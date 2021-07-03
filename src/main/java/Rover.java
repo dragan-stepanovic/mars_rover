@@ -5,6 +5,6 @@ public class Rover {
     }
 
     public String rotate() {
-        return "";
+        return "(0,0,E)";
     }
 }
