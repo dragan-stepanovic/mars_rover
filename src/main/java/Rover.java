@@ -1,6 +1,6 @@
 public class Rover {
 
-    public String callForAction() {
-        return "Dog";
+    public String position() {
+        return "(0,0,N)";
     }
 }

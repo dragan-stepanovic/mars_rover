@@ -5,9 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
-    void fail() {
+    void initial_position_is_zero() {
         Rover rover = new Rover();
-        String value = rover.callForAction();
-        assertEquals("Food", value);
+        assertEquals("(0,0,N)", rover.position());
     }
 }
