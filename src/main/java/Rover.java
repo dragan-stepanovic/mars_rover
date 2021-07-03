@@ -1,7 +1,9 @@
 public class Rover {
 
+    private final String position = "(0,0,N)";
+
     public String position() {
-        return "(0,0,N)";
+        return position;
     }
 
     public String rotate() {
