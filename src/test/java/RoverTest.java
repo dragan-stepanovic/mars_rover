@@ -11,7 +11,9 @@ public class RoverTest {
 
     @Test
     void can_rotate() {
-        assertEquals("(0,0,E)", aRover().rotate());
+        Rover rover = aRover();
+        assertEquals("(0,0,E)", rover.rotate());
+        assertEquals("(0,0,S)", rover.rotate());
     }
 
     private Rover aRover() {
