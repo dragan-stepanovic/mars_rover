@@ -10,7 +10,6 @@ public class Rover {
             return "(0,0,W)";
         else {
             position = "(0,0,E)";
-
         }
         return position;
     }
