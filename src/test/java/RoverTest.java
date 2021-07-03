@@ -10,6 +10,7 @@ public class RoverTest {
         assertEquals("(0,0,E)", rover.rotate());
         assertEquals("(0,0,S)", rover.rotate());
         assertEquals("(0,0,W)", rover.rotate());
+        assertEquals("(0,0,N)", rover.rotate());
     }
 
     private Rover aRover() {
