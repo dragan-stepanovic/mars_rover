@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RoverTest {
 
-
     @Test
     void can_rotate() {
         Rover rover = aRover();
