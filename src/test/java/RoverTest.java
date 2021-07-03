@@ -6,14 +6,12 @@ public class RoverTest {
 
     @Test
     void initial_position_is_zero() {
-        Rover rover = aRover();
-        assertEquals("(0,0,N)", rover.position());
+        assertEquals("(0,0,N)", aRover().position());
     }
 
     @Test
     void can_rotate() {
-        Rover rover = aRover();
-        assertEquals("(0,0,E)", rover.rotate());
+        assertEquals("(0,0,E)", aRover().rotate());
     }
 
     private Rover aRover() {
