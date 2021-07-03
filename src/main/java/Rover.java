@@ -5,7 +5,6 @@ public class Rover {
     public String rotate() {
         if (position.equals("(0,0,E)")) {
             position = "(0,0,S)";
-            return position;
         } else if (position.equals("(0,0,S)"))
             return "(0,0,W)";
         else {
