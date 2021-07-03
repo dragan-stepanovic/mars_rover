@@ -9,4 +9,10 @@ public class RoverTest {
         Rover rover = new Rover();
         assertEquals("(0,0,N)", rover.position());
     }
+
+    @Test
+    void can_rotate() {
+        Rover rover = new Rover();
+        assertEquals("(0,0,E)", rover.rotate());
+    }
 }
