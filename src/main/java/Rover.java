@@ -1,4 +1,4 @@
-public class Thing {
+public class Rover {
 
     public String callForAction() {
         return "Dog";

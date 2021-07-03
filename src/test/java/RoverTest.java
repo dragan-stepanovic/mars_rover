@@ -2,12 +2,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ThingTest {
+public class RoverTest {
 
     @Test
     void fail() {
-        Thing thing = new Thing();
-        String value = thing.callForAction();
+        Rover rover = new Rover();
+        String value = rover.callForAction();
         assertEquals("Food", value);
     }
 }
