@@ -5,12 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
-    void can_rotate() {
+    void can_move() {
         Rover rover = aRover();
-        assertEquals("(0,0,E)", rover.rotate());
-        assertEquals("(0,0,S)", rover.rotate());
-        assertEquals("(0,0,W)", rover.rotate());
-        assertEquals("(0,0,N)", rover.rotate());
+        assertEquals("(0,1,N)", rover.move());
+
     }
 
     private Rover aRover() {

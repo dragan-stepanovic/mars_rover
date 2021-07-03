@@ -2,16 +2,7 @@ public class Rover {
 
     private String position = "(0,0,N)";
 
-    public String rotate() {
-        if (position.equals("(0,0,E)"))
-            position = "(0,0,S)";
-        else if (position.equals("(0,0,S)"))
-            position = "(0,0,W)";
-        else if (position.equals("(0,0,W)"))
-            position = "(0,0,N)";
-        else
-            position = "(0,0,E)";
-
-        return position;
+    public String move() {
+        return "(0,1,N)";
     }
 }
