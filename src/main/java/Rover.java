@@ -12,9 +12,10 @@ public class Rover {
     }
 
     public String rotateRight() {
-        if (position.equals("(0,0,E)")) {
+        char direction = directionOf(position);
+        if (direction == 'E') {
             position = "(0,0,S)";
-        } else if (position.equals("(0,0,S)")) {
+        } else if (direction == 'S') {
             position = "(0,0,W)";
         } else if (position.equals("(0,0,W)")) {
             position = "(0,0,N)";
@@ -22,6 +23,10 @@ public class Rover {
             position = "(0,0,E)";
         }
         return position;
+    }
+
+    private char directionOf(String position) {
+        return position.charAt(5);
     }
 
     private int yCoordinateOf(String position) {
