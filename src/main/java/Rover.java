@@ -3,8 +3,8 @@ public class Rover {
     private String position = "(0,0,N)";
 
     public String move() {
-        int yPosition = increment(yPositionFrom(position));
-        position = "(0," + yPosition + ",N)";
+        int yCoordinate = increment(yPositionFrom(position));
+        position = "(0," + yCoordinate + ",N)";
         return position;
     }
 
