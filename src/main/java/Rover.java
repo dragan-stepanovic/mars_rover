@@ -17,7 +17,7 @@ public class Rover {
             position = "(0,0,S)";
         } else if (direction == 'S') {
             position = "(0,0,W)";
-        } else if (position.equals("(0,0,W)")) {
+        } else if (direction == 'W') {
             position = "(0,0,N)";
         } else {
             position = "(0,0,E)";
