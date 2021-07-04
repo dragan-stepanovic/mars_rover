@@ -4,7 +4,6 @@ public class Rover {
 
     public String move() {
         int yPosition = yPositionFrom(position) + 1;
-
         position = "(0," + yPosition + ",N)";
         return position;
     }
