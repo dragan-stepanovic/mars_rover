@@ -3,13 +3,13 @@ public class Rover {
     private String position = "(0,0,N)";
 
     public String move() {
-        int yPosition = increment(position);
+        int yPosition = increment(yPositionFrom(position));
         position = "(0," + yPosition + ",N)";
         return position;
     }
 
-    private int increment(String position) {
-        return yPositionFrom(position) + 1;
+    private int increment(int i) {
+        return i + 1;
     }
 
     private int yPositionFrom(String position) {
