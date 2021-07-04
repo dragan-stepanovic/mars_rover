@@ -15,7 +15,10 @@ public class Rover {
 
     public String rotateRight() {
         Map<Character, String> rotationRight =
-                Map.of('N', "E", 'E', "S", 'S', "W", 'W', "N");
+                Map.of('N', "E",
+                        'E', "S",
+                        'S', "W",
+                        'W', "N");
 
         char direction = directionOf(position);
         if (direction == 'E') {
