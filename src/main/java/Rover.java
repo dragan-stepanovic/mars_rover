@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.Map;
 
 public class Rover {
 
@@ -14,11 +14,8 @@ public class Rover {
     }
 
     public String rotateRight() {
-        HashMap<Character, String> rotationRight = new HashMap<>();
-        rotationRight.put('N', "E");
-        rotationRight.put('E', "S");
-        rotationRight.put('S', "W");
-        rotationRight.put('W', "N");
+        Map<Character, String> rotationRight =
+                Map.of('N', "E", 'E', "S", 'S', "W", 'W', "N");
 
         char direction = directionOf(position);
         if (direction == 'E') {
