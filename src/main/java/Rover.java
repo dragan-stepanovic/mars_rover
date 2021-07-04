@@ -7,8 +7,8 @@ public class Rover {
         return position;
     }
 
-    private int increment(int i) {
-        return i + 1;
+    private int increment(int value) {
+        return value + 1;
     }
 
     private int yCoordinateOf(String position) {
