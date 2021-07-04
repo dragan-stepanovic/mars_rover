@@ -8,6 +8,7 @@ public class RoverTest {
     void can_move() {
         Rover rover = aRover();
         assertEquals("(0,1,N)", rover.move());
+        assertEquals("(0,2,N)", rover.move());
 
     }
 

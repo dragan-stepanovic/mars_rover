@@ -3,6 +3,10 @@ public class Rover {
     private String position = "(0,0,N)";
 
     public String move() {
-        return "(0,1,N)";
+        if (position.equals("(0,1,N)")) {
+            return "(0,2,N)";
+        }
+        position = "(0,1,N)";
+        return position;
     }
 }
