@@ -19,7 +19,6 @@ public class Rover {
         }
 
 
-        position = "(0,1,N)";
         return position;
     }
 }
