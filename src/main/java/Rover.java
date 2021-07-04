@@ -3,7 +3,7 @@ import java.util.Map;
 public class Rover {
 
     private String position = "(0,0,N)";
-    private final Map<Character, String> rotationRight = Map.of('N', "E",
+    private final Map<Character, String> rotateRight = Map.of('N', "E",
             'E', "S",
             'S', "W",
             'W', "N");
@@ -20,13 +20,13 @@ public class Rover {
     public String rotateRight() {
         char direction = directionOf(position);
         if (direction == 'E') {
-            position = withDirection(rotationRight.get('E'));
+            position = withDirection(rotateRight.get('E'));
         } else if (direction == 'S') {
-            position = withDirection(rotationRight.get('S'));
+            position = withDirection(rotateRight.get('S'));
         } else if (direction == 'W') {
-            position = withDirection(rotationRight.get('W'));
+            position = withDirection(rotateRight.get('W'));
         } else if (direction == 'N') {
-            position = withDirection(rotationRight.get('N'));
+            position = withDirection(rotateRight.get('N'));
         }
         return position;
     }
