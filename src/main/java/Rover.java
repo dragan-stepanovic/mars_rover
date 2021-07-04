@@ -16,6 +16,6 @@ public class Rover {
     }
 
     private int yPositionFrom(String position) {
-        return 0;
+        return (int) position.charAt(3);
     }
 }
