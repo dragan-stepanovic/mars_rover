@@ -16,8 +16,10 @@ public class Rover {
             position = "(0,0,S)";
             return position;
         } else if (position.equals("(0,0,S)")) {
-            return "(0,0,W)";
-        }
+            position = "(0,0,W)";
+            return position;
+        } else if (position.equals("(0,0,W)"))
+            return "(0,0,N)";
 
         position = "(0,0,E)";
         return position;
