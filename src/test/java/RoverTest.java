@@ -11,7 +11,6 @@ public class RoverTest {
         assertEquals("(0,2,N)", rover.move());
         assertEquals("(0,3,N)", rover.move());
         assertEquals("(0,4,N)", rover.move());
-
     }
 
     private Rover aRover() {
