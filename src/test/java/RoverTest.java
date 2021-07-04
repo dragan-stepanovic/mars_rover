@@ -17,6 +17,7 @@ public class RoverTest {
         Rover rover = aRover();
         assertEquals("(0,0,E)", rover.rotateRight());
         assertEquals("(0,0,S)", rover.rotateRight());
+        assertEquals("(0,0,W)", rover.rotateRight());
     }
 
     private Rover aRover() {
