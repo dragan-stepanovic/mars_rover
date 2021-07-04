@@ -13,7 +13,6 @@ public class Rover {
             return position;
         }
 
-
         position = "(0,1,N)";
         return position;
     }
