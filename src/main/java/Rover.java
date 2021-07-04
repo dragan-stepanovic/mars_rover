@@ -4,14 +4,8 @@ public class Rover {
 
     public String move() {
         int yPosition = yPositionFrom(position) + 1;
-        if (position.equals("(0,0,N)")) {
-            position = "(0," + yPosition + ",N)";
-        } else if (position.equals("(0,1,N)")) {
-            position = "(0," + yPosition + ",N)";
-        } else if (position.equals("(0,2,N)")) {
-            position = "(0," + yPosition + ",N)";
-        }
 
+        position = "(0," + yPosition + ",N)";
         return position;
     }
 
