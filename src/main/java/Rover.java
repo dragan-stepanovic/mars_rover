@@ -6,13 +6,9 @@ public class Rover {
         if (position.equals("(0,1,N)")) {
             position = "(0,2,N)";
             return position;
-        }
-
-        if (position.equals("(0,2,N)")) {
+        } else if (position.equals("(0,2,N)")) {
             position = "(0,3,N)";
-        }
-
-        if (position.equals("(0,0,N)")) {
+        } else if (position.equals("(0,0,N)")) {
             position = "(0,1,N)";
         }
 
