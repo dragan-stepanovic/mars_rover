@@ -20,13 +20,13 @@ public class Rover {
     public String rotateRight() {
         char direction = directionOf(position);
         if (direction == 'E') {
-            position = withDirection(rotateRight.get('E'));
+            position = withDirection(rotateRight.get(direction));
         } else if (direction == 'S') {
-            position = withDirection(rotateRight.get('S'));
+            position = withDirection(rotateRight.get(direction));
         } else if (direction == 'W') {
-            position = withDirection(rotateRight.get('W'));
+            position = withDirection(rotateRight.get(direction));
         } else if (direction == 'N') {
-            position = withDirection(rotateRight.get('N'));
+            position = withDirection(rotateRight.get(direction));
         }
         return position;
     }
