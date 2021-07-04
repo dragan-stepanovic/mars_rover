@@ -13,14 +13,14 @@ public class Rover {
         return position;
     }
 
-    private int increment(int value) {
-        return value + 1;
-    }
-
     public String rotateRight() {
         char direction = directionOf(position);
         position = withDirection(rotateRight.get(direction));
         return position;
+    }
+
+    private int increment(int value) {
+        return value + 1;
     }
 
     private String withDirection(String direction) {
