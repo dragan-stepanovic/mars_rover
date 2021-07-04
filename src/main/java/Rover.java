@@ -14,7 +14,7 @@ public class Rover {
     public String rotateRight() {
         char direction = directionOf(position);
         if (direction == 'E') {
-            position = "(0,0,S)";
+            position = "(0,0," + "S)";
         } else if (direction == 'S') {
             position = "(0,0,W)";
         } else if (direction == 'W') {
