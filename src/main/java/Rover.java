@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Rover {
 
     private String position = "(0,0,N)";
@@ -12,6 +14,12 @@ public class Rover {
     }
 
     public String rotateRight() {
+        HashMap<Character, String> rotationRight = new HashMap<>();
+        rotationRight.put('N', "E");
+        rotationRight.put('E', "S");
+        rotationRight.put('S', "W");
+        rotationRight.put('W', "N");
+
         char direction = directionOf(position);
         if (direction == 'E') {
             position = withDirection("S");
