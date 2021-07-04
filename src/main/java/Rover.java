@@ -12,7 +12,7 @@ public class Rover {
     }
 
     public String rotateRight() {
-        return "";
+        return "(0,0,N)";
     }
 
     private int yCoordinateOf(String position) {
