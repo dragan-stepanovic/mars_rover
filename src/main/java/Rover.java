@@ -20,7 +20,7 @@ public class Rover {
         } else if (direction == 'W') {
             position = "(0,0," + "N" + ")";
         } else if (direction == 'N') {
-            position = "(0,0,E)";
+            position = "(0,0," + "E" + ")";
         }
         return position;
     }
