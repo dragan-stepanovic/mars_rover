@@ -22,13 +22,13 @@ public class Rover {
 
         char direction = directionOf(position);
         if (direction == 'E') {
-            position = withDirection("S");
+            position = withDirection(rotationRight.get('E'));
         } else if (direction == 'S') {
-            position = withDirection("W");
+            position = withDirection(rotationRight.get('S'));
         } else if (direction == 'W') {
-            position = withDirection("N");
+            position = withDirection(rotationRight.get('W'));
         } else if (direction == 'N') {
-            position = withDirection("E");
+            position = withDirection(rotationRight.get('N'));
         }
         return position;
     }
