@@ -3,7 +3,7 @@ public class Rover {
     private String position = "(0,0,N)";
 
     public String move() {
-        int yCoordinate = increment(yPositionFrom(position));
+        int yCoordinate = increment(yCoordinateOf(position));
         position = "(0," + yCoordinate + ",N)";
         return position;
     }
@@ -12,7 +12,7 @@ public class Rover {
         return i + 1;
     }
 
-    private int yPositionFrom(String position) {
+    private int yCoordinateOf(String position) {
         return Character.getNumericValue(position.charAt(3));
     }
 }
