@@ -14,15 +14,19 @@ public class Rover {
     public String rotateRight() {
         char direction = directionOf(position);
         if (direction == 'E') {
-            position = "(0,0," + "S" + ")";
+            position = withDirection("S");
         } else if (direction == 'S') {
-            position = "(0,0," + "W" + ")";
+            position = withDirection("W");
         } else if (direction == 'W') {
-            position = "(0,0," + "N" + ")";
+            position = withDirection("N");
         } else if (direction == 'N') {
-            position = "(0,0," + "E" + ")";
+            position = withDirection("E");
         }
         return position;
+    }
+
+    private String withDirection(String s) {
+        return "(0,0," + s + ")";
     }
 
     private char directionOf(String position) {
