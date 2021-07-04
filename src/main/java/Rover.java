@@ -13,6 +13,12 @@ public class Rover {
             return position;
         }
 
+        if (position.equals("(0,0,N)")) {
+            position = "(0,1,N)";
+            return position;
+        }
+
+
         position = "(0,1,N)";
         return position;
     }
