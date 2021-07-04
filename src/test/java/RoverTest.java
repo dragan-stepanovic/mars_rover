@@ -12,6 +12,12 @@ public class RoverTest {
         assertEquals("(0,3,N)", rover.move());
     }
 
+    @Test
+    void can_move_by_x() {
+        Rover rover = aRover();
+        assertEquals("(0,1,N)", rover.move());
+    }
+
     private Rover aRover() {
         return new Rover();
     }
