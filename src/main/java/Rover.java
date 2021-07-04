@@ -11,6 +11,10 @@ public class Rover {
         return value + 1;
     }
 
+    public String rotateRight() {
+        return "";
+    }
+
     private int yCoordinateOf(String position) {
         return Character.getNumericValue(position.charAt(3));
     }

@@ -12,6 +12,11 @@ public class RoverTest {
         assertEquals("(0,3,N)", rover.move());
     }
 
+    @Test
+    void can_rotate_right() {
+        assertEquals("(0,0,N)", aRover().rotateRight());
+    }
+
     private Rover aRover() {
         return new Rover();
     }
