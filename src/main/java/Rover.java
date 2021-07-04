@@ -5,7 +5,7 @@ public class Rover {
     public String move() {
         int yPosition = yPositionFrom(position);
         if (position.equals("(0,0,N)")) {
-            position = "(0,1,N)";
+            position = "(0," + ++yPosition + ",N)";
         } else if (position.equals("(0,1,N)")) {
             position = "(0,2,N)";
         } else if (position.equals("(0,2,N)")) {
@@ -16,6 +16,6 @@ public class Rover {
     }
 
     private int yPositionFrom(String position) {
-        return (int) position.charAt(3);
+        return Character.getNumericValue(position.charAt(3));
     }
 }
