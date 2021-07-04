@@ -2,11 +2,12 @@ import java.util.Map;
 
 public class Rover {
 
-    private String position = "(0,0,N)";
+    public static final String INITIAL_POSITION = "(0,0,N)";
     private final Map<Character, String> rotateRight = Map.of('N', "E",
             'E', "S",
             'S', "W",
             'W', "N");
+    private String position = INITIAL_POSITION;
 
     public String move() {
         position = "(0," + increment(yCoordinateOf(position)) + ",N)";
