@@ -7,9 +7,9 @@ public class Rover {
         if (position.equals("(0,0,N)")) {
             position = "(0," + yPosition + ",N)";
         } else if (position.equals("(0,1,N)")) {
-            position = "(0,2,N)";
+            position = "(0," + yPosition + ",N)";
         } else if (position.equals("(0,2,N)")) {
-            position = "(0,3,N)";
+            position = "(0," + yPosition + ",N)";
         }
 
         return position;
