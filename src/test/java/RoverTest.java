@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
-    void can_move_by_y() {
+    void can_move_by_y_with_x_being_0() {
         Rover rover = aRover();
         assertEquals("(0,1,N)", rover.move());
         assertEquals("(0,2,N)", rover.move());
