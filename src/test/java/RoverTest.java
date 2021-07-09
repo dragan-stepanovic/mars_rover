@@ -13,7 +13,7 @@ public class RoverTest {
     }
 
     @Test
-    void can_move_by_x_with_y_being_0() {
+    void can_move_by_positive_x_and_positive_y() {
         final Rover rover = aRover();
         rover.rotateRight();
         assertEquals("(1,0,E)", rover.move());
