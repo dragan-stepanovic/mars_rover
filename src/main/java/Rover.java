@@ -23,7 +23,6 @@ public class Rover {
             return position;
         }
 
-
         if (movingToEast()) {
             position = "(" + increment(xCoordinateOf(position)) + "," + yCoordinateOf(position) + "," + EAST + ")";
             return position;
