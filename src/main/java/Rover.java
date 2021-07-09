@@ -18,6 +18,12 @@ public class Rover {
     private String position = INITIAL_POSITION;
 
     public String move() {
+        if (movingToWest()) {
+            position = "(" + decrement(xCoordinateOf(position)) + "," + yCoordinateOf(position) + "," + WEST + ")";
+            return position;
+        }
+
+
         if (movingToEast()) {
             position = "(" + increment(xCoordinateOf(position)) + "," + yCoordinateOf(position) + "," + EAST + ")";
             return position;
@@ -25,6 +31,10 @@ public class Rover {
 
         position = "(" + xCoordinateOf(position) + "," + increment(yCoordinateOf(position)) + "," + NORTH + ")";
         return position;
+    }
+
+    private boolean movingToWest() {
+        return directionOf(this.position) == WEST;
     }
 
     private boolean movingToEast() {
@@ -38,6 +48,10 @@ public class Rover {
 
     private int increment(int value) {
         return value + 1;
+    }
+
+    private int decrement(int value) {
+        return value - 1;
     }
 
     private String withDirection(Character direction) {
