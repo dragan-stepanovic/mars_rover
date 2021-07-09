@@ -13,7 +13,7 @@ public class Rover {
 
     public String move() {
         if (movingToEast()) {
-            position = "(" + increment(xCoordinateOf(position)) + ",0,E)";
+            position = "(" + increment(xCoordinateOf(position)) + "," + yCoordinateOf(position) + ",E)";
             return position;
         }
 
