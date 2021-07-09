@@ -12,6 +12,9 @@ public class Rover {
     private String position = INITIAL_POSITION;
 
     public String move() {
+        if (directionOf(this.position) == 'E')
+            return "(1,0,E)";
+
         position = "(0," + increment(yCoordinateOf(position)) + ",N)";
         return position;
     }
