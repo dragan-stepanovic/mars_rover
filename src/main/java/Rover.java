@@ -17,7 +17,7 @@ public class Rover {
             return position;
         }
 
-        position = "(0," + increment(yCoordinateOf(position)) + ",N)";
+        position = "(" + xCoordinateOf(position) + "," + increment(yCoordinateOf(position)) + ",N)";
         return position;
     }
 
