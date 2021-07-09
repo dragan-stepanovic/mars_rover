@@ -14,6 +14,7 @@ public class Rover {
     public String move() {
         if (directionOf(this.position) == 'E'
                 && position.equals("(0,0,E)")) {
+            final String newPosition = "(" + increment(xCoordinateOf(position)) + "0,,E)";
             position = "(1,0,E)";
             return position;
         }
@@ -47,6 +48,10 @@ public class Rover {
 
     private char directionOf(String position) {
         return position.charAt(5);
+    }
+
+    private int xCoordinateOf(String position) {
+        return Character.getNumericValue(position.charAt(1));
     }
 
     private int yCoordinateOf(String position) {
