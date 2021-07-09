@@ -23,7 +23,7 @@ public class Rover {
         }
         if (directionOf(this.position) == 'E'
                 && position.equals("(2,0,E)")) {
-            position = "(3,0,E)";
+            position = "(" + increment(xCoordinateOf(position)) + ",0,E)";
             return position;
         }
 
