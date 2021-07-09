@@ -9,7 +9,7 @@ public class Rover {
 
     public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
 
-    private final Map<Character, Character> rotateRight =
+    private final Map<Character, Character> directionToRightOfIt =
             Map.of(NORTH, EAST,
                     EAST, SOUTH,
                     SOUTH, WEST,
@@ -32,7 +32,7 @@ public class Rover {
     }
 
     public String rotateRight() {
-        position = withDirection(rotateRight.get(directionOf(position)));
+        position = withDirection(directionToRightOfIt.get(directionOf(position)));
         return position;
     }
 
