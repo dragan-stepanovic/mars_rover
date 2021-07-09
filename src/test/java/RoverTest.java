@@ -4,6 +4,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RoverTest {
 
+
+    @Test
+    void can_move_by_negative_x() {
+        final Rover rover = aRover();
+        rover.rotateRight();
+        rover.move();
+        rover.move();
+        rover.move();
+        rover.rotateRight();
+        rover.rotateRight();
+        assertEquals("(2,0,W)", rover.move());
+        assertEquals("(1,0,W)", rover.move());
+    }
+
     @Test
     void can_move_by_positive_x_and_positive_y() {
         final Rover rover = aRover();
