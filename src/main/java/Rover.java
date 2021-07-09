@@ -40,15 +40,15 @@ public class Rover {
     }
 
     private boolean movingToSouth() {
-        return directionOf(this.position) == SOUTH;
+        return direction == SOUTH;
     }
 
     private boolean movingToWest() {
-        return directionOf(this.position) == WEST;
+        return direction == WEST;
     }
 
     private boolean movingToEast() {
-        return directionOf(this.position) == EAST;
+        return direction == EAST;
     }
 
     public String rotateRight() {
