@@ -52,7 +52,8 @@ public class Rover {
     }
 
     public String rotateRight() {
-        position = withDirection(directionToRightOfIt.get(directionOf(position)));
+        direction = directionToRightOfIt.get(directionOf(position));
+        position = withDirection(direction);
         return position;
     }
 
