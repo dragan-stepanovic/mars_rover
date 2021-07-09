@@ -3,13 +3,16 @@ import java.util.Map;
 public class Rover {
 
     public static final Character NORTH = 'N';
-    public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
     public static final Character EAST = 'E';
+    public static final char SOUTH = 'S';
+    public static final char WEST = 'W';
+    public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
+
     private final Map<Character, Character> rotateRight =
             Map.of(NORTH, EAST,
-                    EAST, 'S',
-                    'S', 'W',
-                    'W', NORTH);
+                    EAST, SOUTH,
+                    SOUTH, WEST,
+                    WEST, NORTH);
 
     private String position = INITIAL_POSITION;
 
