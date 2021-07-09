@@ -18,6 +18,18 @@ public class RoverTest {
     }
 
     @Test
+    void can_move_to_south() {
+        final Rover rover = aRover();
+        rover.move();
+        rover.move();
+        rover.move();
+        rover.rotateRight();
+        rover.rotateRight();
+        assertEquals("(0,2,S)", rover.move());
+        assertEquals("(0,1,S)", rover.move());
+    }
+
+    @Test
     void can_move_to_east_and_north() {
         final Rover rover = aRover();
         rover.rotateRight();
