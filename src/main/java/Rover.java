@@ -35,7 +35,7 @@ public class Rover {
     }
 
     private String withDirection(Character direction) {
-        return "(0,0," + direction + ")";
+        return "(" + xCoordinateOf(position) + "," + yCoordinateOf(position) + "," + direction + ")";
     }
 
     private char directionOf(String position) {
