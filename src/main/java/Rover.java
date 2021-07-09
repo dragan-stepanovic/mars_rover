@@ -16,7 +16,8 @@ public class Rover {
                 && position.equals("(0,0,E)")) {
             position = "(1,0,E)";
             return position;
-        } else if (directionOf(this.position) == 'E'
+        }
+        if (directionOf(this.position) == 'E'
                 && position.equals("(1,0,E)"))
             return "(2,0,E)";
 
