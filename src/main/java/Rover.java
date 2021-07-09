@@ -3,9 +3,10 @@ import java.util.Map;
 public class Rover {
 
     public static final String INITIAL_POSITION = "(0,0,N)";
+    public static final Character EAST = 'E';
     private final Map<Character, Character> rotateRight =
-            Map.of('N', 'E',
-                    'E', 'S',
+            Map.of('N', EAST,
+                    EAST, 'S',
                     'S', 'W',
                     'W', 'N');
 
@@ -13,7 +14,7 @@ public class Rover {
 
     public String move() {
         if (movingToEast()) {
-            position = "(" + increment(xCoordinateOf(position)) + "," + yCoordinateOf(position) + ",E)";
+            position = "(" + increment(xCoordinateOf(position)) + "," + yCoordinateOf(position) + "," + EAST + ")";
             return position;
         }
 
@@ -22,7 +23,7 @@ public class Rover {
     }
 
     private boolean movingToEast() {
-        return directionOf(this.position) == 'E';
+        return directionOf(this.position) == EAST;
     }
 
     public String rotateRight() {
