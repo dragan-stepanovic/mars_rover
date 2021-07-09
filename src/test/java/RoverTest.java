@@ -19,13 +19,21 @@ public class RoverTest {
         assertEquals("(1,0,E)", rover.move());
         assertEquals("(2,0,E)", rover.move());
         assertEquals("(3,0,E)", rover.move());
-        rover.rotateRight();
-        rover.rotateRight();
-        rover.rotateRight();
+        rotateToNorth(rover);
         assertEquals("(3,1,N)", rover.move());
         rover.rotateRight();
         rover.move();
         assertEquals("(5,1,E)", rover.move());
+        rotateToNorth(rover);
+        rover.move();
+        rover.move();
+        assertEquals("(5,4,N)", rover.move());
+    }
+
+    private void rotateToNorth(Rover rover) {
+        rover.rotateRight();
+        rover.rotateRight();
+        rover.rotateRight();
     }
 
     @Test
