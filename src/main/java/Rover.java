@@ -6,6 +6,7 @@ public class Rover {
     public static final Character EAST = 'E';
     public static final char SOUTH = 'S';
     public static final char WEST = 'W';
+
     public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
 
     private final Map<Character, Character> rotateRight =
