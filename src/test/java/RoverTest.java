@@ -22,7 +22,7 @@ public class RoverTest {
     }
 
     @Test
-    void can_rotate_right() {
+    void can_rotate_right_full_circle() {
         Rover rover = aRover();
         assertEquals("(0,0,E)", rover.rotateRight());
         assertEquals("(0,0,S)", rover.rotateRight());
