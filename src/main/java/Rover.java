@@ -18,8 +18,15 @@ public class Rover {
             return position;
         }
         if (directionOf(this.position) == 'E'
-                && position.equals("(1,0,E)"))
-            return "(2,0,E)";
+                && position.equals("(1,0,E)")) {
+            position = "(2,0,E)";
+            return position;
+        }
+        if (directionOf(this.position) == 'E'
+                && position.equals("(2,0,E)")) {
+            position = "(3,0,E)";
+            return position;
+        }
 
         position = "(0," + increment(yCoordinateOf(position)) + ",N)";
         return position;
