@@ -16,8 +16,7 @@ public class Rover {
             position = "(" + increment(xCoordinateOf(position)) + ",0,E)";
             return position;
         }
-        if (directionOf(this.position) == 'E'
-                && position.equals("(1,0,E)")) {
+        if (directionOf(this.position) == 'E') {
             position = "(" + increment(xCoordinateOf(position)) + ",0,E)";
             return position;
         }
