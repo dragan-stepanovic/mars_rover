@@ -23,7 +23,7 @@ public class RoverTest {
     }
 
     @Test
-    void can_rotate_and_move_by_x() {
+    void can_move_by_x() {
         final Rover rover = aRover();
         rover.rotateRight();
         assertEquals("(1,0,E)", rover.move());
