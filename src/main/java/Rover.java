@@ -2,13 +2,14 @@ import java.util.Map;
 
 public class Rover {
 
-    public static final String INITIAL_POSITION = "(0,0,N)";
+    public static final Character NORTH = 'N';
+    public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
     public static final Character EAST = 'E';
     private final Map<Character, Character> rotateRight =
-            Map.of('N', EAST,
+            Map.of(NORTH, EAST,
                     EAST, 'S',
                     'S', 'W',
-                    'W', 'N');
+                    'W', NORTH);
 
     private String position = INITIAL_POSITION;
 
@@ -18,7 +19,7 @@ public class Rover {
             return position;
         }
 
-        position = "(" + xCoordinateOf(position) + "," + increment(yCoordinateOf(position)) + ",N)";
+        position = "(" + xCoordinateOf(position) + "," + increment(yCoordinateOf(position)) + "," + NORTH + ")";
         return position;
     }
 
