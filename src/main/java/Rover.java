@@ -12,13 +12,17 @@ public class Rover {
     private String position = INITIAL_POSITION;
 
     public String move() {
-        if (directionOf(this.position) == 'E') {
+        if (movingToEast()) {
             position = "(" + increment(xCoordinateOf(position)) + ",0,E)";
             return position;
         }
 
         position = "(0," + increment(yCoordinateOf(position)) + ",N)";
         return position;
+    }
+
+    private boolean movingToEast() {
+        return directionOf(this.position) == 'E';
     }
 
     public String rotateRight() {
