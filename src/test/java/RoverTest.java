@@ -6,7 +6,7 @@ public class RoverTest {
 
 
     @Test
-    void can_move_by_negative_x() {
+    void can_move_to_west() {
         final Rover rover = aRover();
         rover.rotateRight();
         rover.move();
