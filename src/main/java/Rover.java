@@ -2,24 +2,19 @@ import java.util.Map;
 
 public class Rover {
 
-    public static final char NORTH = 'N';
     public static final char EAST = 'E';
     public static final char SOUTH = 'S';
     public static final char WEST = 'W';
 
     private final Map<Character, Character> directionToRightOfIt =
-            Map.of(NORTH, EAST,
+            Map.of(Direction.NORTH, EAST,
                     EAST, SOUTH,
                     SOUTH, WEST,
-                    WEST, NORTH);
+                    WEST, Direction.NORTH);
 
     private int xCoordinate = 0;
     private int yCoordinate = 0;
-    private char direction = NORTH;
-
-    private static boolean movingToNorth(char direction) {
-        return direction == NORTH;
-    }
+    private char direction = Direction.NORTH;
 
     public void move() {
         if (movingToSouth()) {
@@ -28,7 +23,7 @@ public class Rover {
             xCoordinate = decrement(xCoordinate);
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
-        } else if (movingToNorth(direction)) {
+        } else if (Direction.movingToNorth(direction)) {
             yCoordinate = increment(yCoordinate);
         }
     }
