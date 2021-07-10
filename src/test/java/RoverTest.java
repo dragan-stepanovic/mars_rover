@@ -6,10 +6,10 @@ public class RoverTest {
 
     @Test
     void interprets_command_list() {
-        assertEquals("(0,0,W)", aRover().executeCommands("L"));
-        assertEquals("(-2,0,W)", aRover().executeCommands("LMM"));
-        assertEquals("(-2,-3,S)", aRover().executeCommands("LMMLLRMMM"));
-        assertEquals("(-4,-4,S)", aRover().executeCommands("LMMLLRMMMRMMLM"));
+        assertEquals("(0,0,W)", aRover().execute("L"));
+        assertEquals("(-2,0,W)", aRover().execute("LMM"));
+        assertEquals("(-2,-3,S)", aRover().execute("LMMLLRMMM"));
+        assertEquals("(-4,-4,S)", aRover().execute("LMMLLRMMMRMMLM"));
     }
 
     @Test
