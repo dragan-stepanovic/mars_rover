@@ -26,7 +26,7 @@ public class Rover {
         return position();
     }
 
-    public void move() {
+    private void move() {
         if (direction.movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
         } else if (direction.movingToWest()) {
@@ -46,7 +46,7 @@ public class Rover {
         return value - 1;
     }
 
-    public void rotateRight() {
+    private void rotateRight() {
         direction = direction.rightOfIt();
     }
 
