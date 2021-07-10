@@ -8,7 +8,7 @@ public class Direction {
         this.value = value;
     }
 
-    public boolean movingToWest(char direction) {
+    boolean movingToWest(char direction) {
         return direction == WEST;
     }
 
