@@ -29,4 +29,8 @@ public class Direction {
     public static Direction north() {
         return new Direction(NORTH);
     }
+
+    char asChar() {
+        return value;
+    }
 }
