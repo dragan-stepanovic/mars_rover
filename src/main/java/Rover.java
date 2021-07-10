@@ -2,12 +2,10 @@ import java.util.Map;
 
 public class Rover {
 
-    public static final char SOUTH = 'S';
-
     private final Map<Character, Character> directionToRightOfIt =
             Map.of(Direction.NORTH, Direction.EAST,
-                    Direction.EAST, SOUTH,
-                    SOUTH, Direction.WEST,
+                    Direction.EAST, Direction.SOUTH,
+                    Direction.SOUTH, Direction.WEST,
                     Direction.WEST, Direction.NORTH);
 
     private int xCoordinate = 0;

@@ -3,6 +3,7 @@ public class Direction {
     public static final char NORTH = 'N';
     public static final char WEST = 'W';
     public static final char EAST = 'E';
+    public static final char SOUTH = 'S';
     private final char value;
 
     public Direction(char value) {
@@ -18,7 +19,7 @@ public class Direction {
     }
 
     boolean movingToSouth() {
-        return value == Rover.SOUTH;
+        return value == SOUTH;
     }
 
     boolean movingToWest() {
