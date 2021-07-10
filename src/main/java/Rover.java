@@ -15,7 +15,7 @@ public class Rover {
 
     private int xCoordinate = 0;
     private int yCoordinate = 0;
-    private Character direction = NORTH;
+    private char direction = NORTH;
 
     public void move() {
         if (movingToSouth()) {
