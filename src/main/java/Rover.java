@@ -19,7 +19,7 @@ public class Rover {
     public void move() {
         if (movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
-        } else if (directionDomain.movingToWest(direction)) {
+        } else if (directionDomain.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
