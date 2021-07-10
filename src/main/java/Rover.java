@@ -10,6 +10,8 @@ public class Rover {
                 rotateLeft();
             } else if (command == 'M') {
                 move();
+            } else if (command == 'R') {
+                rotateRight();
             }
         }
 
