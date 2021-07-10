@@ -21,7 +21,7 @@ public class Rover {
             yCoordinate = decrement(yCoordinate);
         } else if (directionDomain.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-        } else if (movingToEast()) {
+        } else if (movingToEast(direction)) {
             xCoordinate = increment(xCoordinate);
         } else if (directionDomain.movingToNorth()) {
             yCoordinate = increment(yCoordinate);
@@ -32,7 +32,7 @@ public class Rover {
         return direction == SOUTH;
     }
 
-    private boolean movingToEast() {
+    private boolean movingToEast(char direction) {
         return direction == EAST;
     }
 
