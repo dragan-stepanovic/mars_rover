@@ -17,7 +17,7 @@ public class Direction {
         return value == EAST;
     }
 
-    boolean movingToSouth(char direction) {
+    boolean movingToSouth() {
         return value == Rover.SOUTH;
     }
 

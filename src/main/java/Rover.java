@@ -16,7 +16,7 @@ public class Rover {
     private Direction directionDomain = Direction.north();
 
     public void move() {
-        if (directionDomain.movingToSouth(direction)) {
+        if (directionDomain.movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
         } else if (directionDomain.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
