@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
+    void interprets_command_list() {
+
+    }
+
+    @Test
     void can_move_to_west() {
         final Rover rover = aRover();
         rover.rotateRight();
