@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Direction {
 
     public static final char NORTH = 'N';
@@ -32,5 +34,9 @@ public class Direction {
 
     char asChar() {
         return value;
+    }
+
+    Direction rightOfIt(Map<Character, Character> directionToRightOfIt) {
+        return new Direction(directionToRightOfIt.get(asChar()));
     }
 }
