@@ -18,12 +18,13 @@ public class Rover {
     private String position = INITIAL_POSITION;
     private Character direction = NORTH;
     private int xCoordinate = 0;
-    private final int yCoordinate = 0;
+    private int yCoordinate = 0;
 
     public String move() {
 
         if (movingToSouth()) {
-            position = "(" + xCoordinate + "," + decrement(yCoordinateOf(position)) + "," + direction + ")";
+            yCoordinate = decrement(yCoordinateOf(position));
+            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
         }
 
@@ -39,7 +40,8 @@ public class Rover {
             return position;
         }
 
-        position = "(" + xCoordinate + "," + increment(yCoordinateOf(position)) + "," + direction + ")";
+        yCoordinate = increment(yCoordinateOf(position));
+        position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
         return position;
     }
 
