@@ -51,7 +51,8 @@ public class RoverTest {
         rotateToNorth(rover);
         rover.move();
         rover.move();
-        assertEquals("(5,4,N)", rover.move());
+        rover.move();
+        assertEquals("(5,4,N)", rover.position());
     }
 
     private void rotateToNorth(Rover rover) {
@@ -63,9 +64,12 @@ public class RoverTest {
     @Test
     void can_rotate_right_full_circle() {
         Rover rover = aRover();
-        assertEquals("(0,0,E)", rover.rotateRight());
-        assertEquals("(0,0,S)", rover.rotateRight());
-        assertEquals("(0,0,W)", rover.rotateRight());
+        rover.rotateRight();
+        assertEquals("(0,0,E)", rover.position());
+        rover.rotateRight();
+        assertEquals("(0,0,S)", rover.position());
+        rover.rotateRight();
+        assertEquals("(0,0,W)", rover.position());
         assertEquals("(0,0,N)", rover.rotateRight());
         assertEquals("(0,0,E)", rover.rotateRight());
     }
