@@ -28,8 +28,6 @@ public class Rover {
             return position;
         } else if (movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-            return position;
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
         } else if (movingToNorth()) {
