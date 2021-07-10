@@ -35,15 +35,15 @@ public class Direction {
         return value == WEST;
     }
 
+    Direction rightOfIt() {
+        return new Direction(directionToRightOfIt.get(asChar()));
+    }
+
     public static Direction north() {
         return new Direction(NORTH);
     }
 
     char asChar() {
         return value;
-    }
-
-    Direction rightOfIt() {
-        return new Direction(directionToRightOfIt.get(asChar()));
     }
 }
