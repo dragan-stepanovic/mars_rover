@@ -8,10 +8,10 @@ public class Rover {
         for (char command : commandsAsString.toCharArray()) {
             if (command == 'L') {
                 rotateLeft();
-            } else if (command == 'M') {
-                move();
             } else if (command == 'R') {
                 rotateRight();
+            } else if (command == 'M') {
+                move();
             }
         }
 
