@@ -8,7 +8,7 @@ public class Direction {
     }
 
     boolean movingToNorth(char direction) {
-        return direction == NORTH;
+        return value == NORTH;
     }
 
     public static Direction north() {
