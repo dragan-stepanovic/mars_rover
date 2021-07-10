@@ -32,7 +32,7 @@ public class Rover {
         return position();
     }
 
-    private String position() {
+    String position() {
         return asString(xCoordinate, yCoordinate, direction);
     }
 
