@@ -32,8 +32,6 @@ public class Rover {
             return position;
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
-            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-            return position;
         } else if (movingToNorth()) {
             yCoordinate = increment(yCoordinate);
         }
