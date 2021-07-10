@@ -10,7 +10,6 @@ public class Rover {
 
     private int xCoordinate = 0;
     private int yCoordinate = 0;
-    private char direction = Direction.NORTH;
     private Direction directionDomain = Direction.north();
 
     public void move() {
@@ -35,7 +34,6 @@ public class Rover {
 
     public void rotateRight() {
         directionDomain = new Direction(directionToRightOfIt.get(directionDomain.asChar()));
-        direction = directionToRightOfIt.get(direction);
     }
 
     String position() {
