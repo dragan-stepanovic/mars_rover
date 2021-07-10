@@ -52,7 +52,7 @@ public class Rover {
     }
 
     public String rotateRight() {
-        direction = directionToRightOfIt.get(directionOf(position));
+        direction = directionToRightOfIt.get(direction);
         position = withDirection(direction);
         return position;
     }
@@ -65,10 +65,6 @@ public class Rover {
         return value - 1;
     }
 
-    private String withDirection(Character direction) {
-        return "(" + xCoordinateOf(position) + "," + yCoordinateOf(position) + "," + direction + ")";
-    }
-
     private int xCoordinateOf(String position) {
         return Character.getNumericValue(position.charAt(1));
     }
@@ -79,5 +75,9 @@ public class Rover {
 
     private char directionOf(String position) {
         return position.charAt(5);
+    }
+
+    private String withDirection(Character direction) {
+        return "(" + xCoordinateOf(position) + "," + yCoordinateOf(position) + "," + direction + ")";
     }
 }
