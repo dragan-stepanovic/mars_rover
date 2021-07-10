@@ -1,6 +1,5 @@
 public class Rover {
 
-
     private int xCoordinate = 0;
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
