@@ -4,7 +4,7 @@ public class Rover {
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
 
-    public String doCommands(String commandsAsString) {
+    public String executeCommands(String commandsAsString) {
         for (char command : commandsAsString.toCharArray()) {
             if (command == 'L') {
                 rotateLeft();
