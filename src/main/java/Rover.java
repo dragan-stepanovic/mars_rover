@@ -10,16 +10,16 @@ public class Rover {
 
     private int xCoordinate = 0;
     private int yCoordinate = 0;
-    private Direction directionDomain = Direction.north();
+    private Direction direction = Direction.north();
 
     public void move() {
-        if (directionDomain.movingToSouth()) {
+        if (direction.movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
-        } else if (directionDomain.movingToWest()) {
+        } else if (direction.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-        } else if (directionDomain.movingToEast()) {
+        } else if (direction.movingToEast()) {
             xCoordinate = increment(xCoordinate);
-        } else if (directionDomain.movingToNorth()) {
+        } else if (direction.movingToNorth()) {
             yCoordinate = increment(yCoordinate);
         }
     }
@@ -33,11 +33,11 @@ public class Rover {
     }
 
     public void rotateRight() {
-        directionDomain = new Direction(directionToRightOfIt.get(directionDomain.asChar()));
+        direction = new Direction(directionToRightOfIt.get(direction.asChar()));
     }
 
     String position() {
-        return asString(xCoordinate, yCoordinate, directionDomain);
+        return asString(xCoordinate, yCoordinate, direction);
     }
 
     private String asString(int xCoordinate, int yCoordinate, Direction directionDomain) {
