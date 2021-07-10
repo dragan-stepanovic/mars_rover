@@ -9,16 +9,16 @@ public class Direction {
         this.value = value;
     }
 
+    boolean movingToNorth() {
+        return value == NORTH;
+    }
+
     boolean movingToEast(char direction) {
         return direction == EAST;
     }
 
     boolean movingToWest() {
         return value == WEST;
-    }
-
-    boolean movingToNorth() {
-        return value == NORTH;
     }
 
     public static Direction north() {
