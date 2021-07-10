@@ -14,17 +14,7 @@ public class RoverTest {
 
     @Test
     void can_move_to_west() {
-        final Rover rover = aRover();
-        rover.rotateRight();
-        rover.move();
-        rover.move();
-        rover.move();
-        rover.rotateRight();
-        rover.rotateRight();
-        rover.move();
-        assertEquals("(2,0,W)", rover.position());
-        rover.move();
-        assertEquals("(1,0,W)", rover.position());
+        assertEquals("(1,0,W)", aRover().execute("RMMMRRMM"));
     }
 
     @Test
