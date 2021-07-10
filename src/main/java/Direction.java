@@ -11,9 +11,9 @@ public class Direction {
 
     private final Map<Character, Character> directionToRightOfIt =
             Map.of(NORTH, EAST,
-                    Direction.EAST, Direction.SOUTH,
-                    Direction.SOUTH, Direction.WEST,
-                    Direction.WEST, Direction.NORTH);
+                    EAST, SOUTH,
+                    SOUTH, WEST,
+                    WEST, NORTH);
 
 
     private Direction(char value) {
