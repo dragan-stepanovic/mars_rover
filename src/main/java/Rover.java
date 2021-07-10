@@ -7,15 +7,12 @@ public class Rover {
     public static final char SOUTH = 'S';
     public static final char WEST = 'W';
 
-    public static final String INITIAL_POSITION = "(0,0," + NORTH + ")";
-
     private final Map<Character, Character> directionToRightOfIt =
             Map.of(NORTH, EAST,
                     EAST, SOUTH,
                     SOUTH, WEST,
                     WEST, NORTH);
 
-    private final String position = INITIAL_POSITION;
     private Character direction = NORTH;
     private int xCoordinate = 0;
     private int yCoordinate = 0;
