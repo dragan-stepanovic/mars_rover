@@ -24,32 +24,7 @@ public class RoverTest {
 
     @Test
     void can_move_to_east_and_north() {
-        final Rover rover = aRover();
-        rover.rotateRight();
-        rover.move();
-        assertEquals("(1,0,E)", rover.position());
-        rover.move();
-        assertEquals("(2,0,E)", rover.position());
-        rover.move();
-        assertEquals("(3,0,E)", rover.position());
-        rotateToNorth(rover);
-        rover.move();
-        assertEquals("(3,1,N)", rover.position());
-        rover.rotateRight();
-        rover.move();
-        rover.move();
-        assertEquals("(5,1,E)", rover.position());
-        rotateToNorth(rover);
-        rover.move();
-        rover.move();
-        rover.move();
-        assertEquals("(5,4,N)", rover.position());
-    }
-
-    private void rotateToNorth(Rover rover) {
-        rover.rotateRight();
-        rover.rotateRight();
-        rover.rotateRight();
+        assertEquals("(5,4,N)", aRover().execute("RMMMRRRMRMMRRRMMM"));
     }
 
     @Test
