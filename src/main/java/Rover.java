@@ -36,7 +36,7 @@ public class Rover {
         direction = rightOfIt(direction);
     }
 
-    private Direction rightOfIt(Direction direction) {
+    Direction rightOfIt(Direction direction) {
         return new Direction(directionToRightOfIt.get(direction.asChar()));
     }
 
