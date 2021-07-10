@@ -20,7 +20,7 @@ public class Rover {
             yCoordinate = decrement(yCoordinate);
         } else if (directionDomain.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-        } else if (Direction.movingToEast(direction)) {
+        } else if (directionDomain.movingToEast(direction)) {
             xCoordinate = increment(xCoordinate);
         } else if (directionDomain.movingToNorth()) {
             yCoordinate = increment(yCoordinate);
