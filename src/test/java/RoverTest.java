@@ -13,8 +13,10 @@ public class RoverTest {
         rover.move();
         rover.rotateRight();
         rover.rotateRight();
-        assertEquals("(2,0,W)", rover.move());
-        assertEquals("(1,0,W)", rover.move());
+        rover.move();
+        assertEquals("(2,0,W)", rover.position());
+        rover.move();
+        assertEquals("(1,0,W)", rover.position());
     }
 
     @Test

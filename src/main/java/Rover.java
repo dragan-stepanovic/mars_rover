@@ -17,8 +17,7 @@ public class Rover {
     private int xCoordinate = 0;
     private int yCoordinate = 0;
 
-    public String move() {
-
+    public void move() {
         if (movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
         } else if (movingToWest()) {
@@ -28,8 +27,6 @@ public class Rover {
         } else if (movingToNorth()) {
             yCoordinate = increment(yCoordinate);
         }
-
-        return position();
     }
 
     String position() {
