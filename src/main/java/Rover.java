@@ -33,7 +33,11 @@ public class Rover {
     }
 
     public void rotateRight() {
-        direction = new Direction(directionToRightOfIt.get(direction.asChar()));
+        direction = rightOfIt(direction);
+    }
+
+    private Direction rightOfIt(Direction direction) {
+        return new Direction(directionToRightOfIt.get(direction.asChar()));
     }
 
     String position() {
