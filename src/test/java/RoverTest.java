@@ -25,8 +25,8 @@ public class RoverTest {
         rover.move();
         rover.move();
         rover.move();
-        rover.rotateRight();
-        rover.rotateRight();
+        rover.rotateLeft();
+        rover.rotateLeft();
         rover.move();
         assertEquals("(0,2,S)", rover.position());
         rover.move();
