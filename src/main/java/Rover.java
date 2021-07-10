@@ -23,24 +23,24 @@ public class Rover {
     public String move() {
 
         if (movingToSouth()) {
-            yCoordinate = decrement(yCoordinateOf(position));
+            yCoordinate = decrement(yCoordinate);
             position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
         }
 
         if (movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-            position = "(" + xCoordinate + "," + yCoordinateOf(position) + "," + direction + ")";
+            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
         }
 
         if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
-            position = "(" + xCoordinate + "," + yCoordinateOf(position) + "," + direction + ")";
+            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
         }
 
-        yCoordinate = increment(yCoordinateOf(position));
+        yCoordinate = increment(yCoordinate);
         position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
         return position;
     }
@@ -71,11 +71,7 @@ public class Rover {
         return value - 1;
     }
 
-    private int yCoordinateOf(String position) {
-        return yCoordinate;
-    }
-
     private String withDirection(Character direction) {
-        return "(" + xCoordinate + "," + yCoordinateOf(position) + "," + direction + ")";
+        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
     }
 }
