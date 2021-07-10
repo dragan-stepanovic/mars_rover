@@ -9,6 +9,7 @@ public class RoverTest {
         assertEquals("(0,0,W)", aRover().doCommands("L"));
         assertEquals("(-2,0,W)", aRover().doCommands("LMM"));
         assertEquals("(-2,-3,S)", aRover().doCommands("LMMLLRMMM"));
+        assertEquals("(-4,-4,S)", aRover().doCommands("LMMLLRMMMRMMLM"));
     }
 
     @Test
