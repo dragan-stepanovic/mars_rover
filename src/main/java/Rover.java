@@ -20,23 +20,8 @@ public class Rover {
     private int xCoordinate = 0;
     private int yCoordinate = 0;
 
-    private static String toString(int xCoordinate, int yCoordinate, Character direction) {
+    private static String asString(int xCoordinate, int yCoordinate, Character direction) {
         return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-    }
-
-    public String move() {
-
-        if (movingToSouth()) {
-            yCoordinate = decrement(yCoordinate);
-        } else if (movingToWest()) {
-            xCoordinate = decrement(xCoordinate);
-        } else if (movingToEast()) {
-            xCoordinate = increment(xCoordinate);
-        } else if (movingToNorth()) {
-            yCoordinate = increment(yCoordinate);
-        }
-
-        return toString(xCoordinate, yCoordinate, direction);
     }
 
     private boolean movingToNorth() {
@@ -55,9 +40,19 @@ public class Rover {
         return direction == EAST;
     }
 
-    public String rotateRight() {
-        direction = directionToRightOfIt.get(direction);
-        return toString(xCoordinate, yCoordinate, direction);
+    public String move() {
+
+        if (movingToSouth()) {
+            yCoordinate = decrement(yCoordinate);
+        } else if (movingToWest()) {
+            xCoordinate = decrement(xCoordinate);
+        } else if (movingToEast()) {
+            xCoordinate = increment(xCoordinate);
+        } else if (movingToNorth()) {
+            yCoordinate = increment(yCoordinate);
+        }
+
+        return asString(xCoordinate, yCoordinate, direction);
     }
 
     private int increment(int value) {
@@ -68,4 +63,8 @@ public class Rover {
         return value - 1;
     }
 
+    public String rotateRight() {
+        direction = directionToRightOfIt.get(direction);
+        return asString(xCoordinate, yCoordinate, direction);
+    }
 }
