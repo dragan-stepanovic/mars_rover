@@ -6,9 +6,8 @@ public class RoverTest {
 
     @Test
     void interprets_command_list() {
-        final Rover rover = aRover();
-        assertEquals("(0,0,W)", rover.doCommands("L"));
-        assertEquals("(-2,0,W)", rover.doCommands("LMM"));
+        assertEquals("(0,0,W)", aRover().doCommands("L"));
+        assertEquals("(-2,0,W)", aRover().doCommands("LMM"));
     }
 
     @Test

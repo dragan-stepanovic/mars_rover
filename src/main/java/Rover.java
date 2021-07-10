@@ -5,7 +5,14 @@ public class Rover {
     private Direction direction = Direction.north();
 
     public String doCommands(String commandsAsString) {
-        rotateLeft();
+        for (char command : commandsAsString.toCharArray()) {
+            if (command == 'L') {
+                rotateLeft();
+            } else if (command == 'M') {
+                move();
+            }
+        }
+
         return position();
     }
 
