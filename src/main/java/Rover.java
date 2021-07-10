@@ -6,12 +6,16 @@ public class Rover {
 
     public String executeCommands(String commandsAsString) {
         for (char command : commandsAsString.toCharArray()) {
-            if (command == 'L') {
-                rotateLeft();
-            } else if (command == 'R') {
-                rotateRight();
-            } else if (command == 'M') {
-                move();
+            switch (command) {
+                case 'L':
+                    rotateLeft();
+                    break;
+                case 'R':
+                    rotateRight();
+                    break;
+                case 'M':
+                    move();
+                    break;
             }
         }
 
