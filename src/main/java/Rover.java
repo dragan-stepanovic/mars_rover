@@ -29,10 +29,6 @@ public class Rover {
         }
     }
 
-    String position() {
-        return asString(xCoordinate, yCoordinate, direction);
-    }
-
     private boolean movingToNorth() {
         return direction == NORTH;
     }
@@ -59,6 +55,10 @@ public class Rover {
 
     public void rotateRight() {
         direction = directionToRightOfIt.get(direction);
+    }
+
+    String position() {
+        return asString(xCoordinate, yCoordinate, direction);
     }
 
     private String asString(int xCoordinate, int yCoordinate, Character direction) {
