@@ -14,7 +14,7 @@ public class Direction {
     }
 
     boolean movingToEast(char direction) {
-        return direction == EAST;
+        return value == EAST;
     }
 
     boolean movingToWest() {
