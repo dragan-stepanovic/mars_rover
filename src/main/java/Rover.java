@@ -54,7 +54,7 @@ public class Rover {
         direction = direction.leftOfIt();
     }
 
-    String position() {
+    private String position() {
         return asString(xCoordinate, yCoordinate, direction);
     }
 
