@@ -26,23 +26,24 @@ public class Rover {
             yCoordinate = decrement(yCoordinate);
             position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
-        }
-
-        if (movingToWest()) {
+        } else if (movingToWest()) {
             xCoordinate = decrement(xCoordinate);
             position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
-        }
-
-        if (movingToEast()) {
+        } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
             position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
             return position;
+        } else if (movingToNorth()) {
+            yCoordinate = increment(yCoordinate);
         }
 
-        yCoordinate = increment(yCoordinate);
         position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
         return position;
+    }
+
+    private boolean movingToNorth() {
+        return direction == NORTH;
     }
 
     private boolean movingToSouth() {
