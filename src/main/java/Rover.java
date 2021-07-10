@@ -29,6 +29,10 @@ public class Rover {
         direction = direction.rightOfIt();
     }
 
+    public void rotateLeft() {
+
+    }
+
     String position() {
         return asString(xCoordinate, yCoordinate, direction);
     }
