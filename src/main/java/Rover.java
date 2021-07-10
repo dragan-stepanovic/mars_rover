@@ -29,11 +29,11 @@ public class Rover {
             yCoordinate = increment(yCoordinate);
         }
 
-        return asString(xCoordinate, yCoordinate, direction);
+        return position();
     }
 
-    private static String asString(int xCoordinate, int yCoordinate, Character direction) {
-        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
+    private String position() {
+        return asString(xCoordinate, yCoordinate, direction);
     }
 
     private boolean movingToNorth() {
@@ -62,6 +62,10 @@ public class Rover {
 
     public String rotateRight() {
         direction = directionToRightOfIt.get(direction);
-        return asString(xCoordinate, yCoordinate, direction);
+        return position();
+    }
+
+    private String asString(int xCoordinate, int yCoordinate, Character direction) {
+        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
     }
 }
