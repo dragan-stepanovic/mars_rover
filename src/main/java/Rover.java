@@ -5,7 +5,8 @@ public class Rover {
     private Direction direction = Direction.north();
 
     public String commands(char someCommands) {
-        return "";
+        rotateLeft();
+        return position();
     }
 
     public void move() {
