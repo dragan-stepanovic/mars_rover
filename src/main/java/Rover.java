@@ -20,6 +20,10 @@ public class Rover {
     private int xCoordinate = 0;
     private int yCoordinate = 0;
 
+    private static String toString(int xCoordinate, int yCoordinate, Character direction) {
+        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
+    }
+
     public String move() {
 
         if (movingToSouth()) {
@@ -32,7 +36,7 @@ public class Rover {
             yCoordinate = increment(yCoordinate);
         }
 
-        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
+        return toString(xCoordinate, yCoordinate, direction);
     }
 
     private boolean movingToNorth() {
@@ -53,7 +57,7 @@ public class Rover {
 
     public String rotateRight() {
         direction = directionToRightOfIt.get(direction);
-        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
+        return toString(xCoordinate, yCoordinate, direction);
     }
 
     private int increment(int value) {
