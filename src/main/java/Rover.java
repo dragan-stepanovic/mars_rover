@@ -18,6 +18,7 @@ public class Rover {
     private String position = INITIAL_POSITION;
     private Character direction = NORTH;
     private int xCoordinate = 0;
+    private final int yCoordinate = 0;
 
     public String move() {
 
