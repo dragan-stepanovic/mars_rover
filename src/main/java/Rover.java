@@ -10,20 +10,24 @@ public class Rover {
 
     public String execute(String commands) {
         for (char command : commands.toCharArray()) {
-            switch (command) {
-                case ROTATE_LEFT:
-                    rotateLeft();
-                    break;
-                case ROTATE_RIGHT:
-                    rotateRight();
-                    break;
-                case MOVE:
-                    move();
-                    break;
-            }
+            execute(command);
         }
 
         return position();
+    }
+
+    private void execute(char command) {
+        switch (command) {
+            case ROTATE_LEFT:
+                rotateLeft();
+                break;
+            case ROTATE_RIGHT:
+                rotateRight();
+                break;
+            case MOVE:
+                move();
+                break;
+        }
     }
 
     private void move() {
