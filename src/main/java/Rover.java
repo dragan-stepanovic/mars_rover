@@ -17,6 +17,10 @@ public class Rover {
     private int yCoordinate = 0;
     private char direction = NORTH;
 
+    private static boolean movingToNorth(char direction) {
+        return direction == NORTH;
+    }
+
     public void move() {
         if (movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
@@ -24,13 +28,9 @@ public class Rover {
             xCoordinate = decrement(xCoordinate);
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
-        } else if (movingToNorth()) {
+        } else if (movingToNorth(direction)) {
             yCoordinate = increment(yCoordinate);
         }
-    }
-
-    private boolean movingToNorth() {
-        return direction == NORTH;
     }
 
     private boolean movingToSouth() {
