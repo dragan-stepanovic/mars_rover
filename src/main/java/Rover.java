@@ -24,7 +24,7 @@ public class Rover {
             xCoordinate = decrement(xCoordinate);
         } else if (movingToEast()) {
             xCoordinate = increment(xCoordinate);
-        } else if (directionDomain.movingToNorth(direction)) {
+        } else if (directionDomain.movingToNorth()) {
             yCoordinate = increment(yCoordinate);
         }
     }
