@@ -36,7 +36,7 @@ public class Direction {
     }
 
     Direction rightOfIt() {
-        return new Direction(directionToRightOfIt.get(asChar()));
+        return new Direction(directionToRightOfIt.get(value));
     }
 
     public static Direction north() {
