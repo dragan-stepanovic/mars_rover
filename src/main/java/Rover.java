@@ -2,12 +2,11 @@ import java.util.Map;
 
 public class Rover {
 
-    public static final char EAST = 'E';
     public static final char SOUTH = 'S';
 
     private final Map<Character, Character> directionToRightOfIt =
-            Map.of(Direction.NORTH, EAST,
-                    EAST, SOUTH,
+            Map.of(Direction.NORTH, Direction.EAST,
+                    Direction.EAST, SOUTH,
                     SOUTH, Direction.WEST,
                     Direction.WEST, Direction.NORTH);
 
@@ -21,7 +20,7 @@ public class Rover {
             yCoordinate = decrement(yCoordinate);
         } else if (directionDomain.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
-        } else if (movingToEast(direction)) {
+        } else if (Direction.movingToEast(direction)) {
             xCoordinate = increment(xCoordinate);
         } else if (directionDomain.movingToNorth()) {
             yCoordinate = increment(yCoordinate);
@@ -30,10 +29,6 @@ public class Rover {
 
     private boolean movingToSouth() {
         return direction == SOUTH;
-    }
-
-    private boolean movingToEast(char direction) {
-        return direction == EAST;
     }
 
     private int increment(int value) {
