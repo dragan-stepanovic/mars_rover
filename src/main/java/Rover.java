@@ -60,9 +60,8 @@ public class Rover {
         return value - 1;
     }
 
-    public String rotateRight() {
+    public void rotateRight() {
         direction = directionToRightOfIt.get(direction);
-        return position();
     }
 
     private String asString(int xCoordinate, int yCoordinate, Character direction) {
