@@ -15,7 +15,7 @@ public class Direction {
                     Direction.WEST, Direction.NORTH);
 
 
-    public Direction(char value) {
+    private Direction(char value) {
         this.value = value;
     }
 
