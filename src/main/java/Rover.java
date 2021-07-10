@@ -50,7 +50,7 @@ public class Rover {
         direction = direction.rightOfIt();
     }
 
-    public void rotateLeft() {
+    private void rotateLeft() {
         direction = direction.leftOfIt();
     }
 
