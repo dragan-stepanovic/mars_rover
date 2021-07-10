@@ -7,7 +7,7 @@ public class RoverTest {
     @Test
     void interprets_command_list() {
         final Rover rover = aRover();
-        assertEquals("(0,0,W)", rover.commands('L'));
+        assertEquals("(0,0,W)", rover.commands("L"));
     }
 
     @Test
