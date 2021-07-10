@@ -69,15 +69,15 @@ public class Rover {
         return "(" + xCoordinateOf(position) + "," + yCoordinateOf(position) + "," + direction + ")";
     }
 
-    private char directionOf(String position) {
-        return position.charAt(5);
-    }
-
     private int xCoordinateOf(String position) {
         return Character.getNumericValue(position.charAt(1));
     }
 
     private int yCoordinateOf(String position) {
         return Character.getNumericValue(position.charAt(3));
+    }
+
+    private char directionOf(String position) {
+        return position.charAt(5);
     }
 }
