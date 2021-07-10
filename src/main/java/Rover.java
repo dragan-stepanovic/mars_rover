@@ -17,24 +17,24 @@ public class Rover {
     private char direction = Direction.NORTH;
     private final Direction directionDomain = Direction.north();
 
-    public void move() {
-        if (movingToSouth()) {
-            yCoordinate = decrement(yCoordinate);
-        } else if (movingToWest()) {
-            xCoordinate = decrement(xCoordinate);
-        } else if (movingToEast()) {
-            xCoordinate = increment(xCoordinate);
-        } else if (directionDomain.movingToNorth()) {
-            yCoordinate = increment(yCoordinate);
-        }
+    public static boolean movingToWest(char direction) {
+        return direction == WEST;
     }
 
     private boolean movingToSouth() {
         return direction == SOUTH;
     }
 
-    private boolean movingToWest() {
-        return direction == WEST;
+    public void move() {
+        if (movingToSouth()) {
+            yCoordinate = decrement(yCoordinate);
+        } else if (movingToWest(direction)) {
+            xCoordinate = decrement(xCoordinate);
+        } else if (movingToEast()) {
+            xCoordinate = increment(xCoordinate);
+        } else if (directionDomain.movingToNorth()) {
+            yCoordinate = increment(yCoordinate);
+        }
     }
 
     private boolean movingToEast() {
