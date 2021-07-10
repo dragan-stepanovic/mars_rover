@@ -64,7 +64,7 @@ public class RoverTest {
     }
 
     @Test
-    void can_rotate_right_full_circle() {
+    void can_rotate_full_circle_to_the_right() {
         Rover rover = aRover();
         rover.rotateRight();
         assertEquals("(0,0,E)", rover.position());
