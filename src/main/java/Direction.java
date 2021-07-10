@@ -16,7 +16,8 @@ public class Direction {
                     WEST, NORTH);
     private final Map<Character, Character> directionToLeftOfIt =
             Map.of(NORTH, WEST,
-                    WEST, SOUTH);
+                    WEST, SOUTH,
+                    SOUTH, EAST);
 
 
     private Direction(char value) {
