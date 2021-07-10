@@ -56,4 +56,11 @@ public class Direction {
     char asChar() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "Direction{" +
+                "value=" + value +
+                '}';
+    }
 }
