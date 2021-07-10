@@ -30,7 +30,7 @@ public class Rover {
     }
 
     public void rotateLeft() {
-
+        direction = direction.leftOfIt();
     }
 
     String position() {

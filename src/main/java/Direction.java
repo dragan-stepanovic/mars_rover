@@ -47,4 +47,8 @@ public class Direction {
     char asChar() {
         return value;
     }
+
+    public Direction leftOfIt() {
+        return new Direction('W');
+    }
 }
