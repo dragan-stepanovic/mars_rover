@@ -8,6 +8,13 @@ public class Direction {
     public static final char WEST = 'W';
     private final char value;
 
+    private final Map<Character, Character> directionToRightOfIt =
+            Map.of(Direction.NORTH, Direction.EAST,
+                    Direction.EAST, Direction.SOUTH,
+                    Direction.SOUTH, Direction.WEST,
+                    Direction.WEST, Direction.NORTH);
+
+
     public Direction(char value) {
         this.value = value;
     }
@@ -36,7 +43,7 @@ public class Direction {
         return value;
     }
 
-    Direction rightOfIt(Map<Character, Character> directionToRightOfIt) {
+    Direction rightOfIt() {
         return new Direction(directionToRightOfIt.get(asChar()));
     }
 }

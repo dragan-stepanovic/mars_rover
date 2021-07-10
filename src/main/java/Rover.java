@@ -1,12 +1,5 @@
-import java.util.Map;
-
 public class Rover {
 
-    private final Map<Character, Character> directionToRightOfIt =
-            Map.of(Direction.NORTH, Direction.EAST,
-                    Direction.EAST, Direction.SOUTH,
-                    Direction.SOUTH, Direction.WEST,
-                    Direction.WEST, Direction.NORTH);
 
     private int xCoordinate = 0;
     private int yCoordinate = 0;
@@ -33,7 +26,7 @@ public class Rover {
     }
 
     public void rotateRight() {
-        direction = direction.rightOfIt(directionToRightOfIt);
+        direction = direction.rightOfIt();
     }
 
     String position() {
