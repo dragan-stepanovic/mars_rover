@@ -39,10 +39,10 @@ public class Rover {
     }
 
     String position() {
-        return asString(xCoordinate, yCoordinate, direction);
+        return asString(xCoordinate, yCoordinate, directionDomain);
     }
 
-    private String asString(int xCoordinate, int yCoordinate, Character direction) {
+    private String asString(int xCoordinate, int yCoordinate, Direction directionDomain) {
         return "(" + xCoordinate + "," + yCoordinate + "," + directionDomain.asChar() + ")";
     }
 }
