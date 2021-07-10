@@ -34,17 +34,7 @@ public class RoverTest {
 
     @Test
     void can_rotate_full_circle_to_the_left() {
-        Rover rover = aRover();
-        rover.rotateLeft();
-        assertEquals("(0,0,W)", rover.position());
-        rover.rotateLeft();
-        assertEquals("(0,0,S)", rover.position());
-        rover.rotateLeft();
-        assertEquals("(0,0,E)", rover.position());
-        rover.rotateLeft();
-        assertEquals("(0,0,N)", rover.position());
-        rover.rotateLeft();
-        assertEquals("(0,0,W)", rover.position());
+        assertEquals("(0,0,W)", aRover().execute("LLLLL"));
     }
 
     private Rover aRover() {
