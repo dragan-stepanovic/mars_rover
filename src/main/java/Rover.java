@@ -19,7 +19,6 @@ public class Rover {
     private Character direction = NORTH;
 
     public String move() {
-        direction = directionOf(position);
         if (movingToSouth()) {
             position = "(" + xCoordinateOf(position) + "," + decrement(yCoordinateOf(position)) + "," + SOUTH + ")";
             return position;
