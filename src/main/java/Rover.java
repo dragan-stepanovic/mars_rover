@@ -28,7 +28,7 @@ public class Rover {
 
         if (movingToWest()) {
             xCoordinate = decrement(xCoordinateOf(position));
-            position = "(" + decrement(xCoordinateOf(position)) + "," + yCoordinateOf(position) + "," + direction + ")";
+            position = "(" + xCoordinate + "," + yCoordinateOf(position) + "," + direction + ")";
             return position;
         }
 
