@@ -44,4 +44,13 @@ public class Rover {
     private String asString(int xCoordinate, int yCoordinate, Direction directionDomain) {
         return "(" + xCoordinate + "," + yCoordinate + "," + directionDomain.asChar() + ")";
     }
+
+    @Override
+    public String toString() {
+        return "Rover{" +
+                "xCoordinate=" + xCoordinate +
+                ", yCoordinate=" + yCoordinate +
+                ", direction=" + direction +
+                '}';
+    }
 }
