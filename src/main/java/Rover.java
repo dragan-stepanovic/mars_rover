@@ -24,8 +24,6 @@ public class Rover {
 
         if (movingToSouth()) {
             yCoordinate = decrement(yCoordinate);
-            position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-            return position;
         } else if (movingToWest()) {
             xCoordinate = decrement(xCoordinate);
         } else if (movingToEast()) {
@@ -34,8 +32,7 @@ public class Rover {
             yCoordinate = increment(yCoordinate);
         }
 
-        position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-        return position;
+        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
     }
 
     private boolean movingToNorth() {
