@@ -9,9 +9,8 @@ public class Rover {
     public static final char MOVE = 'M';
 
     public String execute(String commands) {
-        for (char command : commands.toCharArray()) {
+        for (char command : commands.toCharArray())
             execute(command);
-        }
 
         return position();
     }
