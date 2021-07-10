@@ -10,7 +10,7 @@ public class Direction {
     public static final char WEST = 'W';
 
     private final Map<Character, Character> directionToRightOfIt =
-            Map.of(Direction.NORTH, Direction.EAST,
+            Map.of(NORTH, EAST,
                     Direction.EAST, Direction.SOUTH,
                     Direction.SOUTH, Direction.WEST,
                     Direction.WEST, Direction.NORTH);
