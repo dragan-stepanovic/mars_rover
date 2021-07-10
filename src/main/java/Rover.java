@@ -15,7 +15,7 @@ public class Rover {
                     SOUTH, WEST,
                     WEST, NORTH);
 
-    private String position = INITIAL_POSITION;
+    private final String position = INITIAL_POSITION;
     private Character direction = NORTH;
     private int xCoordinate = 0;
     private int yCoordinate = 0;
@@ -53,8 +53,7 @@ public class Rover {
 
     public String rotateRight() {
         direction = directionToRightOfIt.get(direction);
-        position = "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
-        return position;
+        return "(" + xCoordinate + "," + yCoordinate + "," + direction + ")";
     }
 
     private int increment(int value) {
