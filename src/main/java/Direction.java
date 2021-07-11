@@ -25,6 +25,10 @@ public class Direction {
         this.value = value;
     }
 
+    public static Direction north() {
+        return new Direction(NORTH);
+    }
+
     boolean movingToNorth() {
         return value == NORTH;
     }
@@ -49,8 +53,12 @@ public class Direction {
         return new Direction(directionToLeftOfIt.get(value));
     }
 
-    public static Direction north() {
-        return new Direction(NORTH);
+    int decrement(int value) {
+        return value - 1;
+    }
+
+    int increment(int value) {
+        return value + 1;
     }
 
     char asChar() {
@@ -62,13 +70,5 @@ public class Direction {
         return "Direction{" +
                 "value=" + value +
                 '}';
-    }
-
-    int decrement(int value) {
-        return value - 1;
-    }
-
-    int increment(int value) {
-        return value + 1;
     }
 }
