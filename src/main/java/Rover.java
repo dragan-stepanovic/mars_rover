@@ -13,13 +13,13 @@ public class Rover {
 
     private void execute(char command) {
         switch (command) {
-            case IssuedCommandIs.ROTATE_LEFT:
+            case Command.ROTATE_LEFT:
                 rotateLeft();
                 break;
-            case IssuedCommandIs.ROTATE_RIGHT:
+            case Command.ROTATE_RIGHT:
                 rotateRight();
                 break;
-            case IssuedCommandIs.MOVE:
+            case Command.MOVE:
                 move();
                 break;
         }
