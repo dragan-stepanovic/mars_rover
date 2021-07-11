@@ -10,6 +10,10 @@ public class Position {
         this.direction = direction;
     }
 
+    public static int increment(int value) {
+        return value + 1;
+    }
+
     String asString() {
         return x + ":" + y + ":" + this.direction.asChar();
     }

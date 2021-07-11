@@ -31,14 +31,10 @@ public class Rover {
         } else if (direction.movingToWest()) {
             xCoordinate = decrement(xCoordinate);
         } else if (direction.movingToEast()) {
-            xCoordinate = increment(xCoordinate);
+            xCoordinate = Position.increment(xCoordinate);
         } else if (direction.movingToNorth()) {
-            yCoordinate = increment(yCoordinate);
+            yCoordinate = Position.increment(yCoordinate);
         }
-    }
-
-    private int increment(int value) {
-        return value + 1;
     }
 
     private int decrement(int value) {
