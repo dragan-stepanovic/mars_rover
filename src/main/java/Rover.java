@@ -12,7 +12,7 @@ public class Rover {
         for (char command : commands.toCharArray())
             execute(command);
 
-        return new Position(xCoordinate, yCoordinate, direction).asString(xCoordinate, yCoordinate, direction);
+        return new Position(xCoordinate, yCoordinate, direction).asString();
     }
 
     private void execute(char command) {
