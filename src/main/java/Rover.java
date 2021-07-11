@@ -27,22 +27,14 @@ public class Rover {
 
     private void move() {
         if (direction.movingToSouth()) {
-            yCoordinate = decrement(yCoordinate);
+            yCoordinate = direction.decrement(yCoordinate);
         } else if (direction.movingToWest()) {
-            xCoordinate = decrement(xCoordinate);
+            xCoordinate = direction.decrement(xCoordinate);
         } else if (direction.movingToEast()) {
-            xCoordinate = increment(xCoordinate);
+            xCoordinate = direction.increment(xCoordinate);
         } else if (direction.movingToNorth()) {
-            yCoordinate = increment(yCoordinate);
+            yCoordinate = direction.increment(yCoordinate);
         }
-    }
-
-    private int increment(int value) {
-        return value + 1;
-    }
-
-    private int decrement(int value) {
-        return value - 1;
     }
 
     private void rotateRight() {
