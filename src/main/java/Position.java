@@ -9,4 +9,8 @@ public class Position {
         this.y = y;
         this.direction = direction;
     }
+
+    String asString(int xCoordinate, int yCoordinate, Direction direction) {
+        return xCoordinate + ":" + yCoordinate + ":" + direction.asChar();
+    }
 }
