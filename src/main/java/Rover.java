@@ -58,11 +58,10 @@ public class Rover {
     }
 
     private String position() {
-        return asString(xCoordinate, yCoordinate, direction);
+        return asString(xCoordinate, yCoordinate, direction, new Position(xCoordinate, yCoordinate, direction));
     }
 
-    private String asString(int xCoordinate, int yCoordinate, Direction direction) {
-        final Position position = new Position(xCoordinate, yCoordinate, direction);
+    private String asString(int xCoordinate, int yCoordinate, Direction direction, Position position) {
         return xCoordinate + ":" + yCoordinate + ":" + direction.asChar();
     }
 
