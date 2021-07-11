@@ -11,8 +11,8 @@ public class Rover {
         return new Position(xCoordinate, yCoordinate, direction).asString();
     }
 
-    private void execute(char command) {
-        switch (command) {
+    private void execute(char issuedCommand) {
+        switch (issuedCommand) {
             case Command.ROTATE_LEFT:
                 rotateLeft();
                 break;
