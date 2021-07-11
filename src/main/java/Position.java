@@ -11,6 +11,6 @@ public class Position {
     }
 
     String asString(int xCoordinate, int yCoordinate, Direction direction) {
-        return xCoordinate + ":" + yCoordinate + ":" + direction.asChar();
+        return x + ":" + y + ":" + this.direction.asChar();
     }
 }
