@@ -14,6 +14,10 @@ public class Position {
         return value + 1;
     }
 
+    public static int decrement(int value) {
+        return value - 1;
+    }
+
     String asString() {
         return x + ":" + y + ":" + this.direction.asChar();
     }
