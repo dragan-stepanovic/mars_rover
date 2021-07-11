@@ -63,12 +63,4 @@ public class Direction {
                 "value=" + value +
                 '}';
     }
-
-    int decrement(int value) {
-        return value - 1;
-    }
-
-    int increment(int value) {
-        return value + 1;
-    }
 }
