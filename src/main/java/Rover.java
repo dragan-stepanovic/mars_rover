@@ -4,10 +4,6 @@ public class Rover {
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
 
-    public static final char ROTATE_LEFT = 'L';
-    public static final char ROTATE_RIGHT = 'R';
-    public static final char MOVE = 'M';
-
     public String execute(String commands) {
         for (char command : commands.toCharArray())
             execute(command);
@@ -17,13 +13,13 @@ public class Rover {
 
     private void execute(char command) {
         switch (command) {
-            case ROTATE_LEFT:
+            case Command.ROTATE_LEFT:
                 rotateLeft();
                 break;
-            case ROTATE_RIGHT:
+            case Command.ROTATE_RIGHT:
                 rotateRight();
                 break;
-            case MOVE:
+            case Command.MOVE:
                 move();
                 break;
         }
