@@ -61,8 +61,8 @@ public class Rover {
         return asString(xCoordinate, yCoordinate, direction);
     }
 
-    private String asString(int xCoordinate, int yCoordinate, Direction directionDomain) {
-        return xCoordinate + ":" + yCoordinate + ":" + directionDomain.asChar();
+    private String asString(int xCoordinate, int yCoordinate, Direction direction) {
+        return xCoordinate + ":" + yCoordinate + ":" + direction.asChar();
     }
 
     @Override
