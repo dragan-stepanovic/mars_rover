@@ -6,7 +6,7 @@ public class Rover {
 
     public String execute(String commands, int[] grid) {
         for (char command : commands.toCharArray())
-            execute(command);
+            execute(command, grid);
 
         return new Position(xCoordinate, yCoordinate, direction).asString();
     }
@@ -15,7 +15,7 @@ public class Rover {
         return this.execute(commands, new int[]{100, 100});
     }
 
-    private void execute(char issuedCommand) {
+    private void execute(char issuedCommand, int[] grid) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
                 rotateLeft();
