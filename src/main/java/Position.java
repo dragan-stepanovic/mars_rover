@@ -11,7 +11,11 @@ public class Position {
     }
 
     public static int increment(int value, int[] grid) {
-        return value + 1;
+        final int nextPosition = value + 1;
+        if (nextPosition == grid[1])
+            return 0;
+
+        return nextPosition;
     }
 
     public static int decrement(int value, int[] grid) {
