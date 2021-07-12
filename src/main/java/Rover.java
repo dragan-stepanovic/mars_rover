@@ -5,14 +5,14 @@ public class Rover {
     private Direction direction = Direction.north();
 
     public String execute(String commands, int[] grid) {
-        return "";
-    }
-
-    public String execute(String commands) {
         for (char command : commands.toCharArray())
             execute(command);
 
         return new Position(xCoordinate, yCoordinate, direction).asString();
+    }
+
+    public String execute(String commands) {
+        return this.execute(commands, new int[]{100, 100});
     }
 
     private void execute(char issuedCommand) {
