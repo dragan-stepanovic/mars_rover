@@ -10,11 +10,11 @@ public class Position {
         this.direction = direction;
     }
 
-    public static int increment(int value) {
+    public static int increment(int value, int[] grid) {
         return value + 1;
     }
 
-    public static int decrement(int value) {
+    public static int decrement(int value, int[] grid) {
         return value - 1;
     }
 
