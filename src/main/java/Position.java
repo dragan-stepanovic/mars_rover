@@ -12,10 +12,14 @@ public class Position {
 
     public static int increment(int value, int[] grid) {
         final int nextPosition = value + 1;
-        if (nextPosition == maxY(grid))
+        if (nextPositionGoesOffGrid(grid, nextPosition))
             return 0;
 
         return nextPosition;
+    }
+
+    private static boolean nextPositionGoesOffGrid(int[] grid, int nextPosition) {
+        return nextPosition == maxY(grid);
     }
 
     private static int maxY(int[] grid) {
