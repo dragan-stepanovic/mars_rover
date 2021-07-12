@@ -13,9 +13,13 @@ public class Position {
     public static int increment(int value, int[] grid) {
         final int nextPosition = value + 1;
         if (nextPositionGoesOffGrid(grid, nextPosition))
-            return 0;
+            return wrapAround();
 
         return nextPosition;
+    }
+
+    private static int wrapAround() {
+        return 0;
     }
 
     private static boolean nextPositionGoesOffGrid(int[] grid, int nextPosition) {
