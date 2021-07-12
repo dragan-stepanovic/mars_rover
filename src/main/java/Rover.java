@@ -24,12 +24,12 @@ public class Rover {
                 rotateRight();
                 break;
             case Command.MOVE:
-                moveOn();
+                moveOn(grid);
                 break;
         }
     }
 
-    private void moveOn() {
+    private void moveOn(int[] grid) {
         if (direction.movingToSouth()) {
             yCoordinate = Position.decrement(yCoordinate);
         } else if (direction.movingToWest()) {
