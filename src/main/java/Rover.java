@@ -53,4 +53,8 @@ public class Rover {
                 ", direction=" + direction +
                 '}';
     }
+
+    public String execute(String commands, int[] grid) {
+        return "";
+    }
 }

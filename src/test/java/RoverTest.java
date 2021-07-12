@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RoverTest {
 
     @Test
+    void wraps_around_the_grid() {
+        assertEquals("0:0:N", aRover().execute("MM", new int[]{2, 2}));
+    }
+
+    @Test
     void interprets_command_list() {
         assertEquals("0:0:W", aRover().execute("L"));
         assertEquals("-2:0:W", aRover().execute("LMM"));
