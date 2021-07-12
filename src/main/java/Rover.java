@@ -4,6 +4,10 @@ public class Rover {
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
 
+    public String execute(String commands, int[] grid) {
+        return "";
+    }
+
     public String execute(String commands) {
         for (char command : commands.toCharArray())
             execute(command);
@@ -52,9 +56,5 @@ public class Rover {
                 ", yCoordinate=" + yCoordinate +
                 ", direction=" + direction +
                 '}';
-    }
-
-    public String execute(String commands, int[] grid) {
-        return "";
     }
 }
