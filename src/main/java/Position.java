@@ -36,11 +36,15 @@ public class Position {
     }
 
     public void decrementY(int[] grid) {
+        y = decrement(grid);
+    }
+
+    private int decrement(int[] grid) {
         var nextPosition = y - 1;
         if (nextPosition < 0) {
-            y = grid[1] - 1;
+            return grid[1] - 1;
         } else {
-            y = nextPosition;
+            return nextPosition;
         }
     }
 
