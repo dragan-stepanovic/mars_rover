@@ -53,4 +53,8 @@ public class Position {
     String asString() {
         return x + ":" + y + ":" + direction.asChar();
     }
+
+    public void decrementY() {
+        this.y--;
+    }
 }
