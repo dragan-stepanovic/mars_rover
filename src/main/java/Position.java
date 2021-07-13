@@ -1,7 +1,7 @@
 public class Position {
 
     private int x;
-    private final int y;
+    private int y;
     private final Direction direction;
 
     public Position(int x, int y, Direction direction) {
@@ -16,6 +16,10 @@ public class Position {
 
     public void incrementX(int[] grid) {
         this.x = increment(this.x, grid);
+    }
+
+    public void incrementY(int[] grid) {
+        this.y = increment(this.y, grid);
     }
 
     public void decrementX() {

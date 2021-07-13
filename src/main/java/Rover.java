@@ -38,6 +38,7 @@ public class Rover {
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {
             yCoordinate = Position.increment(yCoordinate, grid);
+            position.incrementY(grid);
         }
     }
 
