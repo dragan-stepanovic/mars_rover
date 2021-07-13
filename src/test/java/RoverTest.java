@@ -8,6 +8,7 @@ public class RoverTest {
     void wraps_around_the_grid() {
         assertEquals("0:0:N", aRover().execute("MM", new int[]{2, 2}));
         assertEquals("0:0:E", aRover().execute("RMM", new int[]{2, 2}));
+        assertEquals("1:0:N", aRover().execute("RMLMM", new int[]{2, 2}));
     }
 
     @Test
