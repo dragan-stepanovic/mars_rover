@@ -30,6 +30,10 @@ public class Position {
         this.x--;
     }
 
+    public void decrementY() {
+        this.y--;
+    }
+
     public static int increment(int value, int[] grid) {
         final int nextPosition = value + 1;
         if (nextPositionGoesOffGrid(grid, nextPosition))
@@ -52,9 +56,5 @@ public class Position {
 
     String asString() {
         return x + ":" + y + ":" + direction.asChar();
-    }
-
-    public void decrementY() {
-        this.y--;
     }
 }
