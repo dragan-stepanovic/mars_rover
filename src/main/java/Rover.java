@@ -47,9 +47,4 @@ public class Rover {
     private void rotateLeft() {
         direction = direction.leftOfIt();
     }
-
-    @Override
-    public String toString() {
-        return "Rover{xCoordinate=" + position.x() + ", yCoordinate=" + position.y() + ", direction=" + direction + '}';
-    }
 }
