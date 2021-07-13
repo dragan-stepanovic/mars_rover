@@ -10,6 +10,10 @@ public class Position {
         this.direction = direction;
     }
 
+    public int x() {
+        return x;
+    }
+
     public void incrementX(int[] grid) {
         this.x = increment(this.x, grid);
     }
@@ -44,9 +48,5 @@ public class Position {
 
     String asString() {
         return x + ":" + y + ":" + direction.asChar();
-    }
-
-    public int x() {
-        return x;
     }
 }

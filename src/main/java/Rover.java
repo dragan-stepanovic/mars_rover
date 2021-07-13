@@ -33,10 +33,8 @@ public class Rover {
         if (direction.movingToSouth()) {
             yCoordinate = Position.decrement(yCoordinate);
         } else if (direction.movingToWest()) {
-//            xCoordinate = Position.decrement(xCoordinate);
             position.decrementX();
         } else if (direction.movingToEast()) {
-//            xCoordinate = Position.increment(xCoordinate, grid);
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {
             yCoordinate = Position.increment(yCoordinate, grid);
