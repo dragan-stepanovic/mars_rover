@@ -10,6 +10,10 @@ public class Position {
         this.direction = direction;
     }
 
+    public void incrementX(int[] grid) {
+        increment(this.x, grid);
+    }
+
     public static int increment(int value, int[] grid) {
         final int nextPosition = value + 1;
         if (nextPositionGoesOffGrid(grid, nextPosition))

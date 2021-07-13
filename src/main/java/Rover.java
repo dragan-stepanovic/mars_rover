@@ -37,6 +37,7 @@ public class Rover {
             xCoordinate = Position.decrement(xCoordinate);
         } else if (direction.movingToEast()) {
             xCoordinate = Position.increment(xCoordinate, grid);
+            position.incrementX(grid);
         } else if (direction.movingToNorth()) {
             yCoordinate = Position.increment(yCoordinate, grid);
         }
