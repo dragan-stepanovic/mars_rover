@@ -29,7 +29,6 @@ public class Position {
         } else {
             x = nextPosition;
         }
-
     }
 
     public void incrementY(int[] grid) {
