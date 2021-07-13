@@ -51,10 +51,6 @@ public class Rover {
 
     @Override
     public String toString() {
-        return "Rover{" +
-                "xCoordinate=" + xCoordinate +
-                ", yCoordinate=" + yCoordinate +
-                ", direction=" + direction +
-                '}';
+        return "Rover{xCoordinate=" + xCoordinate + ", yCoordinate=" + yCoordinate + ", direction=" + direction + '}';
     }
 }
