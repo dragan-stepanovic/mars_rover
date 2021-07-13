@@ -14,6 +14,10 @@ public class Position {
         return x;
     }
 
+    public int y() {
+        return y;
+    }
+
     public void incrementX(int[] grid) {
         this.x = increment(this.x, grid);
     }
@@ -52,9 +56,5 @@ public class Position {
 
     public void decrementY() {
         this.y--;
-    }
-
-    public int y() {
-        return y;
     }
 }
