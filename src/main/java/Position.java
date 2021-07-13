@@ -24,7 +24,6 @@ public class Position {
 
     public void decrementX(int[] grid) {
         this.x = decrement(grid, this.x);
-
     }
 
     public void incrementY(int[] grid) {
