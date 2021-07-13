@@ -23,11 +23,11 @@ public class Position {
     }
 
     public void decrementX(int[] grid) {
-        var nextPosition = x - 1;
+        var nextPosition = this.x - 1;
         if (nextPosition < 0) {
-            x = grid[0] - 1;
+            this.x = grid[0] - 1;
         } else {
-            x = nextPosition;
+            this.x = nextPosition;
         }
     }
 
@@ -36,11 +36,11 @@ public class Position {
     }
 
     public void decrementY(int[] grid) {
-        y = decrement(grid);
+        this.y = decrement(grid);
     }
 
     private int decrement(int[] grid) {
-        var nextPosition = y - 1;
+        var nextPosition = this.y - 1;
         if (nextPosition < 0) {
             return grid[1] - 1;
         }
