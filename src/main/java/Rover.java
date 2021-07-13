@@ -9,7 +9,7 @@ public class Rover {
         for (char command : commands.toCharArray())
             execute(command, grid);
 
-        return new Position(xCoordinate, yCoordinate, direction).asString();
+        return new Position(position.x(), yCoordinate, direction).asString();
     }
 
     public String execute(String commands) {
@@ -34,9 +34,10 @@ public class Rover {
         if (direction.movingToSouth()) {
             yCoordinate = Position.decrement(yCoordinate);
         } else if (direction.movingToWest()) {
-            xCoordinate = Position.decrement(xCoordinate);
+//            xCoordinate = Position.decrement(xCoordinate);
+            position.decrementX();
         } else if (direction.movingToEast()) {
-            xCoordinate = Position.increment(xCoordinate, grid);
+//            xCoordinate = Position.increment(xCoordinate, grid);
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {
             yCoordinate = Position.increment(yCoordinate, grid);
