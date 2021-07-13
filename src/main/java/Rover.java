@@ -8,7 +8,7 @@ public class Rover {
         for (char command : commands.toCharArray())
             execute(command, grid);
 
-        return new Position(position.x(), yCoordinate, direction).asString();
+        return new Position(position.x(), position.y(), direction).asString();
     }
 
     public String execute(String commands) {
@@ -31,14 +31,14 @@ public class Rover {
 
     private void moveOn(int[] grid) {
         if (direction.movingToSouth()) {
-            yCoordinate = Position.decrement(yCoordinate);
+//            yCoordinate = Position.decrement(yCoordinate);
             position.decrementY();
         } else if (direction.movingToWest()) {
             position.decrementX();
         } else if (direction.movingToEast()) {
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {
-            yCoordinate = Position.increment(yCoordinate, grid);
+//            yCoordinate = Position.increment(yCoordinate, grid);
             position.incrementY(grid);
         }
     }
