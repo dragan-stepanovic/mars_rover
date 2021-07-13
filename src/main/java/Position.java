@@ -43,9 +43,9 @@ public class Position {
         var nextPosition = y - 1;
         if (nextPosition < 0) {
             return grid[1] - 1;
-        } else {
-            return nextPosition;
         }
+
+        return nextPosition;
     }
 
     public static int increment(int value, int[] grid) {
