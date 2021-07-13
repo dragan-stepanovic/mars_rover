@@ -15,9 +15,9 @@ public class RoverTest {
     @Test
     void interprets_command_list() {
         assertEquals("0:0:W", aRover().execute("L"));
-        assertEquals("-2:0:W", aRover().execute("LMM"));
-        assertEquals("-2:-3:S", aRover().execute("LMMLLRMMM"));
-        assertEquals("-4:-4:S", aRover().execute("LMMLLRMMMRMMLM"));
+        assertEquals("1:4:N", aRover().execute("MMRMLMM"));
+        assertEquals("2:4:W", aRover().execute("RMMMLMMMMLLRM"));
+        assertEquals("4:4:N", aRover().execute("RMMLLRMMMRMMLM"));
     }
 
     @Test

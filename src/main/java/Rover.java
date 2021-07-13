@@ -32,7 +32,7 @@ public class Rover {
         if (direction.movingToSouth()) {
             position.decrementY();
         } else if (direction.movingToWest()) {
-            position.decrementX();
+            position.decrementX(grid);
         } else if (direction.movingToEast()) {
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {

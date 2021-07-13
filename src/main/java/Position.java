@@ -22,8 +22,14 @@ public class Position {
         this.x = increment(this.x, grid);
     }
 
-    public void decrementX() {
-        this.x--;
+    public void decrementX(int[] grid) {
+        var nextPosition = x - 1;
+        if (nextPosition < 0) {
+            x = grid[0] - 1;
+        } else {
+            x = nextPosition;
+        }
+
     }
 
     public void incrementY(int[] grid) {
