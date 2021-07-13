@@ -46,10 +46,6 @@ public class Position {
         return grid[1];
     }
 
-    public static int decrement(int value) {
-        return value - 1;
-    }
-
     String asString() {
         return x + ":" + y + ":" + direction.asChar();
     }
