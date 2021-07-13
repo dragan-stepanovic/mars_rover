@@ -35,6 +35,6 @@ public class Position {
     }
 
     String asString() {
-        return x + ":" + y + ":" + this.direction.asChar();
+        return x + ":" + y + ":" + direction.asChar();
     }
 }
