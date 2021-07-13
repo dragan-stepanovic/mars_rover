@@ -30,7 +30,7 @@ public class Position {
         return grid[1];
     }
 
-    public static int decrement(int value, int[] grid) {
+    public static int decrement(int value) {
         return value - 1;
     }
 
