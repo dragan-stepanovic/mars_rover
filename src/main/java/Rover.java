@@ -1,9 +1,8 @@
 public class Rover {
 
-    private int xCoordinate = 0;
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
-    private final Position position = new Position(xCoordinate, yCoordinate, direction);
+    private final Position position = new Position(0, yCoordinate, direction);
 
     public String execute(String commands, int[] grid) {
         for (char command : commands.toCharArray())
@@ -54,6 +53,6 @@ public class Rover {
 
     @Override
     public String toString() {
-        return "Rover{xCoordinate=" + xCoordinate + ", yCoordinate=" + yCoordinate + ", direction=" + direction + '}';
+        return "Rover{xCoordinate=" + position.x() + ", yCoordinate=" + yCoordinate + ", direction=" + direction + '}';
     }
 }
