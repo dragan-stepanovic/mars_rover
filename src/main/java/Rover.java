@@ -3,6 +3,7 @@ public class Rover {
     private int xCoordinate = 0;
     private int yCoordinate = 0;
     private Direction direction = Direction.north();
+    private Position position = new Position(xCoordinate, yCoordinate, direction);
 
     public String execute(String commands, int[] grid) {
         for (char command : commands.toCharArray())
