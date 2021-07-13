@@ -1,6 +1,6 @@
 public class Position {
 
-    private final int x;
+    private int x;
     private final int y;
     private final Direction direction;
 
@@ -11,7 +11,7 @@ public class Position {
     }
 
     public void incrementX(int[] grid) {
-        increment(this.x, grid);
+        this.x = increment(this.x, grid);
     }
 
     public static int increment(int value, int[] grid) {
