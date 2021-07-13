@@ -32,7 +32,7 @@ public class Position {
     }
 
     public void incrementY(int[] grid) {
-        this.y = increment(this.y, grid);
+        y = increment(this.y, grid);
     }
 
     public void decrementY(int[] grid) {
