@@ -6,18 +6,12 @@ public class RoverTest {
 
     @Test
     void wraps_around_the_grid() {
-        final int[] ints = new int[]{2, 2};
-        assertEquals("0:0:N", aRover().execute("MM", ints[1]));
-        final int[] ints1 = new int[]{2, 2};
-        assertEquals("0:0:E", aRover().execute("RMM", ints1[1]));
-        final int[] ints2 = new int[]{2, 2};
-        assertEquals("1:0:N", aRover().execute("RMLMM", ints2[1]));
-        final int[] ints3 = new int[]{2, 2};
-        assertEquals("1:0:W", aRover().execute("LM", ints3[1]));
-        final int[] ints4 = new int[]{2, 2};
-        assertEquals("0:1:S", aRover().execute("RRM", ints4[1]));
-        final int[] ints5 = new int[]{4, 4};
-        assertEquals("2:3:S", aRover().execute("RMMRM", ints5[1]));
+        assertEquals("0:0:N", aRover().execute("MM", 2));
+        assertEquals("0:0:E", aRover().execute("RMM", 2));
+        assertEquals("1:0:N", aRover().execute("RMLMM", 2));
+        assertEquals("1:0:W", aRover().execute("LM", 2));
+        assertEquals("0:1:S", aRover().execute("RRM", 2));
+        assertEquals("2:3:S", aRover().execute("RMMRM", 4));
     }
 
     @Test
