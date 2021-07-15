@@ -1,6 +1,6 @@
 public class Rover {
 
-    public static final int INFINITE_GRID_SIZE = 10000;
+    public static final int INFINITE_ENOUGH_GRID_SIZE = 10000;
 
     private Direction direction = Direction.north();
     private final Position position = new Position(0, 0, direction);
@@ -13,7 +13,7 @@ public class Rover {
     }
 
     public String execute(String commands) {
-        return this.execute(commands, INFINITE_GRID_SIZE);
+        return this.execute(commands, INFINITE_ENOUGH_GRID_SIZE);
     }
 
     private void execute(char issuedCommand, int gridSize) {
