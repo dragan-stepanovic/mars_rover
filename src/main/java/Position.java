@@ -51,7 +51,7 @@ public class Position {
             return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(grid[1]);
+            return wrapAroundMax(grid);
         }
         return nextPosition;
     }
@@ -60,8 +60,8 @@ public class Position {
         return 0;
     }
 
-    private int wrapAroundMax(int max) {
-        return max - 1;
+    private int wrapAroundMax(int[] grid) {
+        return max(grid) - 1;
     }
 
     private static boolean offGridAboveMax(int nextPosition, int[] grid) {
