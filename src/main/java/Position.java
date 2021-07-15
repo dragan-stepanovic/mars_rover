@@ -18,8 +18,8 @@ public class Position {
         return y;
     }
 
-    public void incrementX(int[] grid) {
-        this.x = increment(this.x, grid[1]);
+    public void incrementX(int gridSize) {
+        this.x = increment(this.x, gridSize);
     }
 
     public void incrementY(int gridSize) {
