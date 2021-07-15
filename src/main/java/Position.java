@@ -60,20 +60,20 @@ public class Position {
         return 0;
     }
 
-    private int wrapAroundMax(int[] grid) {
-        return max(grid) - 1;
+    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
+        return nextPosition == max(grid[1]);
     }
 
-    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
-        return nextPosition == max(grid);
+    private static int max(int gridSize) {
+        return gridSize;
     }
 
     private static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < 0;
     }
 
-    private static int max(int[] grid) {
-        return grid[1];
+    private int wrapAroundMax(int[] grid) {
+        return max(grid[1]) - 1;
     }
 
     String asString() {
