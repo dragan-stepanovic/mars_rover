@@ -76,11 +76,11 @@ public class Position {
         return max(gridSize) - 1;
     }
 
-    String asString() {
-        return this.x + ":" + this.y + ":" + this.direction.asChar();
-    }
-
     Direction rotateRight(Direction direction) {
         return direction.rightOfIt();
+    }
+
+    String asString() {
+        return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
 }
