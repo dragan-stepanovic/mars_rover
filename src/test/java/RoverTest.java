@@ -11,6 +11,7 @@ public class RoverTest {
         assertEquals("1:0:N", aRover().execute("RMLMM", new int[]{2, 2}));
         assertEquals("1:0:W", aRover().execute("LM", new int[]{2, 2}));
         assertEquals("0:1:S", aRover().execute("RRM", new int[]{2, 2}));
+        assertEquals("2:3:S", aRover().execute("RMMRM", new int[]{4, 4}));
     }
 
     @Test
