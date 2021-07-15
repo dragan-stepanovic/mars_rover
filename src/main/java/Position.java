@@ -30,8 +30,8 @@ public class Position {
         this.x = decrement(this.x, gridSize);
     }
 
-    public void decrementY(int[] grid) {
-        this.y = decrement(this.y, grid[1]);
+    public void decrementY(int gridSize) {
+        this.y = decrement(this.y, gridSize);
     }
 
     public int increment(int value, int gridSize) {

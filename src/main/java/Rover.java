@@ -34,7 +34,7 @@ public class Rover {
 
     private void moveOn(int[] grid) {
         if (direction.movingToSouth()) {
-            position.decrementY(grid);
+            position.decrementY(grid[1]);
         } else if (direction.movingToWest()) {
             position.decrementX(grid[1]);
         } else if (direction.movingToEast()) {
