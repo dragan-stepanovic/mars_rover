@@ -27,11 +27,11 @@ public class Position {
     }
 
     public void decrementX(int[] grid) {
-        this.x = decrement(this.x, grid);
+        this.x = decrement(this.x, grid[1]);
     }
 
     public void decrementY(int[] grid) {
-        this.y = decrement(this.y, grid);
+        this.y = decrement(this.y, grid[1]);
     }
 
     public int increment(int value, int gridSize) {
@@ -40,9 +40,9 @@ public class Position {
         return nextPosition;
     }
 
-    private int decrement(int value, int[] grid) {
+    private int decrement(int value, int gridSize) {
         var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(nextPosition, grid[1]);
+        nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
 
