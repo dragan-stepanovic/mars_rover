@@ -10,6 +10,10 @@ public class Position {
         this.direction = direction;
     }
 
+    static Position initial() {
+        return new Position(0, 0, Direction.north());
+    }
+
     public int x() {
         return x;
     }

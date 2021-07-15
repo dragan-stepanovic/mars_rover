@@ -2,7 +2,7 @@ public class Rover {
 
     public static final int INFINITE_ENOUGH_GRID_SIZE = 10000;
 
-    private final Position position = new Position(0, 0, Direction.north());
+    private final Position position = Position.initial();
 
     public String execute(String commands, int gridSize) {
         for (char command : split(commands))
