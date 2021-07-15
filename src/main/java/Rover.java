@@ -3,8 +3,8 @@ public class Rover {
     private Direction direction = Direction.north();
     private final Position position = new Position(0, 0, direction);
 
-    public String execute(String commands, int[] gridSize) {
-        return executeWithSquareGrid(commands, gridSize[1]);
+    public String execute(String commands, int gridSize) {
+        return executeWithSquareGrid(commands, gridSize);
     }
 
     private String executeWithSquareGrid(String commands, int gridSize) {
@@ -15,7 +15,8 @@ public class Rover {
     }
 
     public String execute(String commands) {
-        return this.execute(commands, new int[]{100, 100});
+        final int[] ints = new int[]{100, 100};
+        return this.execute(commands, 100);
     }
 
     private void execute(char issuedCommand, int gridSize) {
