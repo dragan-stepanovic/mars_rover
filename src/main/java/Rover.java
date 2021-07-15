@@ -40,7 +40,7 @@ public class Rover {
         } else if (direction.movingToEast()) {
             position.incrementX(grid);
         } else if (direction.movingToNorth()) {
-            position.incrementY(grid);
+            position.incrementY(grid[1]);
         }
     }
 
