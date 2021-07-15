@@ -9,7 +9,7 @@ public class Rover {
 
     private String executeWithSquareGrid(String commands, int[] gridSize) {
         for (char command : commands.toCharArray())
-            execute(command, gridSize);
+            execute(command, gridSize[1]);
 
         return new Position(position.x(), position.y(), direction).asString();
     }
@@ -18,7 +18,7 @@ public class Rover {
         return this.execute(commands, new int[]{100, 100});
     }
 
-    private void execute(char issuedCommand, int[] grid) {
+    private void execute(char issuedCommand, int gridSize) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
                 rotateLeft();
@@ -27,7 +27,7 @@ public class Rover {
                 rotateRight();
                 break;
             case Command.MOVE:
-                moveOn(grid[1]);
+                moveOn(gridSize);
                 break;
         }
     }
