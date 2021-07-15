@@ -36,13 +36,13 @@ public class Position {
 
     public int increment(int value, int[] grid) {
         int nextPosition = value + 1;
-        nextPosition = wrapIfNeeded(nextPosition, grid);
+        nextPosition = wrapIfNeeded(nextPosition, grid, grid[1]);
         return nextPosition;
     }
 
     private int decrement(int value, int[] grid) {
         var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(nextPosition, grid);
+        nextPosition = wrapIfNeeded(nextPosition, grid, grid[1]);
         return nextPosition;
     }
 
@@ -54,12 +54,12 @@ public class Position {
         return 0;
     }
 
-    private int wrapIfNeeded(int nextPosition, int[] grid) {
+    private int wrapIfNeeded(int nextPosition, int[] grid, int gridSize) {
         if (offGridAboveMax(nextPosition, grid[1])) {
             return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(grid[1]);
+            return wrapAroundMax(gridSize);
         }
         return nextPosition;
     }
