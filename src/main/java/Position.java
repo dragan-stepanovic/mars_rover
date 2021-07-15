@@ -39,9 +39,9 @@ public class Position {
     }
 
     public static int increment(int value, int[] grid) {
-        final int nextPosition = value + 1;
+        int nextPosition = value + 1;
         if (nextPositionGoesOffGrid(nextPosition, grid))
-            return wrapAround();
+            nextPosition = wrapAround();
 
         return nextPosition;
     }
