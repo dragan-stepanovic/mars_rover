@@ -46,22 +46,22 @@ public class Position {
         return nextPosition;
     }
 
-    private int wrapIfNeeded(int nextPosition, int[] grid) {
-        if (offGridAboveMax(nextPosition, grid)) {
-            return wrapAroundMin();
-        }
-        if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(grid);
-        }
-        return nextPosition;
+    private static boolean offGridAboveMax(int nextPosition, int gridSize) {
+        return nextPosition == max(gridSize);
     }
 
     private static int wrapAroundMin() {
         return 0;
     }
 
-    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
-        return nextPosition == max(grid[1]);
+    private int wrapIfNeeded(int nextPosition, int[] grid) {
+        if (offGridAboveMax(nextPosition, grid[1])) {
+            return wrapAroundMin();
+        }
+        if (offGridUnderMin(nextPosition)) {
+            return wrapAroundMax(grid);
+        }
+        return nextPosition;
     }
 
     private static int max(int gridSize) {
