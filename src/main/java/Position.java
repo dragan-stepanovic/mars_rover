@@ -80,11 +80,11 @@ public class Position {
         return direction.rightOfIt();
     }
 
-    String asString() {
-        return this.x + ":" + this.y + ":" + this.direction.asChar();
-    }
-
     Direction rotateLeft(Direction direction) {
         return direction.leftOfIt();
+    }
+
+    String asString() {
+        return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
 }
