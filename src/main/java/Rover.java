@@ -12,10 +12,6 @@ public class Rover {
         return new Position(position.x(), position.y(), direction).asString();
     }
 
-    private char[] toCommands(String commands) {
-        return commands.toCharArray();
-    }
-
     public String execute(String commands) {
         return this.execute(commands, INFINITE_GRID_SIZE);
     }
@@ -52,5 +48,9 @@ public class Rover {
 
     private void rotateLeft() {
         direction = direction.leftOfIt();
+    }
+
+    private char[] toCommands(String commands) {
+        return commands.toCharArray();
     }
 }
