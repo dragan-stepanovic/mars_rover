@@ -19,7 +19,7 @@ public class Rover {
     private void execute(char issuedCommand, int gridSize) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                direction = rotateLeft();
+                direction = rotateLeft(direction);
                 break;
             case Command.ROTATE_RIGHT:
                 direction = position.rotateRight(direction);
@@ -42,7 +42,7 @@ public class Rover {
         }
     }
 
-    private Direction rotateLeft() {
+    private Direction rotateLeft(Direction direction) {
         return direction.leftOfIt();
     }
 
