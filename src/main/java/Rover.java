@@ -15,7 +15,6 @@ public class Rover {
     }
 
     public String execute(String commands) {
-        final int[] ints = new int[]{100, 100};
         return this.execute(commands, 100);
     }
 
