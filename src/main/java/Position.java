@@ -34,13 +34,13 @@ public class Position {
         this.y = decrement(grid, this.y);
     }
 
-    private static boolean nextPositionGoesOffGrid(int[] grid, int nextPosition) {
+    private static boolean nextPositionGoesOffGrid(int nextPosition, int[] grid) {
         return nextPosition == maxY(grid) || nextPosition < 0;
     }
 
     public static int increment(int value, int[] grid) {
         final int nextPosition = value + 1;
-        if (nextPositionGoesOffGrid(grid, nextPosition))
+        if (nextPositionGoesOffGrid(nextPosition, grid))
             return wrapAround();
 
         return nextPosition;
@@ -52,7 +52,7 @@ public class Position {
 
     private int decrement(int[] grid, int value) {
         var nextPosition = value - 1;
-        if (nextPositionGoesOffGrid(grid, nextPosition)) {
+        if (nextPositionGoesOffGrid(nextPosition, grid)) {
             return grid[1] - 1;
         }
 
