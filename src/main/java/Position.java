@@ -59,7 +59,7 @@ public class Position {
             return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(grid);
+            return wrapAroundMax(grid[1]);
         }
         return nextPosition;
     }
@@ -72,8 +72,8 @@ public class Position {
         return nextPosition < 0;
     }
 
-    private int wrapAroundMax(int[] grid) {
-        return max(grid[1]) - 1;
+    private int wrapAroundMax(int gridSize) {
+        return max(gridSize) - 1;
     }
 
     String asString() {
