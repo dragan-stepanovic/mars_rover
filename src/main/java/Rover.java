@@ -43,8 +43,7 @@ public class Rover {
     }
 
     private Direction rotateLeft() {
-        direction = direction.leftOfIt();
-        return direction;
+        return direction.leftOfIt();
     }
 
     private char[] split(String commands) {
