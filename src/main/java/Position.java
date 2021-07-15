@@ -34,10 +34,6 @@ public class Position {
         this.y = decrement(grid, this.y);
     }
 
-    private static boolean nextPositionGoesOffGrid(int nextPosition, int[] grid) {
-        return offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition);
-    }
-
     private static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < 0;
     }
@@ -48,7 +44,7 @@ public class Position {
 
     public static int increment(int value, int[] grid) {
         int nextPosition = value + 1;
-        if (nextPositionGoesOffGrid(nextPosition, grid))
+        if (offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition))
             nextPosition = wrapAround();
 
         return nextPosition;
@@ -65,7 +61,7 @@ public class Position {
     }
 
     private int wrapIfNeeded(int[] grid, int nextPosition) {
-        if (nextPositionGoesOffGrid(nextPosition, grid)) {
+        if (offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition)) {
             return grid[1] - 1;
         }
         return nextPosition;
