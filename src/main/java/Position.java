@@ -52,10 +52,14 @@ public class Position {
 
     private int decrement(int[] grid, int value) {
         var nextPosition = value - 1;
-        if (nextPositionGoesOffGrid(nextPosition, grid)) {
-            nextPosition = grid[1] - 1;
-        }
+        nextPosition = wrapIfNeeded(grid, nextPosition);
+        return nextPosition;
+    }
 
+    private int wrapIfNeeded(int[] grid, int nextPosition) {
+        if (nextPositionGoesOffGrid(nextPosition, grid)) {
+            return grid[1] - 1;
+        }
         return nextPosition;
     }
 
