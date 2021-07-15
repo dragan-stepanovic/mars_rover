@@ -6,10 +6,14 @@ public class Rover {
     private final Position position = new Position(0, 0, direction);
 
     public String execute(String commands, int gridSize) {
-        for (char command : commands.toCharArray())
+        for (char command : toCommands(commands))
             execute(command, gridSize);
 
         return new Position(position.x(), position.y(), direction).asString();
+    }
+
+    private char[] toCommands(String commands) {
+        return commands.toCharArray();
     }
 
     public String execute(String commands) {
