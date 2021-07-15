@@ -35,7 +35,15 @@ public class Position {
     }
 
     private static boolean nextPositionGoesOffGrid(int nextPosition, int[] grid) {
-        return nextPosition == maxY(grid) || nextPosition < 0;
+        return offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition);
+    }
+
+    private static boolean offGridUnderMin(int nextPosition) {
+        return nextPosition < 0;
+    }
+
+    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
+        return nextPosition == maxY(grid);
     }
 
     public static int increment(int value, int[] grid) {
