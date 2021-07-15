@@ -3,9 +3,9 @@ public class Rover {
     private Direction direction = Direction.north();
     private final Position position = new Position(0, 0, direction);
 
-    public String execute(String commands, int[] grid) {
+    public String execute(String commands, int[] gridSize) {
         for (char command : commands.toCharArray())
-            execute(command, grid);
+            execute(command, gridSize);
 
         return new Position(position.x(), position.y(), direction).asString();
     }
