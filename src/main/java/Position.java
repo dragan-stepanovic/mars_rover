@@ -83,4 +83,8 @@ public class Position {
     String asString() {
         return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
+
+    Direction rotateLeft(Direction direction) {
+        return direction.leftOfIt();
+    }
 }
