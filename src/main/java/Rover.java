@@ -4,12 +4,12 @@ public class Rover {
     private final Position position = new Position(0, 0, direction);
 
     public String execute(String commands, int[] gridSize) {
-        return executeWithSquareGrid(commands, gridSize);
+        return executeWithSquareGrid(commands, gridSize[1]);
     }
 
-    private String executeWithSquareGrid(String commands, int[] gridSize) {
+    private String executeWithSquareGrid(String commands, int gridSize) {
         for (char command : commands.toCharArray())
-            execute(command, gridSize[1]);
+            execute(command, gridSize);
 
         return new Position(position.x(), position.y(), direction).asString();
     }
