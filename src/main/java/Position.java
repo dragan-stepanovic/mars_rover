@@ -42,7 +42,7 @@ public class Position {
         return nextPosition == maxY(grid);
     }
 
-    public static int increment(int value, int[] grid) {
+    public int increment(int value, int[] grid) {
         int nextPosition = value + 1;
         if (offGridAboveMax(nextPosition, grid))
             nextPosition = wrapAroundMin();
