@@ -89,4 +89,8 @@ public class Position {
     String asString() {
         return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
+
+    public Direction direction() {
+        return this.direction;
+    }
 }

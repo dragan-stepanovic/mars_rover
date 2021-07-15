@@ -9,7 +9,7 @@ public class Rover {
         for (char command : split(commands))
             execute(command, gridSize);
 
-        return new Position(position.x(), position.y(), direction).asString();
+        return new Position(position.x(), position.y(), position.direction()).asString();
     }
 
     public String execute(String commands) {
@@ -25,19 +25,19 @@ public class Rover {
                 direction = position.rotateRight();
                 break;
             case Command.MOVE:
-                moveOnGridWith(gridSize);
+                moveOnGridWith(gridSize, position.direction());
                 break;
         }
     }
 
-    private void moveOnGridWith(int gridSize) {
+    private void moveOnGridWith(int gridSize, Direction direction) {
         if (direction.movingToSouth()) {
             position.decrementY(gridSize);
-        } else if (direction.movingToWest()) {
+        } else if (this.direction.movingToWest()) {
             position.decrementX(gridSize);
-        } else if (direction.movingToEast()) {
+        } else if (this.direction.movingToEast()) {
             position.incrementX(gridSize);
-        } else if (direction.movingToNorth()) {
+        } else if (this.direction.movingToNorth()) {
             position.incrementY(gridSize);
         }
     }
