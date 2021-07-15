@@ -57,7 +57,7 @@ public class Position {
             return grid[1] - 1;
         }
         if (offGridUnderMin(nextPosition)) {
-            return 0;
+            return wrapAroundMin();
         }
         return nextPosition;
     }
