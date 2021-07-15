@@ -65,14 +65,14 @@ public class Position {
     }
 
     private static boolean offGridAboveMax(int nextPosition, int[] grid) {
-        return nextPosition == maxY(grid);
+        return nextPosition == max(grid);
     }
 
     private static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < 0;
     }
 
-    private static int maxY(int[] grid) {
+    private static int max(int[] grid) {
         return grid[1];
     }
 
