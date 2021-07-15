@@ -23,7 +23,7 @@ public class Position {
     }
 
     public void decrementX(int[] grid) {
-        this.x = decrement(grid, this.x);
+        this.x = decrement(this.x, grid);
     }
 
     public void incrementY(int[] grid) {
@@ -31,7 +31,7 @@ public class Position {
     }
 
     public void decrementY(int[] grid) {
-        this.y = decrement(grid, this.y);
+        this.y = decrement(this.y, grid);
     }
 
     private static boolean offGridUnderMin(int nextPosition) {
@@ -50,7 +50,7 @@ public class Position {
         return nextPosition;
     }
 
-    private int decrement(int[] grid, int value) {
+    private int decrement(int value, int[] grid) {
         var nextPosition = value - 1;
         nextPosition = wrapIfNeeded(grid, nextPosition);
         return nextPosition;
