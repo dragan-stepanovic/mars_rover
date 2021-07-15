@@ -22,7 +22,7 @@ public class Rover {
                 rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                rotateRight(position);
+                direction = rotateRight(position, direction);
                 break;
             case Command.MOVE:
                 moveOnGridWith(gridSize);
@@ -42,8 +42,8 @@ public class Rover {
         }
     }
 
-    private void rotateRight(Position position) {
-        direction = direction.rightOfIt();
+    private Direction rotateRight(Position position, Direction direction) {
+        return direction.rightOfIt();
     }
 
     private void rotateLeft() {
