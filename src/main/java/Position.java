@@ -44,7 +44,7 @@ public class Position {
 
     private int decrement(int value, int[] grid) {
         var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(grid, nextPosition);
+        nextPosition = wrapIfNeeded(nextPosition, grid);
         return nextPosition;
     }
 
@@ -52,7 +52,7 @@ public class Position {
         return 0;
     }
 
-    private int wrapIfNeeded(int[] grid, int nextPosition) {
+    private int wrapIfNeeded(int nextPosition, int[] grid) {
         if (offGridAboveMax(nextPosition, grid)) {
             return grid[1] - 1;
         }
