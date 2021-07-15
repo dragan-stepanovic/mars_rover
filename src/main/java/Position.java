@@ -19,11 +19,11 @@ public class Position {
     }
 
     public void incrementX(int[] grid) {
-        this.x = increment(this.x, grid);
+        this.x = increment(this.x, grid[1]);
     }
 
     public void incrementY(int[] grid) {
-        this.y = increment(this.y, grid);
+        this.y = increment(this.y, grid[1]);
     }
 
     public void decrementX(int[] grid) {
@@ -34,9 +34,9 @@ public class Position {
         this.y = decrement(this.y, grid);
     }
 
-    public int increment(int value, int[] grid) {
+    public int increment(int value, int gridSize) {
         int nextPosition = value + 1;
-        nextPosition = wrapIfNeeded(nextPosition, grid[1]);
+        nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
 
