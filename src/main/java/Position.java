@@ -34,14 +34,6 @@ public class Position {
         this.y = decrement(this.y, grid);
     }
 
-    private static boolean offGridUnderMin(int nextPosition) {
-        return nextPosition < 0;
-    }
-
-    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
-        return nextPosition == maxY(grid);
-    }
-
     public int increment(int value, int[] grid) {
         int nextPosition = value + 1;
         if (offGridAboveMax(nextPosition, grid))
@@ -67,6 +59,14 @@ public class Position {
             return grid[1] - 1;
         }
         return nextPosition;
+    }
+
+    private static boolean offGridUnderMin(int nextPosition) {
+        return nextPosition < 0;
+    }
+
+    private static boolean offGridAboveMax(int nextPosition, int[] grid) {
+        return nextPosition == maxY(grid);
     }
 
     private static int maxY(int[] grid) {
