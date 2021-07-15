@@ -61,7 +61,9 @@ public class Position {
     }
 
     private int wrapIfNeeded(int[] grid, int nextPosition) {
-        if (offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition)) {
+        if (offGridAboveMax(nextPosition, grid)) {
+            return grid[1] - 1;
+        } else if (offGridUnderMin(nextPosition)) {
             return grid[1] - 1;
         }
         return nextPosition;
