@@ -76,12 +76,12 @@ public class Position {
         return max(gridSize) - 1;
     }
 
-    Direction rotateRight(Direction direction) {
+    Direction rotateRight() {
         this.direction = this.direction.rightOfIt();
         return this.direction;
     }
 
-    Direction rotateLeft(Direction direction) {
+    Direction rotateLeft() {
         this.direction = this.direction.leftOfIt();
         return this.direction;
     }
