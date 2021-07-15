@@ -6,7 +6,7 @@ public class Rover {
     private final Position position = new Position(0, 0, direction);
 
     public String execute(String commands, int gridSize) {
-        for (char command : toCommands(commands))
+        for (char command : split(commands))
             execute(command, gridSize);
 
         return new Position(position.x(), position.y(), direction).asString();
@@ -50,7 +50,7 @@ public class Rover {
         direction = direction.leftOfIt();
     }
 
-    private char[] toCommands(String commands) {
+    private char[] split(String commands) {
         return commands.toCharArray();
     }
 }
