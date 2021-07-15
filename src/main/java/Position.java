@@ -22,12 +22,12 @@ public class Position {
         this.x = increment(this.x, grid);
     }
 
-    public void decrementX(int[] grid) {
-        this.x = decrement(this.x, grid);
-    }
-
     public void incrementY(int[] grid) {
         this.y = increment(this.y, grid);
+    }
+
+    public void decrementX(int[] grid) {
+        this.x = decrement(this.x, grid);
     }
 
     public void decrementY(int[] grid) {
