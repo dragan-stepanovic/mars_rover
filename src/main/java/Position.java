@@ -41,7 +41,7 @@ public class Position {
     }
 
     private int decrement(int value, int[] grid) {
-        var nextPosition = wrapAroundMax(value);
+        var nextPosition = value - 1;
         nextPosition = wrapIfNeeded(nextPosition, grid);
         return nextPosition;
     }
