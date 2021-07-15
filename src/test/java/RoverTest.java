@@ -9,7 +9,7 @@ public class RoverTest {
         assertEquals("0:0:N", aRover().execute("MM", new int[]{2, 2}));
         assertEquals("0:0:E", aRover().execute("RMM", new int[]{2, 2}));
         assertEquals("1:0:N", aRover().execute("RMLMM", new int[]{2, 2}));
-        assertEquals("1:0:W", aRover().execute("LM", new int[]{2, 2}));
+        assertEquals("0:0:W", aRover().execute("LM", new int[]{2, 2}));
         assertEquals("0:1:S", aRover().execute("RRM", new int[]{2, 2}));
     }
 
