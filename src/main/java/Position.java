@@ -45,19 +45,19 @@ public class Position {
     public static int increment(int value, int[] grid) {
         int nextPosition = value + 1;
         if (offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition))
-            nextPosition = wrapAround();
+            nextPosition = wrapAroundMin();
 
         return nextPosition;
-    }
-
-    private static int wrapAround() {
-        return 0;
     }
 
     private int decrement(int[] grid, int value) {
         var nextPosition = value - 1;
         nextPosition = wrapIfNeeded(grid, nextPosition);
         return nextPosition;
+    }
+
+    private static int wrapAroundMin() {
+        return 0;
     }
 
     private int wrapIfNeeded(int[] grid, int nextPosition) {
