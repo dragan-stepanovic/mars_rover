@@ -44,7 +44,7 @@ public class Position {
 
     public static int increment(int value, int[] grid) {
         int nextPosition = value + 1;
-        if (offGridAboveMax(nextPosition, grid) || offGridUnderMin(nextPosition))
+        if (offGridAboveMax(nextPosition, grid))
             nextPosition = wrapAroundMin();
 
         return nextPosition;
