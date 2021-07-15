@@ -2,7 +2,7 @@ public class Position {
 
     private int x;
     private int y;
-    private final Direction direction;
+    private Direction direction;
 
     public Position(int x, int y, Direction direction) {
         this.x = x;
@@ -77,11 +77,13 @@ public class Position {
     }
 
     Direction rotateRight(Direction direction) {
-        return direction.rightOfIt();
+        this.direction = this.direction.rightOfIt();
+        return this.direction;
     }
 
     Direction rotateLeft(Direction direction) {
-        return direction.leftOfIt();
+        this.direction = this.direction.leftOfIt();
+        return this.direction;
     }
 
     String asString() {
