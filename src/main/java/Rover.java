@@ -11,7 +11,7 @@ public class Rover {
     }
 
     public String execute(String commands) {
-        return this.execute(commands, 100);
+        return this.execute(commands, 10);
     }
 
     private void execute(char issuedCommand, int gridSize) {
