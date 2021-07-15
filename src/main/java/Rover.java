@@ -1,6 +1,7 @@
 public class Rover {
 
     public static final int INFINITE_GRID_SIZE = 10000;
+
     private Direction direction = Direction.north();
     private final Position position = new Position(0, 0, direction);
 
