@@ -51,7 +51,7 @@ public class Position {
             return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMin();
+            return wrapAroundMax(grid[1]);
         }
         return nextPosition;
     }
