@@ -36,9 +36,7 @@ public class Position {
 
     public int increment(int value, int[] grid) {
         int nextPosition = value + 1;
-        if (offGridAboveMax(nextPosition, grid))
-            nextPosition = wrapAroundMin();
-
+        nextPosition = wrapIfNeeded(nextPosition, grid);
         return nextPosition;
     }
 
@@ -54,7 +52,7 @@ public class Position {
 
     private int wrapIfNeeded(int nextPosition, int[] grid) {
         if (offGridAboveMax(nextPosition, grid)) {
-            return wrapAroundMax(grid[1]);
+            return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
             return wrapAroundMin();
