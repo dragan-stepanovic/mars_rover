@@ -80,14 +80,12 @@ public class Position {
         return max(gridSize) - 1;
     }
 
-    Direction rotateRight() {
+    void rotateRight() {
         this.direction = this.direction.rightOfIt();
-        return this.direction;
     }
 
-    Direction rotateLeft() {
+    void rotateLeft() {
         this.direction = this.direction.leftOfIt();
-        return this.direction;
     }
 
     String asString() {
