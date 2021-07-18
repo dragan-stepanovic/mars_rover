@@ -49,7 +49,7 @@ public class Direction {
         return new Direction(directionToLeftOfIt.get(value));
     }
 
-    public static Direction north() {
+    public static Direction initial() {
         return new Direction(NORTH);
     }
 
