@@ -88,14 +88,6 @@ public class Position {
         this.direction = this.direction.leftOfIt();
     }
 
-    String asString() {
-        return this.x + ":" + this.y + ":" + this.direction.asChar();
-    }
-
-    public Direction direction() {
-        return this.direction;
-    }
-
     boolean movingToSouth() {
         return direction().movingToSouth();
     }
@@ -110,5 +102,13 @@ public class Position {
 
     boolean movingToNorth() {
         return direction().movingToNorth();
+    }
+
+    String asString() {
+        return this.x + ":" + this.y + ":" + this.direction.asChar();
+    }
+
+    public Direction direction() {
+        return this.direction;
     }
 }
