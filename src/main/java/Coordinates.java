@@ -37,6 +37,16 @@ public class Coordinates {
         return nextPosition;
     }
 
+    int wrapIfNeeded(int nextPosition, int gridSize) {
+        if (offGridAboveMax(nextPosition, gridSize)) {
+            return wrapAroundMin();
+        }
+        if (offGridUnderMin(nextPosition)) {
+            return wrapAroundMax(gridSize);
+        }
+        return nextPosition;
+    }
+
     static int gridMaximumValue(int gridSize) {
         return gridSize;
     }
@@ -55,15 +65,5 @@ public class Coordinates {
 
     int wrapAroundMax(int gridSize) {
         return gridMaximumValue(gridSize) - 1;
-    }
-
-    int wrapIfNeeded(int nextPosition, int gridSize) {
-        if (offGridAboveMax(nextPosition, gridSize)) {
-            return wrapAroundMin();
-        }
-        if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(gridSize);
-        }
-        return nextPosition;
     }
 }
