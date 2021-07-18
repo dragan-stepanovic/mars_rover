@@ -1,15 +1,13 @@
 public class Position {
 
-    private final Coordinates coordinates;
     Direction direction;
 
-    private Position(Coordinates coordinates, Direction direction) {
-        this.coordinates = coordinates;
+    private Position(Direction direction) {
         this.direction = direction;
     }
 
     static Position initial() {
-        return new Position(Coordinates.initial(), Direction.initial());
+        return new Position(Direction.initial());
     }
 
     void rotateRight() {
