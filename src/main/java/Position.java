@@ -21,7 +21,7 @@ public class Position {
     }
 
     public void decrementX(int gridSize) {
-        coordinates.x = coordinates.decrement(coordinates.x, gridSize);
+        coordinates.x = coordinates.decrementXNew(gridSize);
     }
 
     public void decrementY(int gridSize) {
