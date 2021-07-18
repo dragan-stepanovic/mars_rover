@@ -9,7 +9,7 @@ public class Coordinates {
         this.y = y;
     }
 
-    static Coordinates initialCoordinates() {
+    static Coordinates initial() {
         return new Coordinates(GRID_MINIMUM_VALUE, GRID_MINIMUM_VALUE);
     }
 
