@@ -1,7 +1,8 @@
 public class Coordinates {
-    public static final int GRID_MINIMUM_VALUE = 0;
     int x;
     int y;
+    
+    public static final int GRID_MINIMUM_VALUE = 0;
 
     public Coordinates(int x, int y) {
         this.x = x;
