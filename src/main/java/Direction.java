@@ -2,7 +2,7 @@ import java.util.Map;
 
 public class Direction {
 
-    private char value;
+    public char value;
 
     public static final char FACING_NORTH = 'N';
     public static final char FACING_EAST = 'E';
@@ -27,22 +27,6 @@ public class Direction {
 
     public static Direction initial() {
         return new Direction(FACING_NORTH);
-    }
-
-    boolean facingNorth() {
-        return value == FACING_NORTH;
-    }
-
-    boolean facingEast() {
-        return value == FACING_EAST;
-    }
-
-    boolean facingSouth() {
-        return value == FACING_SOUTH;
-    }
-
-    boolean facingWest() {
-        return value == FACING_WEST;
     }
 
     void rotateRight() {
