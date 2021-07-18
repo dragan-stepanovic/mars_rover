@@ -95,4 +95,8 @@ public class Position {
     public Direction direction() {
         return this.direction;
     }
+
+    boolean movingToSouth() {
+        return direction().movingToSouth();
+    }
 }
