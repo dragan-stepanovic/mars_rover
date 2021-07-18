@@ -35,7 +35,7 @@ public class Rover {
     }
 
     void rotateLeft() {
-        this.direction = this.direction.rotateLeft();
+        this.direction.rotateLeft();
     }
 
     private void moveOnGridWith(int gridSize) {

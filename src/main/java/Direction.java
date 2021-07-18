@@ -45,8 +45,8 @@ public class Direction {
         value = directionToRightOfIt.get(value);
     }
 
-    public Direction rotateLeft() {
-        return new Direction(directionToLeftOfIt.get(value));
+    public void rotateLeft() {
+        value = directionToLeftOfIt.get(value);
     }
 
     public static Direction initial() {
