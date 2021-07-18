@@ -89,26 +89,23 @@ public class Position {
     }
 
     boolean movingToSouth() {
-        return direction().movingToSouth();
+        return this.direction.movingToSouth();
     }
 
     boolean movingToWest() {
-        return direction().movingToWest();
+        return this.direction.movingToWest();
     }
 
     boolean movingToEast() {
-        return direction().movingToEast();
+        return this.direction.movingToEast();
     }
 
     boolean movingToNorth() {
-        return direction().movingToNorth();
+        return this.direction.movingToNorth();
     }
 
     String asString() {
         return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
 
-    private Direction direction() {
-        return this.direction;
-    }
 }
