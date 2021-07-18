@@ -13,7 +13,7 @@ public class Rover {
         for (char command : split(commands))
             execute(command, gridSize);
 
-        return position.asString();
+        return position.coordinates.asString() + ":" + position.direction.asChar();
     }
 
     private void execute(char issuedCommand, int gridSize) {

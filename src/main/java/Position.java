@@ -35,8 +35,4 @@ public class Position {
     boolean movingToNorth() {
         return this.direction.movingToNorth();
     }
-
-    String asString() {
-        return coordinates.asString() + ":" + this.direction.asChar();
-    }
 }
