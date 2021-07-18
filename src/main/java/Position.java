@@ -14,10 +14,6 @@ public class Position {
         this.direction = this.direction.rightOfIt();
     }
 
-    void rotateLeft() {
-        this.direction = this.direction.leftOfIt();
-    }
-
     boolean movingToSouth() {
         return this.direction.movingToSouth();
     }

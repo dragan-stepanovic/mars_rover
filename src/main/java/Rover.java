@@ -21,7 +21,7 @@ public class Rover {
     private void execute(char issuedCommand, int gridSize) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                position.rotateLeft();
+                rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
                 position.rotateRight();
@@ -30,6 +30,10 @@ public class Rover {
                 moveOnGridWith(gridSize);
                 break;
         }
+    }
+
+    void rotateLeft() {
+        this.position.direction = this.position.direction.leftOfIt();
     }
 
     private void moveOnGridWith(int gridSize) {
