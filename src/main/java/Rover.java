@@ -11,7 +11,7 @@ public class Rover {
         for (char command : split(commands))
             execute(command, gridSize);
 
-        return new Position(position.x(), position.y(), position.direction()).asString();
+        return position.asString();
     }
 
     private void execute(char issuedCommand, int gridSize) {
