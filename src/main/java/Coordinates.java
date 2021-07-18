@@ -1,5 +1,5 @@
 public class Coordinates {
-    final int x;
+    int x;
     final int y;
 
     public Coordinates(int x, int y) {
