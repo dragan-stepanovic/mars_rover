@@ -42,6 +42,7 @@ public class Rover {
             this.coordinates.incrementX(gridSize);
         } else if (this.position.movingToNorth()) {
             this.position.coordinates.incrementY(gridSize);
+            this.coordinates.incrementY(gridSize);
         }
     }
 
