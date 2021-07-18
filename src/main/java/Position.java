@@ -23,7 +23,6 @@ public class Position {
 
     public void incrementY(int gridSize) {
         coordinates.y = increment(coordinates.y, gridSize);
-        this.y = increment(this.y, gridSize);
     }
 
     public void decrementX(int gridSize) {
@@ -32,7 +31,6 @@ public class Position {
 
     public void decrementY(int gridSize) {
         coordinates.y = decrement(coordinates.y, gridSize);
-        this.y = decrement(this.y, gridSize);
     }
 
     public int increment(int value, int gridSize) {
