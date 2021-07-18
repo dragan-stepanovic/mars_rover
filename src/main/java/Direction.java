@@ -25,19 +25,19 @@ public class Direction {
         this.value = value;
     }
 
-    boolean movingToNorth() {
+    boolean facingNorth() {
         return value == NORTH;
     }
 
-    boolean movingToEast() {
+    boolean facingEast() {
         return value == EAST;
     }
 
-    boolean movingToSouth() {
+    boolean facingSouth() {
         return value == SOUTH;
     }
 
-    boolean movingToWest() {
+    boolean facingWest() {
         return value == WEST;
     }
 
