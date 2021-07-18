@@ -10,10 +10,6 @@ public class Position {
         return new Position(Direction.initial());
     }
 
-    void rotateRight() {
-        this.direction = this.direction.rightOfIt();
-    }
-
     boolean movingToSouth() {
         return this.direction.movingToSouth();
     }
