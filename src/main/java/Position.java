@@ -22,6 +22,7 @@ public class Position {
     }
 
     public void incrementY(int gridSize) {
+        coordinates.y = increment(coordinates.y, gridSize);
         this.y = increment(this.y, gridSize);
     }
 
