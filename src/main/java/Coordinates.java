@@ -58,7 +58,7 @@ public class Coordinates {
         this.y = increment(y, gridSize);
     }
 
-    void decrementXNew(int gridSize) {
+    void decrementX(int gridSize) {
         this.x = decrement(x, gridSize);
     }
 }
