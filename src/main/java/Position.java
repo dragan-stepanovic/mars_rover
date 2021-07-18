@@ -9,11 +9,7 @@ public class Position {
     }
 
     static Position initial() {
-        return new Position(initialCoordinates(), Direction.north());
-    }
-
-    private static Coordinates initialCoordinates() {
-        return new Coordinates(Coordinates.GRID_MINIMUM_VALUE, Coordinates.GRID_MINIMUM_VALUE);
+        return new Position(Coordinates.initialCoordinates(), Direction.north());
     }
 
     public void incrementX(int gridSize) {

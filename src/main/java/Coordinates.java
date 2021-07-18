@@ -9,6 +9,10 @@ public class Coordinates {
         this.y = y;
     }
 
+    static Coordinates initialCoordinates() {
+        return new Coordinates(GRID_MINIMUM_VALUE, GRID_MINIMUM_VALUE);
+    }
+
     void incrementX(int gridSize) {
         this.x = increment(x, gridSize);
     }
