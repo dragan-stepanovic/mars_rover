@@ -41,12 +41,12 @@ public class Coordinates {
         return gridSize;
     }
 
-    static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == gridMaximumValue(gridSize);
-    }
-
     static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < GRID_MINIMUM_VALUE;
+    }
+
+    static boolean offGridAboveMax(int nextPosition, int gridSize) {
+        return nextPosition == gridMaximumValue(gridSize);
     }
 
     static int wrapAroundMin() {
