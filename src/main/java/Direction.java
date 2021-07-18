@@ -41,16 +41,16 @@ public class Direction {
         return value == FACING_SOUTH;
     }
 
+    boolean facingWest() {
+        return value == FACING_WEST;
+    }
+
     void rotateRight() {
         value = directionToRightOfIt.get(value);
     }
 
     public void rotateLeft() {
         value = directionToLeftOfIt.get(value);
-    }
-
-    boolean facingWest() {
-        return value == FACING_WEST;
     }
 
     char asChar() {
