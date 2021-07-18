@@ -2,8 +2,8 @@ public class Rover {
 
     public static final int INFINITE_ENOUGH_GRID_SIZE = 10000;
 
-    private Direction direction = Direction.initial();
     private final Coordinates coordinates = Coordinates.initial();
+    private Direction direction = Direction.initial();
 
     public String execute(String commands) {
         return this.execute(commands, INFINITE_ENOUGH_GRID_SIZE);
