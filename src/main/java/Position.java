@@ -12,18 +12,6 @@ public class Position {
         return new Position(Coordinates.initial(), Direction.initial());
     }
 
-    public void incrementY(int gridSize) {
-        coordinates.incrementY(gridSize);
-    }
-
-    public void decrementX(int gridSize) {
-        coordinates.decrementX(gridSize);
-    }
-
-    public void decrementY(int gridSize) {
-        coordinates.decrementY(gridSize);
-    }
-
     void rotateRight() {
         this.direction = this.direction.rightOfIt();
     }
