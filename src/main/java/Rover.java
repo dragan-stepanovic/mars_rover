@@ -6,23 +6,23 @@ public class Rover {
     private final Direction direction = Direction.initial();
 
     public String execute(String commands) {
-        return this.execute(commands, INFINITE_ENOUGH_GRID_SIZE);
+        return execute(commands, INFINITE_ENOUGH_GRID_SIZE);
     }
 
     public String execute(String commands, int gridSize) {
         for (char command : split(commands))
             execute(command, gridSize);
 
-        return this.toString();
+        return toString();
     }
 
     private void execute(char issuedCommand, int gridSize) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                this.direction.rotateLeft();
+                direction.rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                this.direction.rotateRight();
+                direction.rotateRight();
                 break;
             case Command.MOVE:
                 moveOnGridWith(gridSize);
@@ -31,14 +31,14 @@ public class Rover {
     }
 
     private void moveOnGridWith(int gridSize) {
-        if (this.direction.facingSouth()) {
-            this.coordinates.decrementY(gridSize);
-        } else if (this.direction.facingWest()) {
-            this.coordinates.decrementX(gridSize);
-        } else if (this.direction.facingEast()) {
-            this.coordinates.incrementX(gridSize);
-        } else if (this.direction.facingNorth()) {
-            this.coordinates.incrementY(gridSize);
+        if (direction.facingSouth()) {
+            coordinates.decrementY(gridSize);
+        } else if (direction.facingWest()) {
+            coordinates.decrementX(gridSize);
+        } else if (direction.facingEast()) {
+            coordinates.incrementX(gridSize);
+        } else if (direction.facingNorth()) {
+            coordinates.incrementY(gridSize);
         }
     }
 
