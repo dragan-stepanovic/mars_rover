@@ -1,9 +1,11 @@
 public class Position {
 
     public static final int GRID_MINIMUM_VALUE = 0;
+
     private int x;
     private int y;
     private final Coordinates coordinates;
+
     private Direction direction;
 
     public Position(int x, int y, Direction direction) {
