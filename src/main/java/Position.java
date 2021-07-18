@@ -14,14 +14,6 @@ public class Position {
         return new Position(0, 0, Direction.north());
     }
 
-    public int x() {
-        return x;
-    }
-
-    public int y() {
-        return y;
-    }
-
     public void incrementX(int gridSize) {
         this.x = increment(this.x, gridSize);
     }
