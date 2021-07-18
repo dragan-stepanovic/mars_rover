@@ -104,6 +104,6 @@ public class Position {
     }
 
     String asString() {
-        return this.x + ":" + this.y + ":" + this.direction.asChar();
+        return this.coordinates.x + ":" + this.y + ":" + this.direction.asChar();
     }
 }
