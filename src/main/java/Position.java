@@ -13,49 +13,19 @@ public class Position {
     }
 
     public void incrementX(int gridSize) {
-        coordinates.x = increment(coordinates.x, gridSize);
+        coordinates.x = coordinates.increment(coordinates.x, gridSize);
     }
 
     public void incrementY(int gridSize) {
-        coordinates.y = increment(coordinates.y, gridSize);
+        coordinates.y = coordinates.increment(coordinates.y, gridSize);
     }
 
     public void decrementX(int gridSize) {
-        coordinates.x = decrement(coordinates.x, gridSize);
+        coordinates.x = coordinates.decrement(coordinates.x, gridSize);
     }
 
     public void decrementY(int gridSize) {
-        coordinates.y = decrement(coordinates.y, gridSize);
-    }
-
-    public int increment(int value, int gridSize) {
-        int nextPosition = value + 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
-        return nextPosition;
-    }
-
-    private int decrement(int value, int gridSize) {
-        var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
-        return nextPosition;
-    }
-
-    private static int wrapAroundMin() {
-        return Coordinates.GRID_MINIMUM_VALUE;
-    }
-
-    private int wrapAroundMax(int gridSize) {
-        return Coordinates.gridMaximumValue(gridSize) - 1;
-    }
-
-    private int wrapIfNeeded(int nextPosition, int gridSize) {
-        if (Coordinates.offGridAboveMax(nextPosition, gridSize)) {
-            return wrapAroundMin();
-        }
-        if (Coordinates.offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(gridSize);
-        }
-        return nextPosition;
+        coordinates.y = coordinates.decrement(coordinates.y, gridSize);
     }
 
     void rotateRight() {
