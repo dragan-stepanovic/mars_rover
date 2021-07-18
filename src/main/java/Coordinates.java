@@ -54,7 +54,7 @@ public class Coordinates {
         this.x = increment(x, gridSize);
     }
 
-    int incrementYToRename(int gridSize) {
-        return increment(y, gridSize);
+    void incrementYToRename(int gridSize) {
+        this.y = increment(y, gridSize);
     }
 }
