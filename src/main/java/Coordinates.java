@@ -1,4 +1,5 @@
 public class Coordinates {
+    public static final int GRID_MINIMUM_VALUE = 0;
     int x;
     int y;
 
@@ -13,5 +14,9 @@ public class Coordinates {
 
     static boolean offGridAboveMax(int nextPosition, int gridSize) {
         return nextPosition == gridMaximumValue(gridSize);
+    }
+
+    static boolean offGridUnderMin(int nextPosition) {
+        return nextPosition < GRID_MINIMUM_VALUE;
     }
 }

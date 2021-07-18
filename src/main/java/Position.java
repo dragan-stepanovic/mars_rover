@@ -1,7 +1,5 @@
 public class Position {
 
-    public static final int GRID_MINIMUM_VALUE = 0;
-
     private final Coordinates coordinates;
     private Direction direction;
 
@@ -11,7 +9,7 @@ public class Position {
     }
 
     static Position initial() {
-        return new Position(GRID_MINIMUM_VALUE, GRID_MINIMUM_VALUE, Direction.north());
+        return new Position(Coordinates.GRID_MINIMUM_VALUE, Coordinates.GRID_MINIMUM_VALUE, Direction.north());
     }
 
     public void incrementX(int gridSize) {
@@ -42,26 +40,22 @@ public class Position {
         return nextPosition;
     }
 
-    private int wrapIfNeeded(int nextPosition, int gridSize) {
-        if (Coordinates.offGridAboveMax(nextPosition, gridSize)) {
-            return wrapAroundMin();
-        }
-        if (offGridUnderMin(nextPosition)) {
-            return wrapAroundMax(gridSize);
-        }
-        return nextPosition;
-    }
-
-    private static boolean offGridUnderMin(int nextPosition) {
-        return nextPosition < GRID_MINIMUM_VALUE;
+    private static int wrapAroundMin() {
+        return Coordinates.GRID_MINIMUM_VALUE;
     }
 
     private int wrapAroundMax(int gridSize) {
         return Coordinates.gridMaximumValue(gridSize) - 1;
     }
 
-    private static int wrapAroundMin() {
-        return GRID_MINIMUM_VALUE;
+    private int wrapIfNeeded(int nextPosition, int gridSize) {
+        if (Coordinates.offGridAboveMax(nextPosition, gridSize)) {
+            return wrapAroundMin();
+        }
+        if (Coordinates.offGridUnderMin(nextPosition)) {
+            return wrapAroundMax(gridSize);
+        }
+        return nextPosition;
     }
 
     void rotateRight() {
