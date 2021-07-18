@@ -55,12 +55,12 @@ public class Position {
         return nextPosition;
     }
 
-    private static int max(int gridSize) {
+    private static int gridMaximumValue(int gridSize) {
         return gridSize;
     }
 
     private static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == max(gridSize);
+        return nextPosition == gridMaximumValue(gridSize);
     }
 
     private static boolean offGridUnderMin(int nextPosition) {
@@ -68,7 +68,7 @@ public class Position {
     }
 
     private int wrapAroundMax(int gridSize) {
-        return max(gridSize) - 1;
+        return gridMaximumValue(gridSize) - 1;
     }
 
     private static int wrapAroundMin() {
