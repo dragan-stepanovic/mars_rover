@@ -12,10 +12,6 @@ public class Position {
         return new Position(Coordinates.initial(), Direction.initial());
     }
 
-    public void incrementX(int gridSize) {
-        coordinates.incrementX(gridSize);
-    }
-
     public void incrementY(int gridSize) {
         coordinates.incrementY(gridSize);
     }
