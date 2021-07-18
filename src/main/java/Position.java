@@ -3,7 +3,7 @@ public class Position {
     private final Coordinates coordinates;
     private Direction direction;
 
-    public Position(Coordinates coordinates, Direction direction) {
+    private Position(Coordinates coordinates, Direction direction) {
         this.coordinates = coordinates;
         this.direction = direction;
     }
