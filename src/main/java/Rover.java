@@ -4,7 +4,7 @@ public class Rover {
 
     private final Position position = Position.initial();
 
-    private final Direction direction = Direction.initial();
+    private Direction direction = Direction.initial();
     private final Coordinates coordinates = Coordinates.initial();
 
     public String execute(String commands) {
@@ -34,10 +34,12 @@ public class Rover {
 
     private void rotateRight() {
         this.position.direction = position.direction.rightOfIt();
+        this.direction = this.direction.rightOfIt();
     }
 
     void rotateLeft() {
         this.position.direction = this.position.direction.leftOfIt();
+        this.direction = this.direction.leftOfIt();
     }
 
     private void moveOnGridWith(int gridSize) {
