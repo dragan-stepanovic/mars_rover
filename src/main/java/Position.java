@@ -108,7 +108,7 @@ public class Position {
         return this.x + ":" + this.y + ":" + this.direction.asChar();
     }
 
-    public Direction direction() {
+    private Direction direction() {
         return this.direction;
     }
 }
