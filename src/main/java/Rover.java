@@ -24,12 +24,16 @@ public class Rover {
                 rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                position.rotateRight();
+                rotateRight();
                 break;
             case Command.MOVE:
                 moveOnGridWith(gridSize);
                 break;
         }
+    }
+
+    private void rotateRight() {
+        position.rotateRight();
     }
 
     void rotateLeft() {
