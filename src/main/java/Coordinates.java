@@ -49,4 +49,8 @@ public class Coordinates {
         nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
+
+    void incrementXNew(int gridSize) {
+        this.x = increment(x, gridSize);
+    }
 }
