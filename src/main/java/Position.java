@@ -2,14 +2,12 @@ public class Position {
 
     public static final int GRID_MINIMUM_VALUE = 0;
 
-    private int y;
     private final Coordinates coordinates;
 
     private Direction direction;
 
     public Position(int x, int y, Direction direction) {
         this.coordinates = new Coordinates(x, y);
-        this.y = y;
         this.direction = direction;
     }
 
