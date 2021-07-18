@@ -2,7 +2,6 @@ public class Position {
 
     public static final int GRID_MINIMUM_VALUE = 0;
 
-    private int x;
     private int y;
     private final Coordinates coordinates;
 
@@ -10,7 +9,6 @@ public class Position {
 
     public Position(int x, int y, Direction direction) {
         this.coordinates = new Coordinates(x, y);
-        this.x = x;
         this.y = y;
         this.direction = direction;
     }
