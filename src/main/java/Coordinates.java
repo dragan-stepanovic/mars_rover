@@ -62,7 +62,7 @@ public class Coordinates {
         this.x = decrement(x, gridSize);
     }
 
-    void decrementYNew(int gridSize) {
+    void decrementY(int gridSize) {
         this.y = decrement(y, gridSize);
     }
 }

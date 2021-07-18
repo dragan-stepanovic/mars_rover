@@ -25,7 +25,7 @@ public class Position {
     }
 
     public void decrementY(int gridSize) {
-        coordinates.decrementYNew(gridSize);
+        coordinates.decrementY(gridSize);
     }
 
     void rotateRight() {
