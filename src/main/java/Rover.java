@@ -2,8 +2,6 @@ public class Rover {
 
     public static final int INFINITE_ENOUGH_GRID_SIZE = 10000;
 
-    private final Position position = Position.initial();
-
     private Direction direction = Direction.initial();
     private final Coordinates coordinates = Coordinates.initial();
 
@@ -33,12 +31,10 @@ public class Rover {
     }
 
     private void rotateRight() {
-        this.position.direction = position.direction.rightOfIt();
         this.direction = this.direction.rightOfIt();
     }
 
     void rotateLeft() {
-        this.position.direction = this.position.direction.leftOfIt();
         this.direction = this.direction.leftOfIt();
     }
 
