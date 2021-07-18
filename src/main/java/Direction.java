@@ -9,12 +9,12 @@ public class Direction {
     public static final char FACING_SOUTH = 'S';
     public static final char FACING_WEST = 'W';
 
-    private final Map<Character, Character> directionToRightOfIt =
+    private final Map<Character, Character> directionToTheRight =
             Map.of(FACING_NORTH, FACING_EAST,
                     FACING_EAST, FACING_SOUTH,
                     FACING_SOUTH, FACING_WEST,
                     FACING_WEST, FACING_NORTH);
-    private final Map<Character, Character> directionToLeftOfIt =
+    private final Map<Character, Character> directionToTheLeft =
             Map.of(FACING_NORTH, FACING_WEST,
                     FACING_WEST, FACING_SOUTH,
                     FACING_SOUTH, FACING_EAST,
@@ -46,11 +46,11 @@ public class Direction {
     }
 
     void rotateRight() {
-        value = directionToRightOfIt.get(value);
+        value = directionToTheRight.get(value);
     }
 
     public void rotateLeft() {
-        value = directionToLeftOfIt.get(value);
+        value = directionToTheLeft.get(value);
     }
 
     char asChar() {
