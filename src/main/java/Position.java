@@ -48,10 +48,6 @@ public class Position {
         return nextPosition == max(gridSize);
     }
 
-    private static int wrapAroundMin() {
-        return 0;
-    }
-
     private int wrapIfNeeded(int nextPosition, int gridSize) {
         if (offGridAboveMax(nextPosition, gridSize)) {
             return wrapAroundMin();
@@ -72,6 +68,10 @@ public class Position {
 
     private int wrapAroundMax(int gridSize) {
         return max(gridSize) - 1;
+    }
+
+    private static int wrapAroundMin() {
+        return 0;
     }
 
     void rotateRight() {
