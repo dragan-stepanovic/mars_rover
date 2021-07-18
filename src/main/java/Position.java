@@ -53,6 +53,10 @@ public class Position {
     }
 
     String asString() {
-        return this.coordinates.x + ":" + this.coordinates.y + ":" + this.direction.asChar();
+        return coordinatesAsString() + ":" + this.direction.asChar();
+    }
+
+    private String coordinatesAsString() {
+        return this.coordinates.x + ":" + this.coordinates.y;
     }
 }
