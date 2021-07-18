@@ -31,11 +31,11 @@ public class Rover {
     }
 
     private void rotateRight() {
-        this.direction = this.direction.rightOfIt();
+        this.direction = this.direction.rotateRight();
     }
 
     void rotateLeft() {
-        this.direction = this.direction.leftOfIt();
+        this.direction = this.direction.rotateLeft();
     }
 
     private void moveOnGridWith(int gridSize) {

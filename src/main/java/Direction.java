@@ -41,11 +41,11 @@ public class Direction {
         return value == WEST;
     }
 
-    Direction rightOfIt() {
+    Direction rotateRight() {
         return new Direction(directionToRightOfIt.get(value));
     }
 
-    public Direction leftOfIt() {
+    public Direction rotateLeft() {
         return new Direction(directionToLeftOfIt.get(value));
     }
 
