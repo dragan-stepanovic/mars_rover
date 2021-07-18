@@ -52,6 +52,6 @@ public class Rover {
 
     @Override
     public String toString() {
-        return position.coordinates.asString() + ":" + position.direction.asChar();
+        return coordinates.asString() + ":" + position.direction.asChar();
     }
 }
