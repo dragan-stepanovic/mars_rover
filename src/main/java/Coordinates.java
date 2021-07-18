@@ -50,7 +50,7 @@ public class Coordinates {
         return nextPosition;
     }
 
-    void incrementXNew(int gridSize) {
+    void incrementX(int gridSize) {
         this.x = increment(x, gridSize);
     }
 }
