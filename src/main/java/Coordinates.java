@@ -67,7 +67,7 @@ public class Coordinates {
         return gridMaximumValue(gridSize) - 1;
     }
 
-    String asString(Position position) {
+    String asString() {
         return x + ":" + y;
     }
 }
