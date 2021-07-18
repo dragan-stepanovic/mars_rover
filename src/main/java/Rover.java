@@ -35,7 +35,9 @@ public class Rover {
         }
         if (this.position.movingToWest()) {
             this.position.decrementX(gridSize);
-        } else if (this.position.movingToEast()) {
+            return;
+        }
+        if (this.position.movingToEast()) {
             this.position.incrementX(gridSize);
         } else if (this.position.movingToNorth()) {
             this.position.incrementY(gridSize);
