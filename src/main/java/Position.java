@@ -43,7 +43,7 @@ public class Position {
     }
 
     private int wrapIfNeeded(int nextPosition, int gridSize) {
-        if (offGridAboveMax(nextPosition, gridSize)) {
+        if (Coordinates.offGridAboveMax(nextPosition, gridSize)) {
             return wrapAroundMin();
         }
         if (offGridUnderMin(nextPosition)) {
@@ -52,20 +52,12 @@ public class Position {
         return nextPosition;
     }
 
-    private static int gridMaximumValue(int gridSize) {
-        return gridSize;
-    }
-
-    private static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == gridMaximumValue(gridSize);
-    }
-
     private static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < GRID_MINIMUM_VALUE;
     }
 
     private int wrapAroundMax(int gridSize) {
-        return gridMaximumValue(gridSize) - 1;
+        return Coordinates.gridMaximumValue(gridSize) - 1;
     }
 
     private static int wrapAroundMin() {
