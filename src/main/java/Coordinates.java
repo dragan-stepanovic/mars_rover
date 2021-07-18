@@ -66,4 +66,8 @@ public class Coordinates {
     int wrapAroundMax(int gridSize) {
         return gridMaximumValue(gridSize) - 1;
     }
+
+    String coordinatesAsString(Position position) {
+        return x + ":" + y;
+    }
 }
