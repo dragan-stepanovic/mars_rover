@@ -64,7 +64,7 @@ public class Position {
     }
 
     private static boolean offGridUnderMin(int nextPosition) {
-        return nextPosition < 0;
+        return nextPosition < GRID_MINIMUM_VALUE;
     }
 
     private int wrapAroundMax(int gridSize) {
