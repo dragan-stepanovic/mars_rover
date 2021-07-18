@@ -1,6 +1,6 @@
 public class Coordinates {
-    private final int x;
-    private final int y;
+    final int x;
+    final int y;
 
     public Coordinates(int x, int y) {
         this.x = x;
