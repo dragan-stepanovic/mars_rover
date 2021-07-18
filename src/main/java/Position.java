@@ -10,7 +10,4 @@ public class Position {
         return new Position(Direction.initial());
     }
 
-    boolean movingToNorth() {
-        return this.direction.movingToNorth();
-    }
 }
