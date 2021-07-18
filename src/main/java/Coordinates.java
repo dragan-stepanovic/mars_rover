@@ -8,6 +8,22 @@ public class Coordinates {
         this.y = y;
     }
 
+    void incrementX(int gridSize) {
+        this.x = increment(x, gridSize);
+    }
+
+    void incrementY(int gridSize) {
+        this.y = increment(y, gridSize);
+    }
+
+    void decrementX(int gridSize) {
+        this.x = decrement(x, gridSize);
+    }
+
+    void decrementY(int gridSize) {
+        this.y = decrement(y, gridSize);
+    }
+
     static int gridMaximumValue(int gridSize) {
         return gridSize;
     }
@@ -48,21 +64,5 @@ public class Coordinates {
         int nextPosition = value + 1;
         nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
-    }
-
-    void incrementX(int gridSize) {
-        this.x = increment(x, gridSize);
-    }
-
-    void incrementY(int gridSize) {
-        this.y = increment(y, gridSize);
-    }
-
-    void decrementX(int gridSize) {
-        this.x = decrement(x, gridSize);
-    }
-
-    void decrementY(int gridSize) {
-        this.y = decrement(y, gridSize);
     }
 }
