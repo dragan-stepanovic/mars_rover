@@ -4,15 +4,15 @@ public class Rover {
 
     private final Position position = Position.initial();
 
+    public String execute(String commands) {
+        return this.execute(commands, INFINITE_ENOUGH_GRID_SIZE);
+    }
+
     public String execute(String commands, int gridSize) {
         for (char command : split(commands))
             execute(command, gridSize);
 
         return new Position(position.x(), position.y(), position.direction()).asString();
-    }
-
-    public String execute(String commands) {
-        return this.execute(commands, INFINITE_ENOUGH_GRID_SIZE);
     }
 
     private void execute(char issuedCommand, int gridSize) {
