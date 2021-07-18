@@ -13,6 +13,11 @@ public class Rover {
         for (char command : split(commands))
             execute(command, gridSize);
 
+        return this.toString();
+    }
+
+    @Override
+    public String toString() {
         return position.coordinates.asString() + ":" + position.direction.asChar();
     }
 
