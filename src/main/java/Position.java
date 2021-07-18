@@ -1,6 +1,6 @@
 public class Position {
 
-    final Coordinates coordinates;
+    private final Coordinates coordinates;
     Direction direction;
 
     private Position(Coordinates coordinates, Direction direction) {
