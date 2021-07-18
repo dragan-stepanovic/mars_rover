@@ -4,41 +4,41 @@ public class Direction {
 
     private char value;
 
-    public static final char NORTH = 'N';
-    public static final char EAST = 'E';
-    public static final char SOUTH = 'S';
-    public static final char WEST = 'W';
+    public static final char FACING_NORTH = 'N';
+    public static final char FACING_EAST = 'E';
+    public static final char FACING_SOUTH = 'S';
+    public static final char FACING_WEST = 'W';
 
     private final Map<Character, Character> directionToRightOfIt =
-            Map.of(NORTH, EAST,
-                    EAST, SOUTH,
-                    SOUTH, WEST,
-                    WEST, NORTH);
+            Map.of(FACING_NORTH, FACING_EAST,
+                    FACING_EAST, FACING_SOUTH,
+                    FACING_SOUTH, FACING_WEST,
+                    FACING_WEST, FACING_NORTH);
     private final Map<Character, Character> directionToLeftOfIt =
-            Map.of(NORTH, WEST,
-                    WEST, SOUTH,
-                    SOUTH, EAST,
-                    EAST, NORTH);
+            Map.of(FACING_NORTH, FACING_WEST,
+                    FACING_WEST, FACING_SOUTH,
+                    FACING_SOUTH, FACING_EAST,
+                    FACING_EAST, FACING_NORTH);
 
 
     private Direction(char value) {
         this.value = value;
     }
 
+    public static Direction initial() {
+        return new Direction(FACING_NORTH);
+    }
+
     boolean facingNorth() {
-        return value == NORTH;
+        return value == FACING_NORTH;
     }
 
     boolean facingEast() {
-        return value == EAST;
+        return value == FACING_EAST;
     }
 
     boolean facingSouth() {
-        return value == SOUTH;
-    }
-
-    boolean facingWest() {
-        return value == WEST;
+        return value == FACING_SOUTH;
     }
 
     void rotateRight() {
@@ -49,8 +49,8 @@ public class Direction {
         value = directionToLeftOfIt.get(value);
     }
 
-    public static Direction initial() {
-        return new Direction(NORTH);
+    boolean facingWest() {
+        return value == FACING_WEST;
     }
 
     char asChar() {
