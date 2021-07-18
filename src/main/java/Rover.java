@@ -16,11 +16,6 @@ public class Rover {
         return this.toString();
     }
 
-    @Override
-    public String toString() {
-        return position.coordinates.asString() + ":" + position.direction.asChar();
-    }
-
     private void execute(char issuedCommand, int gridSize) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
@@ -49,5 +44,10 @@ public class Rover {
 
     private char[] split(String commands) {
         return commands.toCharArray();
+    }
+
+    @Override
+    public String toString() {
+        return position.coordinates.asString() + ":" + position.direction.asChar();
     }
 }
