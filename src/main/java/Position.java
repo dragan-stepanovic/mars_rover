@@ -21,7 +21,6 @@ public class Position {
 
     public void incrementX(int gridSize) {
         coordinates.x = increment(coordinates.x, gridSize);
-        this.x = increment(this.x, gridSize);
     }
 
     public void incrementY(int gridSize) {
