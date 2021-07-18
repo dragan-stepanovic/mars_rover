@@ -2,7 +2,7 @@ import java.util.Map;
 
 public class Direction {
 
-    private final char value;
+    private char value;
 
     public static final char NORTH = 'N';
     public static final char EAST = 'E';
@@ -41,8 +41,8 @@ public class Direction {
         return value == WEST;
     }
 
-    Direction rotateRight() {
-        return new Direction(directionToRightOfIt.get(value));
+    void rotateRight() {
+        value = directionToRightOfIt.get(value);
     }
 
     public Direction rotateLeft() {

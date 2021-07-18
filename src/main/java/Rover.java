@@ -31,7 +31,7 @@ public class Rover {
     }
 
     private void rotateRight() {
-        this.direction = this.direction.rotateRight();
+        this.direction.rotateRight();
     }
 
     void rotateLeft() {
