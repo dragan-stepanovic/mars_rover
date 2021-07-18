@@ -3,13 +3,13 @@ public class Position {
     private final Coordinates coordinates;
     private Direction direction;
 
-    public Position(Direction direction, Coordinates coordinates) {
+    public Position(Coordinates coordinates, Direction direction) {
         this.coordinates = coordinates;
         this.direction = direction;
     }
 
     static Position initial() {
-        return new Position(Direction.north(), new Coordinates(Coordinates.GRID_MINIMUM_VALUE, Coordinates.GRID_MINIMUM_VALUE));
+        return new Position(new Coordinates(Coordinates.GRID_MINIMUM_VALUE, Coordinates.GRID_MINIMUM_VALUE), Direction.north());
     }
 
     public void incrementX(int gridSize) {
