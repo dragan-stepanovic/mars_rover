@@ -14,6 +14,7 @@ public class Direction {
                     FACING_EAST, FACING_SOUTH,
                     FACING_SOUTH, FACING_WEST,
                     FACING_WEST, FACING_NORTH);
+
     private final Map<Character, Character> directionToTheLeft =
             Map.of(FACING_NORTH, FACING_WEST,
                     FACING_WEST, FACING_SOUTH,
