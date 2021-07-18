@@ -1,7 +1,7 @@
 public class Coordinates {
     int x;
     int y;
-    
+
     public static final int GRID_MINIMUM_VALUE = 0;
 
     public Coordinates(int x, int y) {
@@ -25,14 +25,14 @@ public class Coordinates {
         this.y = decrement(y, gridSize);
     }
 
-    int decrement(int value, int gridSize) {
-        var nextPosition = value - 1;
+    public int increment(int value, int gridSize) {
+        int nextPosition = value + 1;
         nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
 
-    public int increment(int value, int gridSize) {
-        int nextPosition = value + 1;
+    int decrement(int value, int gridSize) {
+        var nextPosition = value - 1;
         nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
