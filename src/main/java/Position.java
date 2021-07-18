@@ -14,7 +14,7 @@ public class Position {
     }
 
     static Position initial() {
-        return new Position(0, 0, Direction.north());
+        return new Position(GRID_MINIMUM_VALUE, GRID_MINIMUM_VALUE, Direction.north());
     }
 
     public void incrementX(int gridSize) {
