@@ -24,6 +24,18 @@ public class Coordinates {
         this.y = decrement(y, gridSize);
     }
 
+    int decrement(int value, int gridSize) {
+        var nextPosition = value - 1;
+        nextPosition = wrapIfNeeded(nextPosition, gridSize);
+        return nextPosition;
+    }
+
+    public int increment(int value, int gridSize) {
+        int nextPosition = value + 1;
+        nextPosition = wrapIfNeeded(nextPosition, gridSize);
+        return nextPosition;
+    }
+
     static int gridMaximumValue(int gridSize) {
         return gridSize;
     }
@@ -51,18 +63,6 @@ public class Coordinates {
         if (offGridUnderMin(nextPosition)) {
             return wrapAroundMax(gridSize);
         }
-        return nextPosition;
-    }
-
-    int decrement(int value, int gridSize) {
-        var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
-        return nextPosition;
-    }
-
-    public int increment(int value, int gridSize) {
-        int nextPosition = value + 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
         return nextPosition;
     }
 }
