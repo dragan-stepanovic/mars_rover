@@ -103,4 +103,8 @@ public class Position {
     boolean movingToWest() {
         return direction().movingToWest();
     }
+
+    boolean movingToEast() {
+        return direction().movingToEast();
+    }
 }
