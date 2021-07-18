@@ -1,5 +1,6 @@
 public class Position {
 
+    public static final int GRID_MINIMUM_VALUE = 0;
     private int x;
     private int y;
     private final Coordinates coordinates;
@@ -71,7 +72,7 @@ public class Position {
     }
 
     private static int wrapAroundMin() {
-        return 0;
+        return GRID_MINIMUM_VALUE;
     }
 
     void rotateRight() {
