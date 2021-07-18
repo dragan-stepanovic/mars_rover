@@ -29,14 +29,13 @@ public class Rover {
     }
 
     private void moveOnGridWith(int gridSize, Position position) {
-        Direction direction = position.direction();
-        if (direction.movingToSouth()) {
+        if (position.direction().movingToSouth()) {
             this.position.decrementY(gridSize);
-        } else if (direction.movingToWest()) {
+        } else if (position.direction().movingToWest()) {
             this.position.decrementX(gridSize);
-        } else if (direction.movingToEast()) {
+        } else if (position.direction().movingToEast()) {
             this.position.incrementX(gridSize);
-        } else if (direction.movingToNorth()) {
+        } else if (position.direction().movingToNorth()) {
             this.position.incrementY(gridSize);
         }
     }
