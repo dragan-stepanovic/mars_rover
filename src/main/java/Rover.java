@@ -35,10 +35,10 @@ public class Rover {
             coordinates.incrementY(gridSize);
         } else if (direction.isFacingEast()) {
             coordinates.incrementX(gridSize);
-        } else if (direction.isFacingWest()) {
-            coordinates.decrementX(gridSize);
         } else if (direction.isFacingSouth()) {
             coordinates.decrementY(gridSize);
+        } else if (direction.isFacingWest()) {
+            coordinates.decrementX(gridSize);
         }
     }
 
