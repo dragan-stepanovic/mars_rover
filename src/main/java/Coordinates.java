@@ -1,6 +1,7 @@
 public class Coordinates {
-    int x;
-    int y;
+
+    private int x;
+    private int y;
 
     public static final int GRID_MINIMUM_VALUE = 0;
 
