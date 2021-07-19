@@ -48,24 +48,24 @@ public class Coordinates {
         return nextPosition;
     }
 
-    static int gridMaximumValue(int gridSize) {
-        return gridSize;
+    static boolean offGridAboveMax(int nextPosition, int gridSize) {
+        return nextPosition == gridMaximumValue(gridSize);
     }
 
     static boolean offGridUnderMin(int nextPosition) {
         return nextPosition < GRID_MINIMUM_VALUE;
     }
 
-    static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == gridMaximumValue(gridSize);
+    int wrapAroundMax(int gridSize) {
+        return decrement(gridMaximumValue(gridSize));
     }
 
     static int wrapAroundMin() {
         return GRID_MINIMUM_VALUE;
     }
 
-    int wrapAroundMax(int gridSize) {
-        return decrement(gridMaximumValue(gridSize));
+    static int gridMaximumValue(int gridSize) {
+        return gridSize;
     }
 
     String asString() {
