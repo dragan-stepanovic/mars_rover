@@ -36,8 +36,7 @@ public class Coordinates {
 
     int decrement(int value, int gridSize) {
         var nextPosition = value - 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
-        return nextPosition;
+        return wrapIfNeeded(nextPosition, gridSize);
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
