@@ -14,27 +14,19 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = increment(x, gridSize);
+        this.x = wrapIfNeeded(x + 1, gridSize);
     }
 
     void incrementY(int gridSize) {
-        this.y = increment(y, gridSize);
+        this.y = wrapIfNeeded(y + 1, gridSize);
     }
 
     void decrementX(int gridSize) {
-        this.x = decrement(x, gridSize);
+        this.x = wrapIfNeeded(x - 1, gridSize);
     }
 
     void decrementY(int gridSize) {
-        this.y = decrement(y, gridSize);
-    }
-
-    public int increment(int value, int gridSize) {
-        return wrapIfNeeded(value + 1, gridSize);
-    }
-
-    int decrement(int value, int gridSize) {
-        return wrapIfNeeded(value - 1, gridSize);
+        this.y = wrapIfNeeded(y - 1, gridSize);
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
