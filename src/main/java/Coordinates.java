@@ -31,8 +31,7 @@ public class Coordinates {
 
     public int increment(int value, int gridSize) {
         int nextPosition = value + 1;
-        nextPosition = wrapIfNeeded(nextPosition, gridSize);
-        return nextPosition;
+        return wrapIfNeeded(nextPosition, gridSize);
     }
 
     int decrement(int value, int gridSize) {
