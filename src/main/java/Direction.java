@@ -30,19 +30,19 @@ public class Direction {
         return new Direction(FACING_NORTH);
     }
 
-    boolean facingNorth() {
+    boolean isFacingNorth() {
         return value == FACING_NORTH;
     }
 
-    boolean facingEast() {
+    boolean isFacingEast() {
         return value == FACING_EAST;
     }
 
-    boolean facingSouth() {
+    boolean isFacingSouth() {
         return value == FACING_SOUTH;
     }
 
-    boolean facingWest() {
+    boolean isFacingWest() {
         return value == FACING_WEST;
     }
 
