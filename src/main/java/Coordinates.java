@@ -30,13 +30,11 @@ public class Coordinates {
     }
 
     public int increment(int value, int gridSize) {
-        int nextPosition = value + 1;
-        return wrapIfNeeded(nextPosition, gridSize);
+        return wrapIfNeeded(value + 1, gridSize);
     }
 
     int decrement(int value, int gridSize) {
-        var nextPosition = value - 1;
-        return wrapIfNeeded(nextPosition, gridSize);
+        return wrapIfNeeded(value - 1, gridSize);
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
