@@ -15,19 +15,27 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = wrapIfNeeded(x + 1, gridSize);
+        this.x = wrapIfNeeded(increment(x), gridSize);
     }
 
     void incrementY(int gridSize) {
-        this.y = wrapIfNeeded(y + 1, gridSize);
+        this.y = wrapIfNeeded(increment(y), gridSize);
+    }
+
+    private int increment(int value) {
+        return value + 1;
     }
 
     void decrementX(int gridSize) {
-        this.x = wrapIfNeeded(x - 1, gridSize);
+        this.x = wrapIfNeeded(decrement(x), gridSize);
     }
 
     void decrementY(int gridSize) {
-        this.y = wrapIfNeeded(y - 1, gridSize);
+        this.y = wrapIfNeeded(decrement(y), gridSize);
+    }
+
+    private int decrement(int value) {
+        return value - 1;
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
@@ -57,7 +65,7 @@ public class Coordinates {
     }
 
     int wrapAroundMax(int gridSize) {
-        return gridMaximumValue(gridSize) - 1;
+        return decrement(gridMaximumValue(gridSize));
     }
 
     String asString() {
