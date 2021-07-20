@@ -20,7 +20,10 @@ public class Coordinate {
                 .orNoNeedToWrap();
     }
 
-    private Coordinate orNoNeedToWrap() {
+    private Coordinate wrapMax(Grid grid) {
+        if (this.isOffGridAboveMax(grid)) {
+            return wrapAroundMin();
+        }
         return this;
     }
 
@@ -31,10 +34,7 @@ public class Coordinate {
         return this;
     }
 
-    private Coordinate wrapMax(Grid grid) {
-        if (this.isOffGridAboveMax(grid)) {
-            return wrapAroundMin();
-        }
+    private Coordinate orNoNeedToWrap() {
         return this;
     }
 
