@@ -11,7 +11,7 @@ public class Rover {
         for (char command : split(commands))
             execute(command, grid);
 
-        return toString();
+        return positionAsString();
     }
 
     private void execute(char issuedCommand, Grid grid) {
@@ -45,8 +45,7 @@ public class Rover {
         return commands.toCharArray();
     }
 
-    @Override
-    public String toString() {
+    public String positionAsString() {
         return coordinates.asString() + ":" + direction.asChar();
     }
 }
