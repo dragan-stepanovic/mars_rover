@@ -10,6 +10,10 @@ public class Coordinate {
         return grid.maximumValue().decrement();
     }
 
+    public boolean isGreaterOrEqualTo(Coordinate that) {
+        return this.value >= that.value;
+    }
+
     boolean isLessThan(Coordinate that) {
         return this.value < that.value;
     }
@@ -38,9 +42,5 @@ public class Coordinate {
 
     public String asString() {
         return String.valueOf(value);
-    }
-
-    public boolean isGreaterOrEqualTo(Coordinate that) {
-        return this.value >= that.value;
     }
 }
