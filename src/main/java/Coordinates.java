@@ -1,11 +1,11 @@
 public class Coordinates {
 
     private Coordinate x;
-    private int y;
+    private Coordinate y;
 
     private Coordinates(int x, int y) {
         this.x = new Coordinate(x);
-        this.y = y;
+        this.y = new Coordinate(y);
     }
 
     static Coordinates initial() {
@@ -17,7 +17,7 @@ public class Coordinates {
     }
 
     void incrementY(int gridSize) {
-        this.y = new Coordinate(y).increment().wrapIfNeeded(gridSize).value;
+        this.y = y.increment().wrapIfNeeded(gridSize);
     }
 
     void decrementX(int gridSize) {
@@ -25,10 +25,10 @@ public class Coordinates {
     }
 
     void decrementY(int gridSize) {
-        this.y = new Coordinate(y).decrement().wrapIfNeeded(gridSize).value;
+        this.y = y.decrement().wrapIfNeeded(gridSize);
     }
 
     String asString() {
-        return x.value + ":" + y;
+        return x.value + ":" + y.value;
     }
 }
