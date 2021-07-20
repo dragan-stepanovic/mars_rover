@@ -6,14 +6,6 @@ public class Coordinate {
         this.value = value;
     }
 
-    boolean isLessThan(Coordinate that) {
-        return this.value < that.value;
-    }
-
-    static Coordinate wrapAroundMax(Grid grid) {
-        return grid.maximumValue().decrement();
-    }
-
     Coordinate increment() {
         return new Coordinate(value + 1);
     }
@@ -40,12 +32,20 @@ public class Coordinate {
         return isLessThan(Grid.minimumValue());
     }
 
-    public boolean isGreaterOrEqualTo(Coordinate that) {
-        return this.value >= that.value;
+    Coordinate wrapAroundMax(Grid grid) {
+        return grid.maximumValue().decrement();
     }
 
     Coordinate wrapAroundMin() {
         return Grid.minimumValue();
+    }
+
+    boolean isLessThan(Coordinate that) {
+        return this.value < that.value;
+    }
+
+    public boolean isGreaterOrEqualTo(Coordinate that) {
+        return this.value >= that.value;
     }
 
     public String asString() {
