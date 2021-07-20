@@ -8,4 +8,8 @@ public class Coordinate {
     public Coordinate increment() {
         return new Coordinate(value + 1);
     }
+
+    int decrement() {
+        return value - 1;
+    }
 }
