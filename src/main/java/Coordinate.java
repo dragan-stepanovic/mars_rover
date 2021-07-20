@@ -5,11 +5,7 @@ public class Coordinate {
         this.value = value;
     }
 
-    int increment() {
-        return incrementNew().value;
-    }
-
-    private Coordinate incrementNew() {
+    public Coordinate incrementNew() {
         return new Coordinate(value + 1);
     }
 }
