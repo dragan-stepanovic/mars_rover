@@ -15,19 +15,19 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        return wrapMax(grid)
-                .orWrapMin(grid)
+        return wrapAroundMaxIfNeeded(grid)
+                .orWrapAroundMin(grid)
                 .orNoNeedToWrap();
     }
 
-    private Coordinate wrapMax(Grid grid) {
+    private Coordinate orWrapAroundMin(Grid grid) {
         if (this.isOffGridAboveMax(grid)) {
             return wrapAroundMin();
         }
         return this;
     }
 
-    private Coordinate orWrapMin(Grid grid) {
+    private Coordinate wrapAroundMaxIfNeeded(Grid grid) {
         if (this.isOffGridUnderMin()) {
             return wrapAroundMax(grid);
         }
