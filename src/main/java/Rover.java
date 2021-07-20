@@ -1,7 +1,7 @@
 public class Rover {
 
     private Coordinates coordinates = Coordinates.initial();
-    private final Direction direction = Direction.initial();
+    private Direction direction = Direction.initial();
 
     public String execute(String commands) {
         return execute(commands, Grid.INFINITE_ENOUGH);
@@ -17,7 +17,7 @@ public class Rover {
     private void execute(char issuedCommand, Grid grid) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                direction.rotateLeft();
+                this.direction = direction.rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
                 direction.rotateRight();

@@ -50,8 +50,8 @@ public class Direction {
         value = directionToTheRight.get(value);
     }
 
-    public void rotateLeft() {
-        value = directionToTheLeft.get(value);
+    public Direction rotateLeft() {
+        return new Direction(directionToTheLeft.get(value));
     }
 
     char asChar() {
