@@ -18,14 +18,6 @@ public class Coordinate {
         return gridSize;
     }
 
-    static int wrapAroundMax(int gridSize) {
-        return new Coordinate(gridMaximumValue(gridSize)).decrement().value;
-    }
-
-    static int wrapAroundMin() {
-        return GRID_MINIMUM_VALUE;
-    }
-
     Coordinate increment() {
         return new Coordinate(value + 1);
     }
@@ -42,5 +34,13 @@ public class Coordinate {
             return wrapAroundMax(gridSize);
         }
         return value;
+    }
+
+    static int wrapAroundMax(int gridSize) {
+        return new Coordinate(gridMaximumValue(gridSize)).decrement().value;
+    }
+
+    static int wrapAroundMin() {
+        return GRID_MINIMUM_VALUE;
     }
 }
