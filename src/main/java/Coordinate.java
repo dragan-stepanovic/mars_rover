@@ -1,5 +1,4 @@
 public class Coordinate {
-    public static final int GRID_MINIMUM_VALUE = 0;
     public int value;
 
     public Coordinate(int value) {
@@ -11,7 +10,7 @@ public class Coordinate {
     }
 
     static boolean offGridUnderMin(int nextPosition) {
-        return nextPosition < GRID_MINIMUM_VALUE;
+        return nextPosition < Grid.GRID_MINIMUM_VALUE;
     }
 
     static int gridMaximumValue(int gridSize) {
@@ -27,7 +26,7 @@ public class Coordinate {
     }
 
     static Coordinate wrapAroundMin() {
-        return new Coordinate(GRID_MINIMUM_VALUE);
+        return new Coordinate(Grid.GRID_MINIMUM_VALUE);
     }
 
     static Coordinate wrapAroundMax(int gridSize) {
