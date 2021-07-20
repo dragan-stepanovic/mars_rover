@@ -13,7 +13,7 @@ public class Coordinate {
     }
 
     boolean offGridUnderMin(Grid grid) {
-        return this.value < Grid.MINIMUM_VALUE;
+        return this.lessThan(grid.minimumValue());
     }
 
     boolean lessThan(Coordinate that) {
