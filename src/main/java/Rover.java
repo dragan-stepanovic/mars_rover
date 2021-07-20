@@ -29,15 +29,9 @@ public class Rover {
     }
 
     private Coordinates moveOn(Grid grid) {
-        if (direction == Direction.NORTH) {
-            return coordinates.incrementY(grid);
-        }
-        if (direction == Direction.EAST) {
-            return coordinates.incrementX(grid);
-        }
-        if (direction == Direction.SOUTH) {
-            return coordinates.decrementY(grid);
-        }
+        if (direction == Direction.NORTH) return coordinates.incrementY(grid);
+        if (direction == Direction.EAST) return coordinates.incrementX(grid);
+        if (direction == Direction.SOUTH) return coordinates.decrementY(grid);
         return coordinates.decrementX(grid);
     }
 
