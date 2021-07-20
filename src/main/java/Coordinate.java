@@ -27,7 +27,7 @@ public class Coordinate {
     }
 
     static Coordinate wrapAroundMin() {
-        return new Coordinate(Grid.MINIMUM_VALUE);
+        return Grid.minimumValue();
     }
 
     static Coordinate wrapAroundMax(int gridSize) {
