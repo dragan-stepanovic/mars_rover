@@ -1,7 +1,8 @@
 public class Grid {
 
-    public static final Grid INFINITE_ENOUGH = new Grid(10000);
     private final int size;
+
+    public static final Grid INFINITE_ENOUGH = new Grid(10000);
 
     public Grid(int size) {
         this.size = size;
