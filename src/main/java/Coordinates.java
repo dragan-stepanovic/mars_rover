@@ -24,8 +24,8 @@ public class Coordinates {
         return new Coordinates(x.decrement().wrapIfNeeded(grid), y);
     }
 
-    void decrementY(Grid grid) {
-        this.y = y.decrement().wrapIfNeeded(grid);
+    Coordinates decrementY(Grid grid) {
+        return new Coordinates(x, y.decrement().wrapIfNeeded(grid));
     }
 
     String asString() {
