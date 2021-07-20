@@ -27,7 +27,7 @@ public class Coordinate {
     }
 
     static Coordinate wrapAroundMax(int gridSize) {
-        return new Coordinate(Grid.maximumValue(gridSize)).decrement();
+        return new Coordinate(new Grid(gridSize).maximumValue(gridSize)).decrement();
     }
 
     Coordinate wrapIfNeeded(int gridSize) {
