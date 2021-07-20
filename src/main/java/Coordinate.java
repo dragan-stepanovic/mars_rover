@@ -10,10 +10,6 @@ public class Coordinate {
         return grid.maximumValue().decrement();
     }
 
-    boolean offGridUnderMin() {
-        return this.isLessThan(Grid.minimumValue());
-    }
-
     boolean isLessThan(Coordinate that) {
         return this.value < that.value;
     }
@@ -31,10 +27,10 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        if (grid.offGridAboveMax(this)) {
+        if (grid.coordinateIsOffGridAboveMax(this)) {
             return wrapAroundMin();
         }
-        if (offGridUnderMin()) {
+        if (grid.coordinateIsOffGridUnderMin(this)) {
             return wrapAroundMax(grid);
         }
         return this;
