@@ -16,7 +16,7 @@ public class Grid {
     }
 
     boolean coordinateIsOffGridAboveMax(Coordinate coordinate) {
-        return coordinate.equals(maximumValue());
+        return coordinate.isGreaterOrEqualTo(maximumValue());
     }
 
     boolean coordinateIsOffGridUnderMin(Coordinate coordinate) {

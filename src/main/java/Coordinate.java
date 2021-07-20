@@ -40,18 +40,7 @@ public class Coordinate {
         return String.valueOf(value);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Coordinate that = (Coordinate) o;
-
-        return value == that.value;
-    }
-
-    @Override
-    public int hashCode() {
-        return value;
+    public boolean isGreaterOrEqualTo(Coordinate that) {
+        return this.value >= that.value;
     }
 }
