@@ -9,7 +9,7 @@ public class Coordinates {
     }
 
     static Coordinates initial() {
-        return new Coordinates(Grid.gridMinimumValue(), Grid.gridMinimumValue());
+        return new Coordinates(Grid.minimumValue(), Grid.minimumValue());
     }
 
     void incrementX(int gridSize) {

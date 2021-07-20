@@ -1,5 +1,5 @@
 public class Grid {
-    static Coordinate gridMinimumValue() {
+    static Coordinate minimumValue() {
         return new Coordinate(Coordinate.GRID_MINIMUM_VALUE);
     }
 }
