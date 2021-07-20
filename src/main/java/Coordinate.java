@@ -30,12 +30,12 @@ public class Coordinate {
         return new Coordinate(grid.maximumValue()).decrement();
     }
 
-    Coordinate wrapIfNeeded(int gridSize) {
-        if (offGridAboveMax(new Grid(gridSize))) {
+    Coordinate wrapIfNeeded(int gridSize, Grid grid) {
+        if (offGridAboveMax(grid)) {
             return wrapAroundMin();
         }
         if (offGridUnderMin(value)) {
-            return wrapAroundMax(new Grid(gridSize));
+            return wrapAroundMax(grid);
         }
         return this;
     }
