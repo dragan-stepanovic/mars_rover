@@ -43,4 +43,8 @@ public class Coordinate {
         }
         return this;
     }
+
+    public String asChar() {
+        return String.valueOf(value);
+    }
 }

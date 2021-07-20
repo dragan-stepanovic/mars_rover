@@ -29,6 +29,6 @@ public class Coordinates {
     }
 
     String asString() {
-        return x.value + ":" + y.value;
+        return x.asChar() + ":" + y.value;
     }
 }
