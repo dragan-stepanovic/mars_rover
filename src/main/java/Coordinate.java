@@ -23,20 +23,20 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        if (this.isOffAboveMax(grid)) {
+        if (this.isOffGridAboveMax(grid)) {
             return wrapAroundMin();
         }
-        if (isOffUnderMin()) {
+        if (this.isOffGridUnderMin()) {
             return wrapAroundMax(grid);
         }
         return this;
     }
 
-    boolean isOffAboveMax(Grid grid) {
+    boolean isOffGridAboveMax(Grid grid) {
         return isGreaterOrEqualTo(grid.maximumValue());
     }
 
-    boolean isOffUnderMin() {
+    boolean isOffGridUnderMin() {
         return isLessThan(Grid.minimumValue());
     }
 
