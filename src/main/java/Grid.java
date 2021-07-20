@@ -12,7 +12,7 @@ public class Grid {
         return new Coordinate(MINIMUM_VALUE);
     }
 
-    int maximumValue() {
-        return this.size;
+    Coordinate maximumValue() {
+        return new Coordinate(this.size);
     }
 }

@@ -8,8 +8,8 @@ public class Coordinate {
         this.value = value;
     }
 
-    boolean offGridAboveMax(Grid grid) {
-        return this.equals(new Coordinate(grid.maximumValue()));
+    static Coordinate wrapAroundMax(Grid grid) {
+        return grid.maximumValue().decrement();
     }
 
     static boolean offGridUnderMin(int nextPosition) {
@@ -28,8 +28,8 @@ public class Coordinate {
         return Grid.minimumValue();
     }
 
-    static Coordinate wrapAroundMax(Grid grid) {
-        return new Coordinate(grid.maximumValue()).decrement();
+    boolean offGridAboveMax(Grid grid) {
+        return this.equals(grid.maximumValue());
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
