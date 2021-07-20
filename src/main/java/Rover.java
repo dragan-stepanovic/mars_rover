@@ -23,12 +23,12 @@ public class Rover {
                 direction.rotateRight();
                 break;
             case Command.MOVE:
-                moveOnGridWith(grid);
+                moveOn(grid);
                 break;
         }
     }
 
-    private void moveOnGridWith(Grid grid) {
+    private void moveOn(Grid grid) {
         if (direction.isFacingNorth()) {
             coordinates.incrementY(grid);
         } else if (direction.isFacingEast()) {
