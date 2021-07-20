@@ -15,29 +15,19 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = wrapIfNeeded(gridSize, new Coordinate(x).increment());
+        this.x = new Coordinate(x).increment().wrapIfNeeded(gridSize, this);
     }
 
     void incrementY(int gridSize) {
-        this.y = wrapIfNeeded(gridSize, new Coordinate(y).increment());
+        this.y = new Coordinate(y).increment().wrapIfNeeded(gridSize, this);
     }
 
     void decrementX(int gridSize) {
-        this.x = wrapIfNeeded(gridSize, new Coordinate(x).decrement());
+        this.x = new Coordinate(x).decrement().wrapIfNeeded(gridSize, this);
     }
 
     void decrementY(int gridSize) {
-        this.y = wrapIfNeeded(gridSize, new Coordinate(y).decrement());
-    }
-
-    int wrapIfNeeded(int gridSize, Coordinate coordinate) {
-        if (offGridAboveMax(coordinate.value, gridSize)) {
-            return wrapAroundMin();
-        }
-        if (offGridUnderMin(coordinate.value)) {
-            return wrapAroundMax(gridSize);
-        }
-        return coordinate.value;
+        this.y = new Coordinate(y).decrement().wrapIfNeeded(gridSize, this);
     }
 
     static boolean offGridAboveMax(int nextPosition, int gridSize) {

@@ -12,4 +12,14 @@ public class Coordinate {
     Coordinate decrement() {
         return new Coordinate(value - 1);
     }
+
+    int wrapIfNeeded(int gridSize, Coordinates coordinates) {
+        if (Coordinates.offGridAboveMax(value, gridSize)) {
+            return Coordinates.wrapAroundMin();
+        }
+        if (Coordinates.offGridUnderMin(value)) {
+            return coordinates.wrapAroundMax(gridSize);
+        }
+        return value;
+    }
 }
