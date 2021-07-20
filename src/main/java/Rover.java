@@ -29,13 +29,13 @@ public class Rover {
     }
 
     private Coordinates moveOn(Grid grid) {
-        if (direction.isFacingNorth()) {
+        if (direction == Direction.NORTH) {
             return coordinates.incrementY(grid);
         }
-        if (direction.isFacingEast()) {
+        if (direction == Direction.EAST) {
             return coordinates.incrementX(grid);
         }
-        if (direction.isFacingSouth()) {
+        if (direction == Direction.SOUTH) {
             return coordinates.decrementY(grid);
         }
         return coordinates.decrementX(grid);

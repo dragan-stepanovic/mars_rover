@@ -30,22 +30,6 @@ public class Direction {
         return NORTH;
     }
 
-    boolean isFacingNorth() {
-        return this == NORTH;
-    }
-
-    boolean isFacingEast() {
-        return this == EAST;
-    }
-
-    boolean isFacingSouth() {
-        return this == SOUTH;
-    }
-
-    boolean isFacingWest() {
-        return this == WEST;
-    }
-
     Direction rotateRight() {
         return directionToTheRight.get(this);
     }
