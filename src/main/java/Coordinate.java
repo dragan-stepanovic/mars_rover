@@ -15,12 +15,12 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        return wrapMax(grid)
+        return wrapAroundMaxIfNeeded(grid)
                 .orWrapMin(grid)
                 .orNoNeedToWrap();
     }
 
-    private Coordinate wrapMax(Grid grid) {
+    private Coordinate wrapAroundMaxIfNeeded(Grid grid) {
         if (this.isOffGridAboveMax(grid)) {
             return wrapAroundMin();
         }
