@@ -15,8 +15,8 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        return wrapMaxIfNeeded(grid)
-                .orWrapMinIfNeeded(grid)
+        return wrapMax(grid)
+                .orWrapMin(grid)
                 .orNoNeedToWrap();
     }
 
@@ -24,14 +24,14 @@ public class Coordinate {
         return this;
     }
 
-    private Coordinate orWrapMinIfNeeded(Grid grid) {
+    private Coordinate orWrapMin(Grid grid) {
         if (this.isOffGridUnderMin()) {
             return wrapAroundMax(grid);
         }
         return this;
     }
 
-    private Coordinate wrapMaxIfNeeded(Grid grid) {
+    private Coordinate wrapMax(Grid grid) {
         if (this.isOffGridAboveMax(grid)) {
             return wrapAroundMin();
         }
