@@ -9,7 +9,7 @@ public class Coordinate {
         return new Coordinate(value + 1);
     }
 
-    int decrement() {
-        return new Coordinate(value - 1).value;
+    Coordinate decrement() {
+        return new Coordinate(value - 1);
     }
 }
