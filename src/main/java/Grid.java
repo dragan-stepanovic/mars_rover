@@ -1,6 +1,5 @@
 public class Grid {
 
-    public static final int MINIMUM_VALUE = 0;
     public static final Grid INFINITE_ENOUGH = new Grid(10000);
     private final int size;
 
@@ -9,7 +8,7 @@ public class Grid {
     }
 
     static Coordinate minimumValue() {
-        return new Coordinate(MINIMUM_VALUE);
+        return new Coordinate(0);
     }
 
     Coordinate maximumValue() {
