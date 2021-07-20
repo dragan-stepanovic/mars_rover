@@ -1,13 +1,18 @@
 import java.util.Map;
 
-public class Direction {
+enum Direction {
+
+    NORTH('N'),
+    EAST('E'),
+    WEST('W'),
+    SOUTH('S');
 
     private final char value;
 
-    public static final Direction NORTH = new Direction('N');
-    public static final Direction EAST = new Direction('E');
-    public static final Direction SOUTH = new Direction('S');
-    public static final Direction WEST = new Direction('W');
+//    public static final Direction NORTH = new Direction('N');
+//    public static final Direction EAST = new Direction('E');
+//    public static final Direction SOUTH = new Direction('S');
+//    public static final Direction WEST = new Direction('W');
 
     private static final Map<Direction, Direction> directionToTheRight =
             Map.of(NORTH, EAST,
@@ -22,7 +27,7 @@ public class Direction {
                     EAST, NORTH);
 
 
-    private Direction(char value) {
+    Direction(char value) {
         this.value = value;
     }
 
@@ -30,32 +35,15 @@ public class Direction {
         return NORTH;
     }
 
-    Direction rotateRight() {
+    Direction toRight() {
         return directionToTheRight.get(this);
     }
 
-    public Direction rotateLeft() {
+    public Direction toLeft() {
         return directionToTheLeft.get(this);
     }
 
     char asChar() {
         return value;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Direction direction = (Direction) o;
-
-        return value == direction.value;
-    }
-
-    @Override
-    public int hashCode() {
-        return value;
-    }
-
-
 }

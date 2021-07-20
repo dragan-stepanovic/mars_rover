@@ -17,10 +17,10 @@ public class Rover {
     private void execute(char issuedCommand, Grid grid) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                this.direction = direction.rotateLeft();
+                this.direction = direction.toLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                this.direction = direction.rotateRight();
+                this.direction = direction.toRight();
                 break;
             case Command.MOVE:
                 this.coordinates = moveOn(grid);
@@ -29,10 +29,16 @@ public class Rover {
     }
 
     private Coordinates moveOn(Grid grid) {
-        if (direction == Direction.NORTH) return coordinates.incrementY(grid);
-        if (direction == Direction.EAST) return coordinates.incrementX(grid);
-        if (direction == Direction.SOUTH) return coordinates.decrementY(grid);
-        return coordinates.decrementX(grid);
+        switch (direction) {
+            case NORTH:
+                return coordinates.incrementY(grid);
+            case EAST:
+                return coordinates.incrementX(grid);
+            case SOUTH:
+                return coordinates.decrementY(grid);
+            default:
+                return coordinates.decrementX(grid);
+        }
     }
 
     private char[] split(String commands) {
