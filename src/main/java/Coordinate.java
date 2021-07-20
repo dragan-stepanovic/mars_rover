@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Coordinate {
 
     public int value;
@@ -7,7 +9,7 @@ public class Coordinate {
     }
 
     boolean offGridAboveMax(Grid grid) {
-        return this.value == grid.maximumValue();
+        return this.equals(new Coordinate(grid.maximumValue()));
     }
 
     static boolean offGridUnderMin(int nextPosition) {
@@ -42,5 +44,18 @@ public class Coordinate {
 
     public String asString() {
         return String.valueOf(value);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Coordinate that = (Coordinate) o;
+        return value == that.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 }
