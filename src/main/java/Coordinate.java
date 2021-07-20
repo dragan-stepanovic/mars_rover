@@ -6,16 +6,12 @@ public class Coordinate {
         this.value = value;
     }
 
-    static Coordinate wrapAroundMax(Grid grid) {
-        return grid.maximumValue().decrement();
-    }
-
-    public boolean isGreaterOrEqualTo(Coordinate that) {
-        return this.value >= that.value;
-    }
-
     boolean isLessThan(Coordinate that) {
         return this.value < that.value;
+    }
+
+    static Coordinate wrapAroundMax(Grid grid) {
+        return grid.maximumValue().decrement();
     }
 
     Coordinate increment() {
@@ -28,6 +24,10 @@ public class Coordinate {
 
     Coordinate wrapAroundMin() {
         return Grid.minimumValue();
+    }
+
+    public boolean isGreaterOrEqualTo(Coordinate that) {
+        return this.value >= that.value;
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
