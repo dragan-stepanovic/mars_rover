@@ -6,6 +6,10 @@ public class Coordinate {
     }
 
     int increment() {
-        return new Coordinate(value + 1).value;
+        return incrementNew().value;
+    }
+
+    private Coordinate incrementNew() {
+        return new Coordinate(value + 1);
     }
 }
