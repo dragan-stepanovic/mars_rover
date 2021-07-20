@@ -29,11 +29,11 @@ enum Direction {
         return NORTH;
     }
 
-    Direction toRight() {
+    Direction toTheRight() {
         return directionToTheRight.get(this);
     }
 
-    public Direction toLeft() {
+    public Direction toTheLeft() {
         return directionToTheLeft.get(this);
     }
 

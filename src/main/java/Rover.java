@@ -17,10 +17,10 @@ public class Rover {
     private void execute(char issuedCommand, Grid grid) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
-                this.direction = direction.toLeft();
+                this.direction = direction.toTheLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                this.direction = direction.toRight();
+                this.direction = direction.toTheRight();
                 break;
             case Command.MOVE:
                 this.coordinates = moveOn(grid);
