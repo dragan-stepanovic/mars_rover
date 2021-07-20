@@ -10,6 +10,6 @@ public class Coordinate {
     }
 
     int decrement() {
-        return value - 1;
+        return new Coordinate(value - 1).value;
     }
 }
