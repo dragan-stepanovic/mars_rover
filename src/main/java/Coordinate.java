@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Coordinate {
 
     public int value;
@@ -54,12 +52,14 @@ public class Coordinate {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Coordinate that = (Coordinate) o;
+
         return value == that.value;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value);
+        return value;
     }
 }
