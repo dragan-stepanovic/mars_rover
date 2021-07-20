@@ -13,19 +13,19 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = new Coordinate(x).increment().wrapIfNeededOld(gridSize);
+        this.x = new Coordinate(x).increment().wrapIfNeededOld(gridSize).value;
     }
 
     void incrementY(int gridSize) {
-        this.y = new Coordinate(y).increment().wrapIfNeededOld(gridSize);
+        this.y = new Coordinate(y).increment().wrapIfNeededOld(gridSize).value;
     }
 
     void decrementX(int gridSize) {
-        this.x = new Coordinate(x).decrement().wrapIfNeededOld(gridSize);
+        this.x = new Coordinate(x).decrement().wrapIfNeededOld(gridSize).value;
     }
 
     void decrementY(int gridSize) {
-        this.y = new Coordinate(y).decrement().wrapIfNeededOld(gridSize);
+        this.y = new Coordinate(y).decrement().wrapIfNeededOld(gridSize).value;
     }
 
     String asString() {

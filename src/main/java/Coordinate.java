@@ -34,13 +34,13 @@ public class Coordinate {
         return new Coordinate(gridMaximumValue(gridSize)).decrement();
     }
 
-    int wrapIfNeededOld(int gridSize) {
+    Coordinate wrapIfNeededOld(int gridSize) {
         if (offGridAboveMax(value, gridSize)) {
-            return wrapAroundMin().value;
+            return wrapAroundMin();
         }
         if (offGridUnderMin(value)) {
-            return wrapAroundMax(gridSize).value;
+            return wrapAroundMax(gridSize);
         }
-        return value;
+        return this;
     }
 }
