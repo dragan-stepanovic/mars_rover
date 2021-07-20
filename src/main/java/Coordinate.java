@@ -12,8 +12,8 @@ public class Coordinate {
         return grid.maximumValue().decrement();
     }
 
-    static boolean offGridUnderMin(int nextPosition) {
-        return nextPosition < Grid.MINIMUM_VALUE;
+    boolean offGridUnderMin() {
+        return this.value < Grid.MINIMUM_VALUE;
     }
 
     Coordinate increment() {
@@ -36,7 +36,7 @@ public class Coordinate {
         if (offGridAboveMax(grid)) {
             return wrapAroundMin();
         }
-        if (offGridUnderMin(value)) {
+        if (offGridUnderMin()) {
             return wrapAroundMax(grid);
         }
         return this;
