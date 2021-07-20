@@ -1,8 +1,29 @@
 public class Coordinate {
+    public static final int GRID_MINIMUM_VALUE = 0;
     public int value;
 
     public Coordinate(int value) {
         this.value = value;
+    }
+
+    static boolean offGridAboveMax(int nextPosition, int gridSize) {
+        return nextPosition == gridMaximumValue(gridSize);
+    }
+
+    static boolean offGridUnderMin(int nextPosition) {
+        return nextPosition < GRID_MINIMUM_VALUE;
+    }
+
+    static int gridMaximumValue(int gridSize) {
+        return gridSize;
+    }
+
+    static int wrapAroundMax(int gridSize) {
+        return new Coordinate(gridMaximumValue(gridSize)).decrement().value;
+    }
+
+    static int wrapAroundMin() {
+        return GRID_MINIMUM_VALUE;
     }
 
     Coordinate increment() {
@@ -13,12 +34,12 @@ public class Coordinate {
         return new Coordinate(value - 1);
     }
 
-    int wrapIfNeeded(int gridSize, Coordinates coordinates) {
-        if (Coordinates.offGridAboveMax(value, gridSize)) {
-            return Coordinates.wrapAroundMin();
+    int wrapIfNeeded(int gridSize) {
+        if (offGridAboveMax(value, gridSize)) {
+            return wrapAroundMin();
         }
-        if (Coordinates.offGridUnderMin(value)) {
-            return coordinates.wrapAroundMax(gridSize);
+        if (offGridUnderMin(value)) {
+            return wrapAroundMax(gridSize);
         }
         return value;
     }
