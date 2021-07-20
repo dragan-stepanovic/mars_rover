@@ -12,20 +12,20 @@ public class Coordinates {
         return new Coordinates(Grid.minimumValue(), Grid.minimumValue());
     }
 
-    void incrementX(int gridSize) {
-        this.x = x.increment().wrapIfNeeded(new Grid(gridSize));
+    void incrementX(Grid grid) {
+        this.x = x.increment().wrapIfNeeded(grid);
     }
 
-    void incrementY(int gridSize) {
-        this.y = y.increment().wrapIfNeeded(new Grid(gridSize));
+    void incrementY(Grid grid) {
+        this.y = y.increment().wrapIfNeeded(grid);
     }
 
-    void decrementX(int gridSize) {
-        this.x = x.decrement().wrapIfNeeded(new Grid(gridSize));
+    void decrementX(Grid grid) {
+        this.x = x.decrement().wrapIfNeeded(grid);
     }
 
-    void decrementY(int gridSize) {
-        this.y = y.decrement().wrapIfNeeded(new Grid(gridSize));
+    void decrementY(Grid grid) {
+        this.y = y.decrement().wrapIfNeeded(grid);
     }
 
     String asString() {
