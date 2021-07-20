@@ -12,8 +12,8 @@ public class Coordinate {
         return grid.maximumValue().decrement();
     }
 
-    boolean offGridUnderMin(Grid grid) {
-        return this.lessThan(grid.minimumValue());
+    boolean offGridUnderMin() {
+        return this.lessThan(Grid.minimumValue());
     }
 
     boolean lessThan(Coordinate that) {
@@ -28,7 +28,7 @@ public class Coordinate {
         return new Coordinate(value - 1);
     }
 
-    static Coordinate wrapAroundMin() {
+    Coordinate wrapAroundMin() {
         return Grid.minimumValue();
     }
 
@@ -40,7 +40,7 @@ public class Coordinate {
         if (offGridAboveMax(grid)) {
             return wrapAroundMin();
         }
-        if (offGridUnderMin(grid)) {
+        if (offGridUnderMin()) {
             return wrapAroundMax(grid);
         }
         return this;
