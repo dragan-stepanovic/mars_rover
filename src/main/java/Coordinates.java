@@ -15,29 +15,32 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = wrapIfNeeded(new Coordinate(x).increment().value, gridSize);
+        final int value = new Coordinate(x).increment().value;
+        this.x = wrapIfNeeded(gridSize, new Coordinate(value));
     }
 
     void incrementY(int gridSize) {
-        this.y = wrapIfNeeded(new Coordinate(y).increment().value, gridSize);
+        final int value = new Coordinate(y).increment().value;
+        this.y = wrapIfNeeded(gridSize, new Coordinate(value));
     }
 
     void decrementX(int gridSize) {
-        this.x = wrapIfNeeded(new Coordinate(x).decrement().value, gridSize);
+        final int value = new Coordinate(x).decrement().value;
+        this.x = wrapIfNeeded(gridSize, new Coordinate(value));
     }
 
     void decrementY(int gridSize) {
-        this.y = wrapIfNeeded(new Coordinate(y).decrement().value, gridSize);
+        this.y = wrapIfNeeded(gridSize, new Coordinate(y).decrement());
     }
 
-    int wrapIfNeeded(int nextPosition, int gridSize) {
-        if (offGridAboveMax(nextPosition, gridSize)) {
+    int wrapIfNeeded(int gridSize, Coordinate coordinate) {
+        if (offGridAboveMax(coordinate.value, gridSize)) {
             return wrapAroundMin();
         }
-        if (offGridUnderMin(nextPosition)) {
+        if (offGridUnderMin(coordinate.value)) {
             return wrapAroundMax(gridSize);
         }
-        return nextPosition;
+        return coordinate.value;
     }
 
     static boolean offGridAboveMax(int nextPosition, int gridSize) {
