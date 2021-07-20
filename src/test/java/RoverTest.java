@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,12 +10,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class RoverTest {
 
-    private Rover rover;
-
-    @BeforeEach
-    public void initializeRover() {
-        rover = new Rover();
-    }
+    private final Rover rover = new Rover();
 
     static Stream<Arguments> wrappingTestInputs() {
         return Stream.of(
