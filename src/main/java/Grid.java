@@ -5,4 +5,8 @@ public class Grid {
     static Coordinate minimumValue() {
         return new Coordinate(MINIMUM_VALUE);
     }
+
+    static int maximumValue(int gridSize) {
+        return gridSize;
+    }
 }
