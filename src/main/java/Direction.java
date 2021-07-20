@@ -46,8 +46,8 @@ public class Direction {
         return value == FACING_WEST;
     }
 
-    void rotateRight() {
-        value = directionToTheRight.get(value);
+    Direction rotateRight() {
+        return new Direction(directionToTheRight.get(value));
     }
 
     public Direction rotateLeft() {

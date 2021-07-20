@@ -20,23 +20,23 @@ public class Rover {
                 this.direction = direction.rotateLeft();
                 break;
             case Command.ROTATE_RIGHT:
-                direction.rotateRight();
+                this.direction = direction.rotateRight();
                 break;
             case Command.MOVE:
-                moveOn(grid);
+                this.coordinates = moveOn(grid);
                 break;
         }
     }
 
-    private void moveOn(Grid grid) {
+    private Coordinates moveOn(Grid grid) {
         if (direction.isFacingNorth()) {
-            this.coordinates = coordinates.incrementY(grid);
+            return coordinates.incrementY(grid);
         } else if (direction.isFacingEast()) {
-            this.coordinates = coordinates.incrementX(grid);
+            return coordinates.incrementX(grid);
         } else if (direction.isFacingSouth()) {
-            this.coordinates = coordinates.decrementY(grid);
-        } else if (direction.isFacingWest()) {
-            this.coordinates = coordinates.decrementX(grid);
+            return coordinates.decrementY(grid);
+        } else {
+            return coordinates.decrementX(grid);
         }
     }
 
