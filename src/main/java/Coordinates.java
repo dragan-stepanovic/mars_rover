@@ -1,7 +1,7 @@
 public class Coordinates {
 
-    private Coordinate x;
-    private Coordinate y;
+    private final Coordinate x;
+    private final Coordinate y;
 
     private Coordinates(Coordinate x, Coordinate y) {
         this.x = x;
