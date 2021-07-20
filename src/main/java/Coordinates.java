@@ -31,7 +31,7 @@ public class Coordinates {
     }
 
     private int decrement(int value) {
-        return value - 1;
+        return new Coordinate(value).value - 1;
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
