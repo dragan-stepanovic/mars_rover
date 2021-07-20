@@ -3,13 +3,13 @@ public class Coordinates {
     private Coordinate x;
     private Coordinate y;
 
-    private Coordinates(int x, int y) {
-        this.x = new Coordinate(x);
-        this.y = new Coordinate(y);
+    private Coordinates(Coordinate x, Coordinate y) {
+        this.x = x;
+        this.y = y;
     }
 
     static Coordinates initial() {
-        return new Coordinates(Coordinate.GRID_MINIMUM_VALUE, Coordinate.GRID_MINIMUM_VALUE);
+        return new Coordinates(Grid.gridMinimumValue(), Grid.gridMinimumValue());
     }
 
     void incrementX(int gridSize) {
