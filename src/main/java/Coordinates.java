@@ -15,8 +15,7 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        final int value = new Coordinate(x).increment().value;
-        this.x = wrapIfNeeded(gridSize, new Coordinate(value));
+        this.x = wrapIfNeeded(gridSize, new Coordinate(x).increment());
     }
 
     void incrementY(int gridSize) {
