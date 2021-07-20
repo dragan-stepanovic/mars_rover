@@ -4,4 +4,8 @@ public class Coordinate {
     public Coordinate(int value) {
         this.value = value;
     }
+
+    int increment() {
+        return new Coordinate(value + 1).value;
+    }
 }

@@ -15,15 +15,11 @@ public class Coordinates {
     }
 
     void incrementX(int gridSize) {
-        this.x = wrapIfNeeded(increment(new Coordinate(x)), gridSize);
+        this.x = wrapIfNeeded(new Coordinate(x).increment(), gridSize);
     }
 
     void incrementY(int gridSize) {
-        this.y = wrapIfNeeded(increment(new Coordinate(y)), gridSize);
-    }
-
-    private int increment(Coordinate coordinate) {
-        return coordinate.value + 1;
+        this.y = wrapIfNeeded(new Coordinate(y).increment(), gridSize);
     }
 
     void decrementX(int gridSize) {
