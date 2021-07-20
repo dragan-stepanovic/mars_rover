@@ -23,7 +23,7 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        if (grid.isOffAboveMax(this)) {
+        if (this.isOffAboveMax(grid)) {
             return wrapAroundMin();
         }
         if (grid.isOffUnderMin(this)) {
@@ -42,5 +42,9 @@ public class Coordinate {
 
     public String asString() {
         return String.valueOf(value);
+    }
+
+    boolean isOffAboveMax(Grid grid) {
+        return isGreaterOrEqualTo(grid.maximumValue());
     }
 }
