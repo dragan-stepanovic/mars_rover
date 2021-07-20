@@ -7,7 +7,7 @@ public class Coordinate {
     }
 
     static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == new Grid(gridSize).maximumValue(gridSize);
+        return nextPosition == new Grid(gridSize).maximumValue();
     }
 
     static boolean offGridUnderMin(int nextPosition) {
@@ -27,7 +27,7 @@ public class Coordinate {
     }
 
     static Coordinate wrapAroundMax(int gridSize) {
-        return new Coordinate(new Grid(gridSize).maximumValue(gridSize)).decrement();
+        return new Coordinate(new Grid(gridSize).maximumValue()).decrement();
     }
 
     Coordinate wrapIfNeeded(int gridSize) {
