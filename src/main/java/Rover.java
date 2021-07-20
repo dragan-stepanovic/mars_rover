@@ -4,7 +4,7 @@ public class Rover {
     private final Direction direction = Direction.initial();
 
     public String execute(String commands) {
-        return execute(commands, Grid.INFINITE_ENOUGH_GRID_SIZE);
+        return execute(commands, Grid.INFINITE_ENOUGH);
     }
 
     public String execute(String commands, Grid grid) {
