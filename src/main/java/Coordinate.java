@@ -12,7 +12,7 @@ public class Coordinate {
         return grid.maximumValue().decrement();
     }
 
-    boolean offGridUnderMin() {
+    boolean offGridUnderMin(Grid grid) {
         return this.value < Grid.MINIMUM_VALUE;
     }
 
@@ -40,7 +40,7 @@ public class Coordinate {
         if (offGridAboveMax(grid)) {
             return wrapAroundMin();
         }
-        if (offGridUnderMin()) {
+        if (offGridUnderMin(grid)) {
             return wrapAroundMax(grid);
         }
         return this;
