@@ -15,11 +15,25 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        if (this.isOffGridAboveMax(grid)) {
-            return wrapAroundMin();
-        }
+        return wrapMaxIfNeeded(grid)
+                .orWrapMinIfNeeded(grid)
+                .orNoNeedToWrap();
+    }
+
+    private Coordinate orNoNeedToWrap() {
+        return this;
+    }
+
+    private Coordinate orWrapMinIfNeeded(Grid grid) {
         if (this.isOffGridUnderMin()) {
             return wrapAroundMax(grid);
+        }
+        return this;
+    }
+
+    private Coordinate wrapMaxIfNeeded(Grid grid) {
+        if (this.isOffGridAboveMax(grid)) {
+            return wrapAroundMin();
         }
         return this;
     }
