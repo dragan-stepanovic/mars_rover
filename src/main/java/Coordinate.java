@@ -35,11 +35,14 @@ public class Coordinate {
     }
 
     int wrapIfNeeded(int gridSize) {
+        final Coordinate result;
         if (offGridAboveMax(value, gridSize)) {
-            return wrapAroundMin().value;
+            result = wrapAroundMin();
+            return result.value;
         }
         if (offGridUnderMin(value)) {
-            return wrapAroundMax(gridSize).value;
+            result = wrapAroundMax(gridSize);
+            return result.value;
         }
         return value;
     }
