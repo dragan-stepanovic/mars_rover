@@ -14,4 +14,8 @@ public class Grid {
     Coordinate maximumValue() {
         return new Coordinate(this.size);
     }
+
+    boolean offGridAboveMax(Coordinate coordinate) {
+        return coordinate.equals(maximumValue());
+    }
 }
