@@ -16,6 +16,10 @@ public class Coordinate {
         return this.value < Grid.MINIMUM_VALUE;
     }
 
+    boolean lessThan(Coordinate that) {
+        return this.value < that.value;
+    }
+
     Coordinate increment() {
         return new Coordinate(value + 1);
     }
