@@ -22,14 +22,6 @@ public class Coordinate {
         return new Coordinate(value - 1);
     }
 
-    Coordinate wrapAroundMin() {
-        return Grid.minimumValue();
-    }
-
-    public boolean isGreaterOrEqualTo(Coordinate that) {
-        return this.value >= that.value;
-    }
-
     Coordinate wrapIfNeeded(Grid grid) {
         if (grid.isOffAboveMax(this)) {
             return wrapAroundMin();
@@ -38,6 +30,14 @@ public class Coordinate {
             return wrapAroundMax(grid);
         }
         return this;
+    }
+
+    public boolean isGreaterOrEqualTo(Coordinate that) {
+        return this.value >= that.value;
+    }
+
+    Coordinate wrapAroundMin() {
+        return Grid.minimumValue();
     }
 
     public String asString() {
