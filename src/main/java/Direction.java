@@ -4,18 +4,18 @@ public class Direction {
 
     private final char value;
 
-    public static final char FACING_NORTH = 'N';
-    public static final char FACING_EAST = 'E';
-    public static final char FACING_SOUTH = 'S';
-    public static final char FACING_WEST = 'W';
+    public static final Direction FACING_NORTH = new Direction('N');
+    public static final Direction FACING_EAST = new Direction('E');
+    public static final Direction FACING_SOUTH = new Direction('S');
+    public static final Direction FACING_WEST = new Direction('W');
 
-    private final Map<Character, Character> directionToTheRight =
+    private static final Map<Direction, Direction> directionToTheRight =
             Map.of(FACING_NORTH, FACING_EAST,
                     FACING_EAST, FACING_SOUTH,
                     FACING_SOUTH, FACING_WEST,
                     FACING_WEST, FACING_NORTH);
 
-    private final Map<Character, Character> directionToTheLeft =
+    private static final Map<Direction, Direction> directionToTheLeft =
             Map.of(FACING_NORTH, FACING_WEST,
                     FACING_WEST, FACING_SOUTH,
                     FACING_SOUTH, FACING_EAST,
@@ -27,34 +27,51 @@ public class Direction {
     }
 
     public static Direction initial() {
-        return new Direction(FACING_NORTH);
+        return FACING_NORTH;
     }
 
     boolean isFacingNorth() {
-        return value == FACING_NORTH;
+        return this == FACING_NORTH;
     }
 
     boolean isFacingEast() {
-        return value == FACING_EAST;
+        return this == FACING_EAST;
     }
 
     boolean isFacingSouth() {
-        return value == FACING_SOUTH;
+        return this == FACING_SOUTH;
     }
 
     boolean isFacingWest() {
-        return value == FACING_WEST;
+        return this == FACING_WEST;
     }
 
     Direction rotateRight() {
-        return new Direction(directionToTheRight.get(value));
+        return directionToTheRight.get(this);
     }
 
     public Direction rotateLeft() {
-        return new Direction(directionToTheLeft.get(value));
+        return directionToTheLeft.get(this);
     }
 
     char asChar() {
         return value;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Direction direction = (Direction) o;
+
+        return value == direction.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return value;
+    }
+
+
 }
