@@ -1,7 +1,6 @@
 import java.util.Map;
 
 enum Direction {
-
     NORTH('N'),
     EAST('E'),
     WEST('W'),
