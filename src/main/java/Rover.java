@@ -6,17 +6,17 @@ public class Rover {
     private final Direction direction = Direction.initial();
 
     public String execute(String commands) {
-        return execute(commands, INFINITE_ENOUGH_GRID_SIZE);
+        return execute(commands, new Grid(INFINITE_ENOUGH_GRID_SIZE));
     }
 
-    public String execute(String commands, int gridSize) {
+    public String execute(String commands, Grid grid) {
         for (char command : split(commands))
-            execute(command, gridSize);
+            execute(command, grid);
 
         return toString();
     }
 
-    private void execute(char issuedCommand, int gridSize) {
+    private void execute(char issuedCommand, Grid grid) {
         switch (issuedCommand) {
             case Command.ROTATE_LEFT:
                 direction.rotateLeft();
@@ -25,12 +25,12 @@ public class Rover {
                 direction.rotateRight();
                 break;
             case Command.MOVE:
-                moveOnGridWith(gridSize, new Grid(gridSize));
+                moveOnGridWith(grid);
                 break;
         }
     }
 
-    private void moveOnGridWith(int gridSize, Grid grid) {
+    private void moveOnGridWith(Grid grid) {
         if (direction.isFacingNorth()) {
             coordinates.incrementY(grid);
         } else if (direction.isFacingEast()) {

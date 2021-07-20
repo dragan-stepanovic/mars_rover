@@ -6,13 +6,14 @@ public class RoverTest {
 
     @Test
     void wraps_around_the_grid() {
-        assertEquals("0:0:N", aRover().execute("MM", 2));
-        assertEquals("0:0:E", aRover().execute("RMM", 2));
-        assertEquals("1:0:W", aRover().execute("LMMMM", 5));
-        assertEquals("1:0:N", aRover().execute("RMLMM", 2));
-        assertEquals("1:0:W", aRover().execute("LM", 2));
-        assertEquals("0:1:S", aRover().execute("RRM", 2));
-        assertEquals("2:3:S", aRover().execute("RMMRM", 4));
+        //todo: parameterize
+        assertEquals("0:0:N", aRover().execute("MM", new Grid(2)));
+        assertEquals("0:0:E", aRover().execute("RMM", new Grid(2)));
+        assertEquals("1:0:W", aRover().execute("LMMMM", new Grid(5)));
+        assertEquals("1:0:N", aRover().execute("RMLMM", new Grid(2)));
+        assertEquals("1:0:W", aRover().execute("LM", new Grid(2)));
+        assertEquals("0:1:S", aRover().execute("RRM", new Grid(2)));
+        assertEquals("2:3:S", aRover().execute("RMMRM", new Grid(4)));
     }
 
     @Test
