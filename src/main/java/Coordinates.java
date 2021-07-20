@@ -20,8 +20,8 @@ public class Coordinates {
         return new Coordinates(x, y.increment().wrapIfNeeded(grid));
     }
 
-    void decrementX(Grid grid) {
-        this.x = x.decrement().wrapIfNeeded(grid);
+    Coordinates decrementX(Grid grid) {
+        return new Coordinates(x.decrement().wrapIfNeeded(grid), y);
     }
 
     void decrementY(Grid grid) {

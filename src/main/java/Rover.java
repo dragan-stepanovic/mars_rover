@@ -36,7 +36,7 @@ public class Rover {
         } else if (direction.isFacingSouth()) {
             coordinates.decrementY(grid);
         } else if (direction.isFacingWest()) {
-            coordinates.decrementX(grid);
+            this.coordinates = coordinates.decrementX(grid);
         }
     }
 
