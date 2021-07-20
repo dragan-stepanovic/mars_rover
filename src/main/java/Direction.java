@@ -9,11 +9,6 @@ enum Direction {
 
     private final char value;
 
-//    public static final Direction NORTH = new Direction('N');
-//    public static final Direction EAST = new Direction('E');
-//    public static final Direction SOUTH = new Direction('S');
-//    public static final Direction WEST = new Direction('W');
-
     private static final Map<Direction, Direction> directionToTheRight =
             Map.of(NORTH, EAST,
                     EAST, SOUTH,
