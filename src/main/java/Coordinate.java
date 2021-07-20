@@ -7,7 +7,7 @@ public class Coordinate {
     }
 
     static boolean offGridAboveMax(int nextPosition, int gridSize) {
-        return nextPosition == Grid.maximumValue(gridSize);
+        return nextPosition == new Grid(gridSize).maximumValue(gridSize);
     }
 
     static boolean offGridUnderMin(int nextPosition) {
