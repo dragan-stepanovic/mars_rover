@@ -26,21 +26,21 @@ public class Coordinate {
         return new Coordinate(value - 1);
     }
 
-    int wrapIfNeeded(int gridSize) {
-        if (offGridAboveMax(value, gridSize)) {
-            return wrapAroundMin();
-        }
-        if (offGridUnderMin(value)) {
-            return wrapAroundMax(gridSize);
-        }
-        return value;
+    static Coordinate wrapAroundMin() {
+        return new Coordinate(GRID_MINIMUM_VALUE);
     }
 
     static int wrapAroundMax(int gridSize) {
         return new Coordinate(gridMaximumValue(gridSize)).decrement().value;
     }
 
-    static int wrapAroundMin() {
-        return GRID_MINIMUM_VALUE;
+    int wrapIfNeeded(int gridSize) {
+        if (offGridAboveMax(value, gridSize)) {
+            return wrapAroundMin().value;
+        }
+        if (offGridUnderMin(value)) {
+            return wrapAroundMax(gridSize);
+        }
+        return value;
     }
 }
