@@ -34,7 +34,7 @@ public class Coordinate {
         return new Coordinate(gridMaximumValue(gridSize)).decrement();
     }
 
-    Coordinate wrapIfNeededOld(int gridSize) {
+    Coordinate wrapIfNeeded(int gridSize) {
         if (offGridAboveMax(value, gridSize)) {
             return wrapAroundMin();
         }
