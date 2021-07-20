@@ -4,22 +4,22 @@ public class Direction {
 
     private final char value;
 
-    public static final Direction FACING_NORTH = new Direction('N');
-    public static final Direction FACING_EAST = new Direction('E');
-    public static final Direction FACING_SOUTH = new Direction('S');
-    public static final Direction FACING_WEST = new Direction('W');
+    public static final Direction NORTH = new Direction('N');
+    public static final Direction EAST = new Direction('E');
+    public static final Direction SOUTH = new Direction('S');
+    public static final Direction WEST = new Direction('W');
 
     private static final Map<Direction, Direction> directionToTheRight =
-            Map.of(FACING_NORTH, FACING_EAST,
-                    FACING_EAST, FACING_SOUTH,
-                    FACING_SOUTH, FACING_WEST,
-                    FACING_WEST, FACING_NORTH);
+            Map.of(NORTH, EAST,
+                    EAST, SOUTH,
+                    SOUTH, WEST,
+                    WEST, NORTH);
 
     private static final Map<Direction, Direction> directionToTheLeft =
-            Map.of(FACING_NORTH, FACING_WEST,
-                    FACING_WEST, FACING_SOUTH,
-                    FACING_SOUTH, FACING_EAST,
-                    FACING_EAST, FACING_NORTH);
+            Map.of(NORTH, WEST,
+                    WEST, SOUTH,
+                    SOUTH, EAST,
+                    EAST, NORTH);
 
 
     private Direction(char value) {
@@ -27,23 +27,23 @@ public class Direction {
     }
 
     public static Direction initial() {
-        return FACING_NORTH;
+        return NORTH;
     }
 
     boolean isFacingNorth() {
-        return this == FACING_NORTH;
+        return this == NORTH;
     }
 
     boolean isFacingEast() {
-        return this == FACING_EAST;
+        return this == EAST;
     }
 
     boolean isFacingSouth() {
-        return this == FACING_SOUTH;
+        return this == SOUTH;
     }
 
     boolean isFacingWest() {
-        return this == FACING_WEST;
+        return this == WEST;
     }
 
     Direction rotateRight() {
