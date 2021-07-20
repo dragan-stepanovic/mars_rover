@@ -25,8 +25,7 @@ public class Coordinates {
     }
 
     void decrementX(int gridSize) {
-        final int value = new Coordinate(x).decrement().value;
-        this.x = wrapIfNeeded(gridSize, new Coordinate(value));
+        this.x = wrapIfNeeded(gridSize, new Coordinate(x).decrement());
     }
 
     void decrementY(int gridSize) {
