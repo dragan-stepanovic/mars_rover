@@ -1,55 +1,77 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RoverTest {
 
-    @Test
-    void wraps_around_the_grid() {
-        //todo: parameterize
-        assertEquals("0:0:N", aRover().execute("MM", new Grid(2)));
-        assertEquals("0:0:E", aRover().execute("RMM", new Grid(2)));
-        assertEquals("1:0:W", aRover().execute("LMMMM", new Grid(5)));
-        assertEquals("1:0:N", aRover().execute("RMLMM", new Grid(2)));
-        assertEquals("1:0:W", aRover().execute("LM", new Grid(2)));
-        assertEquals("0:1:S", aRover().execute("RRM", new Grid(2)));
-        assertEquals("2:3:S", aRover().execute("RMMRM", new Grid(4)));
+    private Rover rover;
+
+    static Stream<Arguments> wrappingTestInputs() {
+        return Stream.of(
+                Arguments.arguments("MM", 2, "0:0:N"),
+                Arguments.arguments("RMM", 2, "0:0:E"),
+                Arguments.arguments("LMMMM", 5, "1:0:W"),
+                Arguments.arguments("RMLMM", 2, "1:0:N"),
+                Arguments.arguments("LM", 2, "1:0:W"),
+                Arguments.arguments("RRM", 2, "0:1:S"),
+                Arguments.arguments("RMMRM", 4, "2:3:S")
+        );
     }
 
-    @Test
-    void interprets_command_list() {
-        assertEquals("0:0:W", aRover().execute("L"));
-        assertEquals("1:4:N", aRover().execute("MMRMLMM"));
-        assertEquals("2:4:W", aRover().execute("RMMMLMMMMLLRM"));
-        assertEquals("4:4:N", aRover().execute("RMMLLRMMMRMMLM"));
+    static Stream<Arguments> interpretingTestInput() {
+        return Stream.of(
+                Arguments.arguments("L", "0:0:W"),
+                Arguments.arguments("MMRMLMM", "1:4:N"),
+                Arguments.arguments("RMMMLMMMMLLRM", "2:4:W"),
+                Arguments.arguments("RMMLLRMMMRMMLM", "4:4:N"));
+    }
+
+    @BeforeEach
+    public void initializeRover() {
+        rover = new Rover();
+    }
+
+    @ParameterizedTest
+    @MethodSource("wrappingTestInputs")
+    void wraps_around_the_grid(String commands, int gridSize, String result) {
+        assertEquals(result, rover.execute(commands, new Grid(gridSize)));
+    }
+
+    @ParameterizedTest
+    @MethodSource("interpretingTestInput")
+    void interprets_command_list(String commands, String result) {
+        assertEquals(result, rover.execute(commands));
     }
 
     @Test
     void can_move_to_west() {
-        assertEquals("1:0:W", aRover().execute("RMMMRRMM"));
+        assertEquals("1:0:W", rover.execute("RMMMRRMM"));
     }
 
     @Test
     void can_move_to_south() {
-        assertEquals("0:1:S", aRover().execute("MMMLLMM"));
+        assertEquals("0:1:S", rover.execute("MMMLLMM"));
     }
 
     @Test
     void can_move_to_east_and_north() {
-        assertEquals("5:4:N", aRover().execute("RMMMRRRMRMMRRRMMM"));
+        assertEquals("5:4:N", rover.execute("RMMMRRRMRMMRRRMMM"));
     }
 
     @Test
     void can_rotate_full_circle_to_the_right() {
-        assertEquals("0:0:E", aRover().execute("RRRRR"));
+        assertEquals("0:0:E", rover.execute("RRRRR"));
     }
 
     @Test
     void can_rotate_full_circle_to_the_left() {
-        assertEquals("0:0:W", aRover().execute("LLLLL"));
+        assertEquals("0:0:W", rover.execute("LLLLL"));
     }
 
-    private Rover aRover() {
-        return new Rover();
-    }
 }
