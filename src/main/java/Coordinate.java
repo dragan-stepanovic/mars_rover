@@ -1,4 +1,5 @@
 public class Coordinate {
+
     public int value;
 
     public Coordinate(int value) {
