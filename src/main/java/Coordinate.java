@@ -16,7 +16,7 @@ public class Coordinate {
 
     Coordinate wrapIfNeeded(Grid grid) {
         return wrapAroundMaxIfNeeded(grid)
-                .orWrapMin(grid)
+                .orWrapAroundMin(grid)
                 .orNoNeedToWrap();
     }
 
@@ -27,7 +27,7 @@ public class Coordinate {
         return this;
     }
 
-    private Coordinate orWrapMin(Grid grid) {
+    private Coordinate orWrapAroundMin(Grid grid) {
         if (this.isOffGridUnderMin()) {
             return wrapAroundMax(grid);
         }
