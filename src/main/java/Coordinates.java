@@ -23,15 +23,15 @@ public class Coordinates {
     }
 
     void decrementX(int gridSize) {
-        this.x = wrapIfNeeded(decrement(x), gridSize);
+        this.x = wrapIfNeeded(decrement(new Coordinate(x)), gridSize);
     }
 
     void decrementY(int gridSize) {
-        this.y = wrapIfNeeded(decrement(y), gridSize);
+        this.y = wrapIfNeeded(decrement(new Coordinate(y)), gridSize);
     }
 
-    private int decrement(int value) {
-        return new Coordinate(value).value - 1;
+    private int decrement(Coordinate coordinate) {
+        return coordinate.value - 1;
     }
 
     int wrapIfNeeded(int nextPosition, int gridSize) {
@@ -53,7 +53,7 @@ public class Coordinates {
     }
 
     int wrapAroundMax(int gridSize) {
-        return decrement(gridMaximumValue(gridSize));
+        return decrement(new Coordinate(gridMaximumValue(gridSize)));
     }
 
     static int wrapAroundMin() {
