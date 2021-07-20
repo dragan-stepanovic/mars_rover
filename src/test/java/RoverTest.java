@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class RoverTest {
 
@@ -14,22 +15,22 @@ public class RoverTest {
 
     static Stream<Arguments> wrappingTestInputs() {
         return Stream.of(
-                Arguments.arguments("MM", 2, "0:0:N"),
-                Arguments.arguments("RMM", 2, "0:0:E"),
-                Arguments.arguments("LMMMM", 5, "1:0:W"),
-                Arguments.arguments("RMLMM", 2, "1:0:N"),
-                Arguments.arguments("LM", 2, "1:0:W"),
-                Arguments.arguments("RRM", 2, "0:1:S"),
-                Arguments.arguments("RMMRM", 4, "2:3:S")
+                arguments("MM", 2, "0:0:N"),
+                arguments("RMM", 2, "0:0:E"),
+                arguments("LMMMM", 5, "1:0:W"),
+                arguments("RMLMM", 2, "1:0:N"),
+                arguments("LM", 2, "1:0:W"),
+                arguments("RRM", 2, "0:1:S"),
+                arguments("RMMRM", 4, "2:3:S")
         );
     }
 
     static Stream<Arguments> interpretingTestInput() {
         return Stream.of(
-                Arguments.arguments("L", "0:0:W"),
-                Arguments.arguments("MMRMLMM", "1:4:N"),
-                Arguments.arguments("RMMMLMMMMLLRM", "2:4:W"),
-                Arguments.arguments("RMMLLRMMMRMMLM", "4:4:N"));
+                arguments("L", "0:0:W"),
+                arguments("MMRMLMM", "1:4:N"),
+                arguments("RMMMLMMMMLLRM", "2:4:W"),
+                arguments("RMMLLRMMMRMMLM", "4:4:N"));
     }
 
     @BeforeEach
