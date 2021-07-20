@@ -16,7 +16,4 @@ public class Grid {
         return new Coordinate(this.size);
     }
 
-    boolean isOffUnderMin(Coordinate coordinate) {
-        return coordinate.isLessThan(minimumValue());
-    }
 }

@@ -26,10 +26,18 @@ public class Coordinate {
         if (this.isOffAboveMax(grid)) {
             return wrapAroundMin();
         }
-        if (grid.isOffUnderMin(this)) {
+        if (isOffUnderMin()) {
             return wrapAroundMax(grid);
         }
         return this;
+    }
+
+    boolean isOffAboveMax(Grid grid) {
+        return isGreaterOrEqualTo(grid.maximumValue());
+    }
+
+    boolean isOffUnderMin() {
+        return isLessThan(Grid.minimumValue());
     }
 
     public boolean isGreaterOrEqualTo(Coordinate that) {
@@ -42,9 +50,5 @@ public class Coordinate {
 
     public String asString() {
         return String.valueOf(value);
-    }
-
-    boolean isOffAboveMax(Grid grid) {
-        return isGreaterOrEqualTo(grid.maximumValue());
     }
 }
