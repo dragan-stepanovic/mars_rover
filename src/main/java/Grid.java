@@ -15,11 +15,11 @@ public class Grid {
         return new Coordinate(this.size);
     }
 
-    boolean coordinateIsOffGridAboveMax(Coordinate coordinate) {
+    boolean isOffGridAboveMax(Coordinate coordinate) {
         return coordinate.isGreaterOrEqualTo(maximumValue());
     }
 
-    boolean coordinateIsOffGridUnderMin(Coordinate coordinate) {
+    boolean isOffGridUnderMin(Coordinate coordinate) {
         return coordinate.isLessThan(minimumValue());
     }
 }

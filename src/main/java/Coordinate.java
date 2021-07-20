@@ -31,10 +31,10 @@ public class Coordinate {
     }
 
     Coordinate wrapIfNeeded(Grid grid) {
-        if (grid.coordinateIsOffGridAboveMax(this)) {
+        if (grid.isOffGridAboveMax(this)) {
             return wrapAroundMin();
         }
-        if (grid.coordinateIsOffGridUnderMin(this)) {
+        if (grid.isOffGridUnderMin(this)) {
             return wrapAroundMax(grid);
         }
         return this;
