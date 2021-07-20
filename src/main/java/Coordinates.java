@@ -23,7 +23,7 @@ public class Coordinates {
     }
 
     private int increment(int value) {
-        return new Coordinate(value + 1).value;
+        return new Coordinate(value).value + 1;
     }
 
     void decrementX(int gridSize) {
