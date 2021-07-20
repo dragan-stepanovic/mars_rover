@@ -2,7 +2,7 @@ import java.util.Map;
 
 public class Direction {
 
-    private char value;
+    private final char value;
 
     public static final char FACING_NORTH = 'N';
     public static final char FACING_EAST = 'E';
