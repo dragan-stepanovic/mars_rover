@@ -1,6 +1,6 @@
 public class Rover {
 
-    private final Coordinates coordinates = Coordinates.initial();
+    private Coordinates coordinates = Coordinates.initial();
     private final Direction direction = Direction.initial();
 
     public String execute(String commands) {
@@ -30,9 +30,9 @@ public class Rover {
 
     private void moveOn(Grid grid) {
         if (direction.isFacingNorth()) {
-            coordinates.incrementY(grid);
+            this.coordinates = coordinates.incrementY(grid);
         } else if (direction.isFacingEast()) {
-            coordinates.incrementX(grid);
+            this.coordinates = coordinates.incrementX(grid);
         } else if (direction.isFacingSouth()) {
             coordinates.decrementY(grid);
         } else if (direction.isFacingWest()) {

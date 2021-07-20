@@ -12,12 +12,12 @@ public class Coordinates {
         return new Coordinates(Grid.minimumValue(), Grid.minimumValue());
     }
 
-    void incrementX(Grid grid) {
-        this.x = x.increment().wrapIfNeeded(grid);
+    Coordinates incrementX(Grid grid) {
+        return new Coordinates(x.increment().wrapIfNeeded(grid), y);
     }
 
-    void incrementY(Grid grid) {
-        this.y = y.increment().wrapIfNeeded(grid);
+    Coordinates incrementY(Grid grid) {
+        return new Coordinates(x, y.increment().wrapIfNeeded(grid));
     }
 
     void decrementX(Grid grid) {
