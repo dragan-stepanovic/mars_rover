@@ -11,7 +11,7 @@ public class Grid {
         return new Coordinate(MINIMUM_VALUE);
     }
 
-    static int maximumValue(int gridSize) {
+    int maximumValue(int gridSize) {
         return gridSize;
     }
 }
